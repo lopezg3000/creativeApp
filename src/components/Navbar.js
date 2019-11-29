@@ -14,10 +14,16 @@ const StyledNavbar = styled.div`
   }
 `;
 
+
+
 const NavBar = () => {
   return (
     <StyledNavbar>
-      <NavLinks navItems={["Home", "Profile", "Settings"]} />
+      <NavLinks navItems={[
+        { title: "Home", link: "/About/#home" },
+        { title: "Profile", link: "Profile/#profile" },
+        { title: "Settings", link: "Settings#settings" }
+      ]} />
     </StyledNavbar>
   );
 };

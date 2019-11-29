@@ -1,7 +1,7 @@
 import styled from "styled-components"
 
 const StyledHeader = styled.header`
-    padding: 20px;
+    padding: 50px;
     background: gold;
 `
 
