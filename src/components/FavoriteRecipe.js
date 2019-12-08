@@ -5,7 +5,7 @@ const FavoriteRecipe = () => {
         <form>
             <label>
                 Let Us Know Your Favorite Recipe:
-                <input type="text" favoriteRecipe="favoriteRecipe" />
+                <input type="text" favoriteRecipe="favoriteRecipe" placeholder="My Favorite Recipe is..." />
             </label>
             <input type="submit" value="Submit" />
         </form>
@@ -28,5 +28,11 @@ Problems in react:
 5. Give this input element props such as type and value.
 
 input elements are self closing
+*/
+
+/*Add Placeholder Text To A Field
+
+Placeholder text is what is displayed before your user has inputted anything.
+It is pretty much an attribute given to the input element.
 
 */
