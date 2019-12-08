@@ -18,6 +18,12 @@ const Heading = () => {
                 <li>Baked Salmon</li>
                 <li>Chicken Parm Stuffed Peppers</li>
             </ul>
+            <h3>Every Recipe Is Certified To Be...</h3>
+            <ol>
+                <li>Budget-Friendly</li>
+                <li>Quick to Make</li>
+                <li>Delicious</li>
+            </ol>
         </div>
     );
 };
@@ -48,4 +54,17 @@ You can also use deadlinks when changing the behavior of the link with javascrip
 
 /*Turn An Image Into a Link
 
-You can make elements into links by nesting them within anchor elements */
+You can make elements into links by nesting them within anchor elements.
+*/
+
+/*Create A Bulleted Unordered List
+
+Unordered lists start with an <ul> tag and end with a closing </ul>.
+Within the unordered list tags are any number of <li> elements.
+*/
+
+/* Create an Ordered List
+
+Ordered list start with an opening <ol> element and end with a closing </ol> element.
+Within the <ol> elements are any number of <li> elements.
+*/
