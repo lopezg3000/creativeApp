@@ -12,6 +12,12 @@ const Heading = () => {
             </main> {/*descriptive html tag. Helps with SEO and accessibility*/}
             <a href="https://www.delish.com/cooking/recipe-ideas/g3733/healthy-dinner-recipes/" target="_blank" rel="noopener noreferrer">Healthy Recipes</a> {/*Added target to open link in new*/}
             <a href="https://www.lizshealthytable.com/2017/05/03/2-modern-italian-cooking-with-alexandra-caspero-rd/" target="_blank" rel="noopener noreferrer"><img style={{ height: "200vh", width: "175vh" }} src={Recipe} alt="Pasta with Vegetables" /> </a> {/*importing images is different in react*/ /*Alt tag used for screen readers to improve accessibility and is displayed if the image fails to load. If the image is purely decorative then using an empty alt attribute is best practice */}
+            <h3>My Favorite Healthy Recipes include:</h3>
+            <ul>
+                <li>Primavera Stuffed Chicken</li>
+                <li>Baked Salmon</li>
+                <li>Chicken Parm Stuffed Peppers</li>
+            </ul>
         </div>
     );
 };
