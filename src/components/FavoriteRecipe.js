@@ -3,10 +3,10 @@ import React from 'react';
 const FavoriteRecipe = () => {
     return (
         <form>
-            <lablel>
+            <label>
                 Let Us Know Your Favorite Recipe:
                 <input type="text" favoriteRecipe="favoriteRecipe" />
-            </lablel>
+            </label>
             <input type="submit" value="Submit" />
         </form>
     );
@@ -26,5 +26,7 @@ Problems in react:
 3. Give input element props such as type and name.
 4. After the label element, create another input element
 5. Give this input element props such as type and value.
+
+input elements are self closing
 
 */
