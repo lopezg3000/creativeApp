@@ -28,7 +28,7 @@ class FavoriteRecipe extends Component {
             <form onSubmit={this.handleSubmit}>
                 <label>
                     Let Us Know Your Favorite Recipe:
-                <input type="text" placeholder="My Favorite Recipe is..." value={this.state.value} onChange={this.handleChange} />
+                <input type="text" placeholder="My Favorite Recipe is..." value={this.state.value} onChange={this.handleChange} required />
                 </label>
                 <input type="submit" value="Submit" />
             </form>
@@ -66,5 +66,33 @@ It is pretty much an attribute given to the input element.
 */
 
 /* Create A Form Element
+
+pure html can be used to build web forms that submit data to a server.
+I still do not know how to use the action attribute or if it is necessary in react js.
+I believe that the action attribute is replaced by something else in react js.
+The action attribute specifies the url where one wishes to post the form data.
+I think you might need a database but not sure.
+
+*/
+
+/* Add a Submit Button to a Form
+
+First, Bind this to event handler function in the constructor, so that we have access to the class component's
+state property.
+Second, create the event handler functions outside the constructor and before the render method.
+Third, reference the function in the return statement in curly brackets.
+Fourth, use setState function to update the state.
+e.preventDefault is used so that page is not refreshed.
+this.state.value is set to an empty string in the handleSubmit method to reset the input field.
+
+
+*/
+
+/* Use html to Require a Field
+
+The require attribute is used so that the user is not able to submit data unless he/she
+has filled out the form field.
+The required attribute is used within an input element.
+
 
 */
