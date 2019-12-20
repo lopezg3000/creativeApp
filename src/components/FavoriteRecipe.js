@@ -1,18 +1,46 @@
-import React from 'react';
+import React, { Component } from 'react';
 
-const FavoriteRecipe = () => {
-    return (
-        <form>
-            <label>
-                Let Us Know Your Favorite Recipe:
-                <input type="text" favoriteRecipe="favoriteRecipe" placeholder="My Favorite Recipe is..." />
-            </label>
-            <input type="submit" value="Submit" />
-        </form>
-    );
+
+class FavoriteRecipe extends Component {
+    constructor() {
+        super();
+        this.state = { value: '' };
+
+        this.handleSubmit = this.handleSubmit.bind(this);
+        this.handleChange = this.handleChange.bind(this);
+    }
+
+    handleChange(e) {
+        this.setState({ value: e.target.value });
+    };
+
+
+    handleSubmit(e) {
+        alert('Favorite Recipe Submitted: ' + this.state.value);
+        e.preventDefault();
+        this.setState({ value: '' });
+        console.log(this.state.value);
+    };
+
+
+    render() {
+        return (
+            <form onSubmit={this.handleSubmit}>
+                <label>
+                    Let Us Know Your Favorite Recipe:
+                <input type="text" placeholder="My Favorite Recipe is..." value={this.state.value} onChange={this.handleChange} />
+                </label>
+                <input type="submit" value="Submit" />
+            </form>
+        );
+    };
 };
 
+
+
 export default FavoriteRecipe;
+
+
 
 
 /* Create A Text Field
@@ -34,5 +62,9 @@ input elements are self closing
 
 Placeholder text is what is displayed before your user has inputted anything.
 It is pretty much an attribute given to the input element.
+
+*/
+
+/* Create A Form Element
 
 */
