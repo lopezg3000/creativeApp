@@ -4,13 +4,14 @@ import React, { Component } from 'react';
 class SignUp extends Component {
     Constructor(props) {
         super();
-        this.state = {};
+        this.state = {
+            display: 'none'
+        };
 
         this.handleOnload = this.handleOnLoad.bind(this);
     }
 
     handleOnLoad() {
-        setTimeout
     }
 
     render() {
@@ -30,3 +31,9 @@ class SignUp extends Component {
 };
 
 export default SignUp;
+
+/* Need to apply filter to the background or layout so that it is blurred
+
+Need to apply position: fixed to the form so that it is centered
+
+Z-index needs to be applied to form so that it is above background*/
