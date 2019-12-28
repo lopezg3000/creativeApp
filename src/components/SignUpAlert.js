@@ -2,28 +2,47 @@ import React, { Component } from 'react';
 
 
 class SignUp extends Component {
-    Constructor(props) {
+    constructor(props) {
         super();
-        this.state = {
-            display: 'none'
-        };
+        this.state = { signUp: 'YES' };
 
-        this.handleOnload = this.handleOnLoad.bind(this);
+        this.handleSignUpChange = this.handleSignUpChange.bind(this);
+        this.handleSubmit = this.handleSubmit.bind(this);
     }
 
-    handleOnLoad() {
+    handleSignUpChange(e) {
+        this.setState({ signUp: e.target.value });
+        console.log()
+    }
+
+    handleSubmit(e) {
+        alert('Sign Up: ' + this.state.signUp);
+        console.log(this.state.signUp);
     }
 
     render() {
         return (
-            <form onLoad={this.handleOnLoad}>
+            <form onSubmit={this.handleSubmit}>
                 <h1>Determined to stay healthy?</h1>
-                <label for='yes-no'>
-                    <input id='yes' type='radio' name='yes-no'>Yes, sign me up to your newsletter</input>
+                <label>
+                    Yes, sign me up to your newsletter
+                    <input
+                        value="YES"
+                        name="signUp"
+                        onChange={this.handleSignUpChange}
+                        type='radio' defaultChecked />
                 </label>
-                <label for='yes-no'>
-                    <input id='no' type='radio' name='yes-no'>No, I can't commit to a healthy lifestyle </input>
+                <label>
+                    No, I can't commit to a healthy lifestyle
+                    <input
+                        value="NO"
+                        name="signUp"
+                        checked={this.state.signUp === 'NO'}
+                        onChange={this.handleSignUpChange}
+                        type='radio' >
+                    </input>
                 </label>
+                <input type="submit" value="Submit" />
             </form>
         );
     };

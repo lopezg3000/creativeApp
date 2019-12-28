@@ -4,6 +4,7 @@ import Information from "../src/components/Information"
 import Navbar from "../src/components/Navbar"
 import About from "../src/components/About"
 import FavoriteRecipe from "./components/FavoriteRecipe"
+import SignUpAlert from "./components/SignUpAlert"
 
 
 
@@ -15,6 +16,7 @@ function App() {
       <Information />
       <About />
       <FavoriteRecipe />
+      <SignUpAlert />
     </div>
   );
 }
