@@ -5,7 +5,9 @@ import Navbar from "../src/components/Navbar"
 import About from "../src/components/About"
 import FavoriteRecipe from "./components/FavoriteRecipe"
 import SignUpAlert from "./components/SignUpAlert"
-
+import HomePage from "./components/HomePage"
+import SignUpSuccess from './components/SignUpSuccess'
+import { Route, Switch } from 'react-router-dom'
 
 
 function App() {
@@ -15,6 +17,10 @@ function App() {
       <Navbar />
       <Information />
       <About />
+      <Switch>
+        <Route path='/HomePage' component={HomePage} />
+        <Route path='/SignUpSuccess' component={SignUpSuccess} />
+      </Switch>
       <FavoriteRecipe />
       <SignUpAlert />
     </div>

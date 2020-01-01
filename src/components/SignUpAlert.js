@@ -1,23 +1,32 @@
 import React, { Component } from 'react';
+import { withRouter } from "react-router-dom";
 
 
 class SignUp extends Component {
     constructor(props) {
         super();
-        this.state = { signUp: 'YES' };
+        this.state = {
+            signUp: 'YES',
+            linkTo: '/'
+        };
+
 
         this.handleSignUpChange = this.handleSignUpChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
+        console.log(this.state.linkTo);
     }
 
     handleSignUpChange(e) {
         this.setState({ signUp: e.target.value });
-        console.log()
     }
 
     handleSubmit(e) {
-        alert('Sign Up: ' + this.state.signUp);
-        console.log(this.state.signUp);
+        e.preventDefault();
+        if (this.state.signUp === 'YES') {
+            return this.props.history.push('/SignUpSuccess')
+        } else {
+            return this.props.history.push('/HomePage');
+        };
     }
 
     render() {
@@ -42,14 +51,14 @@ class SignUp extends Component {
                         type='radio' >
                     </input>
                 </label>
-                <input type="submit" value="Submit" />
+                <input type='submit' value='Submit' />
             </form>
         );
     };
 
 };
 
-export default SignUp;
+export default withRouter(SignUp);
 
 /* Need to apply filter to the background or layout so that it is blurred
 
