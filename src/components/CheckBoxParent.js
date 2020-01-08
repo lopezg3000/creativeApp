@@ -22,10 +22,9 @@ class CheckBoxParent extends Component {
         this.setState(prevState => ({
             fitnessGoals: {
                 ...prevState.fitnessGoals,
-                [name] = !prevState.fitnessGoals[name]
+                [name]: !prevState.fitnessGoals[name]
             }
         }));
-
     };
 
     createCheckbox = option => (
