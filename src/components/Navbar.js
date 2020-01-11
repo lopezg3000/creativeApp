@@ -20,9 +20,9 @@ const NavBar = () => {
   return (
     <StyledNavbar>
       <NavLinks navItems={[
-        { title: "Home", link: "/Header/#home" },
-        { title: "Profile", link: "Profile/#profile" },
-        { title: "Settings", link: "Settings#settings" }
+        { title: "Home", link: "/Header/#home", id: "home" },
+        { title: "Profile", link: "Profile/#profile", id: "profile" },
+        { title: "Settings", link: "Settings#settings", id: "settings" }
       ]} />
     </StyledNavbar>
   );

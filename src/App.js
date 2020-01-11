@@ -7,6 +7,7 @@ import FavoriteRecipe from "./components/FavoriteRecipe"
 import SignUpAlert from "./components/SignUpAlert"
 import HomePage from "./components/HomePage"
 import SignUpSuccess from './components/SignUpSuccess'
+import CheckboxParent from './components/CheckBoxParent'
 import { Route, Switch } from 'react-router-dom'
 
 
@@ -23,6 +24,7 @@ function App() {
       </Switch>
       <FavoriteRecipe />
       <SignUpAlert />
+      <CheckboxParent />
     </div>
   );
 }
