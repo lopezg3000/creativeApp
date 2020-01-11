@@ -1,8 +1,13 @@
 import React from 'react';
+import styled from 'styled-components';
+
+const Title = styled.h1`
+    color: red;
+`;
 
 const HomePage = () => {
     return (
-        <h1>Welcome to Homepage</h1>
+        <Title>Welcome to Homepage</Title>
     )
 }
 
