@@ -54,3 +54,47 @@ example: <h2 style=" color: red;">Born to Be Wild</h2>
 It is good practice to end a style declaration with a semicolon.
 
 */
+
+/*Use CSS Selectors to Style Elements
+
+1. Create a style block.
+2. Create a CSS selector for a type of element e.g. h2
+    All elements of that type would have the style.
+You should have opening and closing curly braces ({ and }) around each element's style rules.
+Also make sure your element's style definition is between the opening and closing style tags.
+Be sure to add a semi colon to the end of each of your element's style rules.
+example: <style>
+            h2 {
+                color: red;
+            }
+        </style
+*/
+
+/* Use a CSS Class to Style an Element
+
+Classes are reusable styles that can be added to html elements.
+In CSS Style element, class names start with a period.
+In html elements' class attribute, the class name does not include the period.
+Example: CSS class declaration
+            <style>
+            .blue-text {
+                color: blue;
+            }
+            </style>
+
+Example to apply CSS class to an html element
+            <h2 class="blue-text">Cat Photo APP</h2>
+
+*/
+
+/*Style Multiple Elements with a CSS Class
+
+Classes allow you to use the same CSS styles on multiple html elements.
+
+*/
+
+/*Change the font size of an Element
+
+Font Size is controlled by the font-size CSS property.
+
+*/

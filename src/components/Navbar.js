@@ -2,10 +2,13 @@ import React from "react";
 import styled from "styled-components";
 import NavLinks from "../components/NavLinks";
 
-const StyledNavbar = styled.div`
+const StyledNavbar = styled.header`
   color: white;
   text-decoration: none;
-  padding: 20px;
+  background: gold;
+  height: 90px;
+  padding-top: 6px;
+  padding-right: 20px;
   & li {
     list-style: none;
     padding: 1em;

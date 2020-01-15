@@ -1,8 +1,16 @@
 import styled from "styled-components"
+import Navbar from "./Navbar"
+import React from 'react'
 
 const StyledHeader = styled.header`
-    padding: 50px;
+    height: 50px;
     background: gold;
 `
 
-export default StyledHeader;
+const Header = () => {
+    return (< StyledHeader >
+    </StyledHeader >
+    )
+};
+
+export default Header;

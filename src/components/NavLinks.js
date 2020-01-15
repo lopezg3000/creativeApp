@@ -6,8 +6,14 @@ const ButtonLink = styled.button`
     background: none;
     outline: none;
     cursor: pointer;
-
-
+    font-size: 2vh;
+    border: none;
+    & ul{
+    }
+    a {
+        text-decoration: none;
+        color: white;
+    }
 `;
 
 
