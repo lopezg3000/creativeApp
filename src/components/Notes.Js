@@ -98,3 +98,9 @@ Classes allow you to use the same CSS styles on multiple html elements.
 Font Size is controlled by the font-size CSS property.
 
 */
+
+/*Set The Font Family of an Element
+
+Set which font an element should use by using the font-family property.
+
+*/

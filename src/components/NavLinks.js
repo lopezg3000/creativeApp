@@ -13,6 +13,7 @@ const ButtonLink = styled.button`
     a {
         text-decoration: none;
         color: white;
+        font-family: monaco;
     }
 `;
 
