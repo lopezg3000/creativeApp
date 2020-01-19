@@ -6,7 +6,7 @@ import HeroChild from "./HeroChild";
 
 const HeroParent = () => {
     return (
-        <div class="App">
+        <div className="App">
             <HeroChild
                 className={"heroStyled"}
                 alt={"pasta"}
