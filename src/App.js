@@ -9,13 +9,15 @@ import HomePage from "./components/HomePage"
 import SignUpSuccess from './components/SignUpSuccess'
 import CheckboxParent from './components/CheckBoxParent'
 import { Route, Switch } from 'react-router-dom'
+import HeroParent from "./components/HeroParent";
 
 
 function App() {
   return (
-    <div>
-      <Navbar />
+    <React.Fragment>
+      <HeroParent />
       <Information />
+      <Navbar />
       <About />
       <Switch>
         <Route path='/HomePage' component={HomePage} />
@@ -24,7 +26,7 @@ function App() {
       <FavoriteRecipe />
       <SignUpAlert />
       <CheckboxParent />
-    </div>
+    </React.Fragment>
   );
 }
 

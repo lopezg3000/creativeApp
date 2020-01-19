@@ -1,10 +1,11 @@
 import React from "react"
-import Recipe from "../Img/recipe.jpg"
+import Recipe from "../Img/highResRecipe.jpg"
+import HeroParent from "./HeroParent"
 
 const Heading = () => {
     return (
         <div>
-            <a href="https://www.lizshealthytable.com/2017/05/03/2-modern-italian-cooking-with-alexandra-caspero-rd/" target="_blank" rel="noopener noreferrer"><img style={{ width: "100vw", display: "block", height: "100vh" }} src={Recipe} alt="Pasta with Vegetables" /> </a> {/*importing images is different in react*/ /*Alt tag used for screen readers to improve accessibility and is displayed if the image fails to load. If the image is purely decorative then using an empty alt attribute is best practice */}
+            {/* <a href="https://www.lizshealthytable.com/2017/05/03/2-modern-italian-cooking-with-alexandra-caspero-rd/" target="_blank" rel="noopener noreferrer"><img style={{ width: "100vw", height: "100vh" }} src={Recipe} alt="Pasta with Vegetables" /> </a> importing images is different in react*/ /*Alt tag used for screen readers to improve accessibility and is displayed if the image fails to load. If the image is purely decorative then using an empty alt attribute is best practice */}
             <h1><a target="_blank" href="#" rel="noopener noreferrer">Hello World</a></h1>
             <h2 id="home">Healthy Food Recipes App</h2> {/*Looking for new title*/}
             <main>

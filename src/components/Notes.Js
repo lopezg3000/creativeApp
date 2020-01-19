@@ -104,3 +104,13 @@ Font Size is controlled by the font-size CSS property.
 Set which font an element should use by using the font-family property.
 
 */
+
+/*Import a Google Font
+
+Software developers can specify non-standard, custom web fonts for use on a website.
+Google Fonts is a free library of web fonts that you can use in your CSS by
+    referencing the font's URL.
+To import a Google font, you can copy the font's URL from the Google Font's library and
+    then paste it in your HTML.
+
+*/
