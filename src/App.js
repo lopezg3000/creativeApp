@@ -16,8 +16,8 @@ function App() {
   return (
     <React.Fragment>
       <HeroParent />
-      <Information />
       <Navbar />
+      <Information />
       <About />
       <Switch>
         <Route path='/HomePage' component={HomePage} />

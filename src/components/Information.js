@@ -1,5 +1,5 @@
 import React from "react"
-import Recipe from "../Img/highResRecipe.jpg"
+// import Recipe from "../Img/highResRecipe.jpg"
 import HeroParent from "./HeroParent"
 
 const Heading = () => {

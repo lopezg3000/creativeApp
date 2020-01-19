@@ -5,7 +5,10 @@ import NavLinks from "../components/NavLinks";
 const StyledNavbar = styled.header`
   color: white;
   text-decoration: none;
-  background: gold;
+  background: white;
+  background: white;
+  border-style: solid;
+  border-color: #32CD32;
   height: 90px;
   padding-top: 6px;
   padding-right: 20px;
@@ -13,7 +16,7 @@ const StyledNavbar = styled.header`
     list-style: none;
     padding: 1em;
     float: right;
-    background-color: #00BFFF;
+    background-color: #32CD32;
   }
 `;
 

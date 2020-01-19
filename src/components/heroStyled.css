@@ -1,10 +1,10 @@
 .heroStyled {
     width: 100vw;
-    height: 100vh;
+    height: 75vh;
 }
 
 .App {
     background: rgb(255, 247, 247);
-    height: 100vh;
+    height: 75vh;
     width: 100vw;
 }

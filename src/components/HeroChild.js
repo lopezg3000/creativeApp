@@ -12,7 +12,7 @@ const overlayStyles = {
     // position: "absolute",
     filter: "blur(10px)",
     transition: "opacity ease-in 1000ms",
-    clipPath: "inset(0)"
+    // clipPath: "inset(0)"
 
 };
 
