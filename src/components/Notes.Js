@@ -112,5 +112,54 @@ Google Fonts is a free library of web fonts that you can use in your CSS by
     referencing the font's URL.
 To import a Google font, you can copy the font's URL from the Google Font's library and
     then paste it in your HTML.
+Example Code: <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
+Paste this code at the top of the html document.
+Use the font in CSS by implementing the following code:
+    font-family: FAMILY_NAME, GENERIC_NAME;
+Family name should be set to the family value, which can be found in the google font's URL.
+The GENERIC_NAME is optional, and is a fallback font in case the other specified font
+    is not available.
+Family names are case-sensitive and need to be wrapped in quotes if there is a space
+    in the name.
+For example, you need quotes to use the "Open Sans" font, but not to use the Lobster font.
+
+
+*/
+
+/*Specify How Fonts Should Degrade
+
+There are several default fonts that are available in all browsers.
+These generic font families include monospace, serif, and sans-serif.
+When one font is not available, you can tell the browser to "degrade" to another font.
+Example code: p { font-family: Helvetica, sans-serif;}.
+Generic font family names are not case-sensitive.
+Also, they do not need quotes because they are css keywords.
+
+*/
+
+/*Size Your Image
+
+CSS has a property called width that controls an element's width.
+Like fonts, px (pixels) can be used to specify the image's width.
+Example Code: .smaller-image { width: 100px;}
+
+*/
+
+/*Add Borders Around Your Elements
+
+CSS borders have properties like style, color, and width.
+Example Code: .thin-red-properties { border-color: red;
+border-width: 5px; border-style: solid;}
+Multiple classes can be applied to an element using its class attribute.
+Simply, separate each class name with a space.
+Example Code: <img class="class1 class2">
+
+*/
+
+/*Add Rounded Corners With Border-Radius
+
+border-radius is a CSS property that can be used to round out corners.
+px can be used to specify how the rounded corners will appear.
+Example Code: .thick-green-border { border-radius: 10px;}
 
 */

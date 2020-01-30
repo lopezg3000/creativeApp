@@ -3,13 +3,15 @@ import styled from "styled-components";
 import NavLinks from "../components/NavLinks";
 
 const StyledNavbar = styled.header`
-  color: white;
+  color: black;
   text-decoration: none;
   background: white;
   background: white;
   border-style: solid;
   border-color: #32CD32;
-  height: 90px;
+  border-width: 10px;
+  border-radius: 10px;
+  height: 11vh;
   padding-top: 6px;
   padding-right: 20px;
   & li {
@@ -18,19 +20,28 @@ const StyledNavbar = styled.header`
     float: right;
     background-color: #32CD32;
   }
-`;
+`
+
+const Title = styled.h1`
+  @import url('https://fonts.googleapis.com/css?family=Pacifico&display=swap');
+  font-family: 'Pacifico', cursive;
+  text-align: center;
+`
 
 
 
 const NavBar = () => {
   return (
-    <StyledNavbar>
-      <NavLinks navItems={[
-        { title: "Home", link: "/Header/#home", id: "home" },
-        { title: "Profile", link: "Profile/#profile", id: "profile" },
-        { title: "Settings", link: "Settings#settings", id: "settings" }
-      ]} />
-    </StyledNavbar>
+    <div>
+      <StyledNavbar>
+        <NavLinks navItems={[
+          { title: "Home", link: "/Header/#home", id: "home" },
+          { title: "Profile", link: "Profile/#profile", id: "profile" },
+          { title: "Settings", link: "Settings#settings", id: "settings" }
+        ]} />
+        <Title>Fitness Todo</Title>
+      </StyledNavbar>
+    </div>
   );
 };
 
