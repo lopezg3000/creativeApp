@@ -1,7 +1,7 @@
 import React from 'react';
 import Header from "../src/components/Header"
 import Information from "../src/components/Information"
-import Navbar from "../src/components/Navbar"
+import Home from "./components/home/Home"
 import About from "../src/components/About"
 import FavoriteRecipe from "./components/FavoriteRecipe"
 import SignUpAlert from "./components/SignUpAlert"
@@ -15,17 +15,16 @@ import HeroParent from "./components/HeroParent";
 function App() {
   return (
     <React.Fragment>
-      <HeroParent />
-      <Navbar />
-      <Information />
-      <About />
-      <Switch>
-        <Route path='/HomePage' component={HomePage} />
+      <Home />
+      {/* <Information /> */}
+      {/* <About />
+      <Switch> */}
+      {/* <Route path='/HomePage' component={HomePage} />
         <Route path='/SignUpSuccess' component={SignUpSuccess} />
-      </Switch>
-      <FavoriteRecipe />
+      </Switch> */}
+      {/* <FavoriteRecipe />
       <SignUpAlert />
-      <CheckboxParent />
+      <CheckboxParent /> */}
     </React.Fragment>
   );
 }

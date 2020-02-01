@@ -1,13 +1,17 @@
 import React from 'react';
 import styled from 'styled-components';
+import HeroParent from "../HeroParent"
+import Navbar from "../Navbar"
 
 const Title = styled.h1`
     color: red;
 `;
 
-const HomePage = () => {
+const Home = () => {
     return (
         <div>
+            <HeroParent />
+            <Navbar />
             <Title>Change Your Life</Title>
             <p>Welcome to Fitness Todo. The site that gives you an opportunity to redefine
                 yourself. It all starts with nutritious smoothie recipes. I am big on smoothies. I drink one
@@ -23,4 +27,4 @@ const HomePage = () => {
     )
 }
 
-export default HomePage;
+export default Home;

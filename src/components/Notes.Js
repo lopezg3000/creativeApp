@@ -163,3 +163,17 @@ px can be used to specify how the rounded corners will appear.
 Example Code: .thick-green-border { border-radius: 10px;}
 
 */
+
+/*Make Circular Images with a border-radius
+
+In addition to pixels, border-radius can also be specified using percentages.
+Example Code: border-radius: 50%;
+
+*/
+
+/*Give a Background Color to a Div Element
+
+An Element's background color can be set with the background-color property.
+Example Code: background-color: green;
+
+*/
