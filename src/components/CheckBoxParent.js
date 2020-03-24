@@ -30,8 +30,9 @@ class CheckboxParent extends Component {
     deselectAll = () => this.selectAllCheckboxes(false);
 
     handleCheckboxChange = changeEvent => {
-        const { name } = changeEvent.target;
 
+        const { name } = changeEvent.target;
+        console.log(name);
         this.setState(prevState => ({
             fitnessGoals: {
                 ...prevState.fitnessGoals,
