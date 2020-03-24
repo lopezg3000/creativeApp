@@ -1,21 +1,25 @@
 import React from 'react';
 import Layout from './components/home/layout'
-import Header from "../src/components/Header"
-import Information from "../src/components/Information"
-import Home from "./components/home/Home"
-import About from "../src/components/About"
-import FavoriteRecipe from "./components/FavoriteRecipe"
-import SignUpAlert from "./components/SignUpAlert"
-import HomePage from "./components/HomePage"
-import SignUpSuccess from './components/SignUpSuccess'
+import './App.css';
+// import Header from "./components/roughComponents/Header"
+// import Information from "./components/roughComponents/Information"
+// import Home from "./components/home/Home"
+// import About from "./components/roughComponents/About"
+// import FavoriteRecipe from "./components/roughComponents/FavoriteRecipe"
+// import SignUpAlert from "./components/roughComponents/SignUpAlert"
+// import HomePage from "./components/roughComponents/HomePage"
+// import SignUpSuccess from './components/roughComponents/SignUpSuccess'
 // import CheckboxParent from './components/CheckBoxParent'
 // import { Route, Switch } from 'react-router-dom'
-import HeroParent from "./components/HeroParent";
+// import HeroParent from "./components/roughComponents/HeroParent";
+
 
 
 function App() {
   return (
-    <Layout />
+    <div className="container">
+      <Layout />
+    </div>
   );
 }
 
