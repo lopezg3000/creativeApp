@@ -51,10 +51,12 @@ const fitnessGoals = [
                 needs!
             </p>
         )
-    },
+    }
+];
 
-
-]
+export function getFitnessGoals() {
+    return fitnessGoals;
+};
 
 
 {/* Will need to find a way to map it. Will probably have to use an array to map the benefits
