@@ -3,22 +3,29 @@ import PageHeader from "../common/pageHeader"
 
 
 class Home extends Component {
-    state = {}
+    state = {
+        fitnessGoals: []
+    }
+
+    componentDidMount() {
+        this.setState({ fitnessGoals: getFitnessGoals() })
+    };
 
 
     render() {
+        const { fitnessGoals } = this.state;
+
         return (
             <React.Fragment>
                 <div className="box header">
                     <PageHeader header={this.props.headerProperty} />
                 </div>
                 <div className="box instructions">
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                        Vero repellendus corporis magnam voluptates dicta,
-                        harum maxime commodi sit nisi omnis, praesentium itaque minus
-                        deserunt in totam quia rerum sint eius.
-                    </p>
+                    <h3>Title</h3>
+                    <p>Paragraph</p>
+                    <ul>
+                        <li>UnorderedList</li>
+                    </ul>
                 </div>
                 <div className="box carousel">
                     <p>

@@ -7,6 +7,13 @@ const fitnessGoals = [
                 We all want to have lean muscles because not only does it look good,
                 it has great health benefits:
             </p>
+        ),
+        benefits: (
+            <ul>
+                <li>Improves stamina</li>
+                <li>Protects and improves joint health</li>
+                <li>Strong bones</li>
+            </ul>
         )
     },
 
@@ -19,6 +26,13 @@ const fitnessGoals = [
                 steps to a healthier you. Reducing your body fat has a lot of benefits
                 such as:
             </p>
+        ),
+        benefits: (
+            <ul>
+                <li>Better performance and endurance</li>
+                <li>Improved appearance and confidence</li>
+                <li>Better hormonal profiles in your body</li>
+            </ul>
         )
     },
 
@@ -61,11 +75,11 @@ export function getFitnessGoals() {
     might put it under prop additional info<ul>
 <li>Improved joints and tendons</li>
 <li>Lowered risk of diabetes</li>
-<li>Reduced risk of heart disease</li>
+<li></li>
 <li>Reduced inflammation</li>
-<li>Better performance and endurance</li>
-<li>Improved appearance and confidence</li>
-<li>Better hormonal profiles in your body</li>
+<li></li>
+<li></li>
+<li></li>
 
 
 
@@ -79,6 +93,6 @@ export function getFitnessGoals() {
 // Improved posture
 // Reduced body fat
 // Improved metabolism
-// Strong bones
-// Protects and improves joint health
-// Improves stamina
+// 
+// 
+//
