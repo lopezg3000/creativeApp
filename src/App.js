@@ -1,5 +1,5 @@
 import React from 'react';
-import Layout from './components/home/layout'
+import Home from './components/home/home'
 import './App.css';
 // import Header from "./components/roughComponents/Header"
 // import Information from "./components/roughComponents/Information"
@@ -18,7 +18,7 @@ import './App.css';
 function App() {
   return (
     <div className="container">
-      <Layout />
+      <Home />
     </div>
   );
 }
