@@ -51,6 +51,10 @@ body {
   height: 50px;
 }
 
+.headerText {
+  margin: 0;
+}
+
 .instructions {
   grid-column: col / span 2;
   grid-row: row 2;

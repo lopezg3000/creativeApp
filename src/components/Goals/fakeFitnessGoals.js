@@ -1,5 +1,3 @@
-"Build More Lean Muscle", "Decrease Body Fat", "Drink More Water", "Eat More Greens"
-
 const fitnessGoals = [
     {
         _id: "5b21ca3eeb7f6fbccd471815",
@@ -11,7 +9,6 @@ const fitnessGoals = [
             </p>
         )
     },
-
 
     {
         _id: "5b21ca3eeb7f6fbccd471816",

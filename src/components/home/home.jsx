@@ -1,12 +1,17 @@
 import React, { Component } from 'react'
+import PageHeader from "../common/pageHeader"
 
 
-class Layout extends Component {
+class Home extends Component {
     state = {}
+
+
     render() {
         return (
             <React.Fragment>
-                <div className="box header">The Daily Smoothie</div>
+                <div className="box header">
+                    <PageHeader header={this.props.headerProperty} />
+                </div>
                 <div className="box instructions">
                     <p>
                         Lorem ipsum dolor sit amet, consectetur adipisicing elit.
@@ -31,4 +36,8 @@ class Layout extends Component {
     }
 }
 
-export default Layout;
+Home.defaultProps = {
+    headerProperty: "The Daily Smoothie"
+};
+
+export default Home;
