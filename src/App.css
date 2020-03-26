@@ -55,7 +55,7 @@ body {
   margin: 0;
 }
 
-.instructions {
+.information {
   grid-column: col / span 2;
   grid-row: row 2;
   height: 400px;

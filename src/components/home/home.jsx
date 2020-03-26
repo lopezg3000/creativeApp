@@ -1,47 +1,37 @@
 import React, { Component } from 'react';
-import { getFitnessGoals } from '../goals/fakeGoalFitness';
+import { getFitnessGoals, getGoal } from '../goals/fakeGoalFitness';
 import PageHeader from "../common/pageHeader";
+import Information from '../common/Information'
 
 
 class Home extends Component {
     state = {
-        fitnessGoals: getFitnessGoals(),
-        selectedGoal: 'Live a Healthier Life This Year'
+        fitnessGoals: []
     }
 
     componentDidMount() {
-        const fitnessGoals = [
-            {
-                _id: '',
-                title: '"Live a Healthier Life This Year"',
-                description: "Get matched with the right foods and make your fitness goals a reality."
-            }, ...getFitnessGoals()
-        ];
-
-        this.setState({ fitnessGoals });
+        this.setState({ fitnessGoals: getFitnessGoals() });
     };
 
 
 
 
     render() {
-        const { fitnessGoals } = this.state;
-        const filtered = fitnessGoals.find(item => item._id === "5b21ca3eeb7f6fbccd471815");
-        console.log(filtered.title);
+        const { selectedGoal } = this.state;
+        const { titleProperty, paragraphProperty } = this.props;
+        const goal =
+            !selectedGoal
+                ? <React.Fragment>{titleProperty}{paragraphProperty}</React.Fragment>
+                : getGoal(selectedGoal._id);
+
+        console.log(goal);
         return (
             <React.Fragment>
                 <div className="box header">
                     <PageHeader header={this.props.headerProperty} />
                 </div>
-                <div className="box instructions">
-                    <h3>{filtered.title}</h3>
-                    <p>{filtered.description}</p>
-                    <ul>
-                        {filtered.benefits.map(b => (
-                            <li>{b}</li>
-                        ))}
-                    </ul>
-
+                <div className="box information">
+                    <Information goal={goal} />
                 </div>
                 <div className="box carousel">
                     <p>
@@ -60,7 +50,9 @@ class Home extends Component {
 }
 
 Home.defaultProps = {
-    headerProperty: "The Daily Smoothie"
+    headerProperty: "The Daily Smoothie",
+    titleProperty: <h3>Live a Healthier Life</h3>,
+    paragraphProperty: <p>Get matched with the right foods and make your fitness goals a reality.</p>
 };
 
 export default Home;

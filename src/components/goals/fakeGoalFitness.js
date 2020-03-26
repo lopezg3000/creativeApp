@@ -37,3 +37,7 @@ const fitnessGoals = [
 export function getFitnessGoals() {
     return fitnessGoals;
 };
+
+export function getGoal(id) {
+    return fitnessGoals.find(g => g._id === id);
+}
