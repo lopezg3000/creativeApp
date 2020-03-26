@@ -1,30 +1,35 @@
 import React, { Component } from 'react';
 import { getFitnessGoals, getGoal } from '../goals/fakeGoalFitness';
 import PageHeader from "../common/pageHeader";
-import Information from '../common/Information'
+import Information from '../common/Information';
 
 
 class Home extends Component {
     state = {
-        fitnessGoals: []
+        fitnessGoals: [],
     }
 
     componentDidMount() {
         this.setState({ fitnessGoals: getFitnessGoals() });
     };
 
+    handleGoalSelect = (goal) => {
+        console.log(goal);
+        this.setState({ selectedGoal: goal })
+    };
+
 
 
 
     render() {
-        const { selectedGoal } = this.state;
+        const { selectedGoal, fitnessGoals } = this.state;
+
         const { titleProperty, paragraphProperty } = this.props;
         const goal =
             !selectedGoal
                 ? <React.Fragment>{titleProperty}{paragraphProperty}</React.Fragment>
                 : getGoal(selectedGoal._id);
 
-        console.log(goal);
         return (
             <React.Fragment>
                 <div className="box header">
@@ -34,12 +39,9 @@ class Home extends Component {
                     <Information goal={goal} />
                 </div>
                 <div className="box carousel">
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                        Vero repellendus corporis magnam voluptates dicta,
-                        harum maxime commodi sit nisi omnis, praesentium itaque minus
-                        deserunt in totam quia rerum sint eius.
-                    </p>
+                    <ul>
+                        {fitnessGoals.map(g => <li onClick={() => this.handleGoalSelect(g)}>{g.title}</li>)}
+                    </ul>
                 </div>
                 <div className="box advertisement">Advertisement</div>
                 <div className="box footer">Footer</div>

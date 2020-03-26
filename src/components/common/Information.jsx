@@ -1,6 +1,7 @@
 import React from 'react';
 
 const Information = ({ goal: data }) => {
+    console.log(data);
     if (!data._id) return data;
 
     return (

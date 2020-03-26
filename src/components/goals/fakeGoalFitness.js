@@ -14,11 +14,11 @@ const fitnessGoals = [
         _id: "5b21ca3eeb7f6fbccd471816",
         title: "Decrease Body Fat",
         description: "This may seem like an obvious one but it is one of the most important steps to a healthier you. Reducing your body fat has a lot of benefits such as:",
-        benefits: {
-            One: "Better performance and endurance",
-            Two: "Improved appearance and confidence",
-            Three: "Better hormonal profiles in your body"
-        }
+        benefits: [
+            "Better performance and endurance",
+            "Improved appearance and confidence",
+            "Better hormonal profiles in your body"
+        ]
     },
 
     {
