@@ -1,31 +1,44 @@
-import React, { Component } from 'react'
-import PageHeader from "../common/pageHeader"
+import React, { Component } from 'react';
+import { getFitnessGoals } from '../goals/fakeGoalFitness';
+import PageHeader from "../common/pageHeader";
 
 
 class Home extends Component {
     state = {
-        fitnessGoals: []
+        fitnessGoals: [],
     }
 
     componentDidMount() {
-        this.setState({ fitnessGoals: getFitnessGoals() })
+        const fitnessGoals = [
+            {
+                _id: '',
+                title: '"Live a Healthier Life This Year"',
+                description: "Get matched with the right foods and make your fitness goals a reality."
+            },
+            ...getFitnessGoals()
+        ];
+
+        this.setState({ fitnessGoals });
     };
 
 
     render() {
         const { fitnessGoals } = this.state;
+        const filtered =
+            selectedGoal && selectedGoal._id
+                ?
 
+                // const benefits = filtered.benefits ? filtered.benefits : null;
+                console.log(filtered);
         return (
             <React.Fragment>
                 <div className="box header">
                     <PageHeader header={this.props.headerProperty} />
                 </div>
                 <div className="box instructions">
-                    <h3>Title</h3>
-                    <p>Paragraph</p>
-                    <ul>
-                        <li>UnorderedList</li>
-                    </ul>
+                    <h3>{filtered.title}</h3>
+                    <p>{filtered.description}</p>
+                    {/* {benefits} */}
                 </div>
                 <div className="box carousel">
                     <p>
