@@ -24,7 +24,7 @@ class Home extends Component {
     render() {
         const { selectedGoal, fitnessGoals } = this.state;
 
-        const { titleProperty, paragraphProperty } = this.props;
+        const { headerProperty, titleProperty, paragraphProperty } = this.props;
         const goal =
             !selectedGoal
                 ? <React.Fragment>{titleProperty}{paragraphProperty}</React.Fragment>
@@ -33,7 +33,7 @@ class Home extends Component {
         return (
             <React.Fragment>
                 <div className="box header">
-                    <PageHeader header={this.props.headerProperty} />
+                    <PageHeader header={headerProperty} />
                 </div>
                 <div className="box information">
                     <Information goal={goal} />
