@@ -1,17 +1,31 @@
-import React from 'react';
+import React, { Component } from 'react';
 
-const Information = ({ goal: data }) => {
-    console.log(data);
-    if (!data._id) return data;
+class Information extends Component {
+    renderList = (data, listProperty) => {
+        if (data[listProperty]) return <ul>{data[listProperty].map(b => <li key={b}>{b}</li>)}</ul>;
 
-    return (
-        <React.Fragment>
-            <h3>{data.title}</h3>
-            <p>{data.description}</p>
-            {data.benefits ? <ul>{data.benefits.map(b => <li key={b}>{b}</li>)}</ul> : null}
-        </React.Fragment>
+        return null;
+    };
 
-    );
-}
+    render() {
+        const { goal: data, titleProperty, descriptionProperty, listProperty, valueProperty } = this.props;
+        if (!data[valueProperty]) return data;
+
+        return (
+            <React.Fragment>
+                <h3>{data[titleProperty]}</h3>
+                <p>{data[descriptionProperty]}</p>
+                {this.renderList(data, listProperty)}
+            </React.Fragment>
+        );
+    };
+};
+
+Information.defaultProps = {
+    valueProperty: "_id",
+    titleProperty: "title",
+    descriptionProperty: "description",
+    listProperty: "list"
+};
 
 export default Information;

@@ -14,7 +14,7 @@ class Home extends Component {
     };
 
     handleGoalSelect = (goal) => {
-        console.log(goal);
+        // console.log(goal);
         this.setState({ selectedGoal: goal })
     };
 
