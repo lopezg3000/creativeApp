@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-import { getFitnessGoals, getGoal } from '../goals/fakeGoalFitness';
-import PageHeader from "../common/pageHeader";
-import Information from '../common/Information';
+import { getFitnessGoals, findGoal } from '../goals/fakeGoalFitness';
+import PageHeader from '../common/pageHeader';
+import Content from './homeContent';
+
 
 
 class Home extends Component {
@@ -18,6 +19,13 @@ class Home extends Component {
         this.setState({ selectedGoal: goal })
     };
 
+    getGoal = (selectedGoal, titleProperty, paragraphProperty) => {
+        if (!selectedGoal) return (
+            <React.Fragment> {titleProperty}{paragraphProperty}</React.Fragment>
+        );
+
+        return findGoal(selectedGoal._id);
+    }
 
 
 
@@ -25,23 +33,20 @@ class Home extends Component {
         const { selectedGoal, fitnessGoals } = this.state;
 
         const { headerProperty, titleProperty, paragraphProperty } = this.props;
-        const goal =
-            !selectedGoal
-                ? <React.Fragment>{titleProperty}{paragraphProperty}</React.Fragment>
-                : getGoal(selectedGoal._id);
+
+        const goal = this.getGoal(selectedGoal, titleProperty, paragraphProperty);
 
         return (
             <React.Fragment>
                 <div className="box header">
                     <PageHeader header={headerProperty} />
                 </div>
-                <div className="box information">
-                    <Information goal={goal} />
-                </div>
-                <div className="box carousel">
-                    <ul>
-                        {fitnessGoals.map(g => <li onClick={() => this.handleGoalSelect(g)}>{g.title}</li>)}
-                    </ul>
+                <div className="box content">
+                    <Content
+                        fitnessGoals={fitnessGoals}
+                        goal={goal}
+                        onGoalSelect={this.handleGoalSelect}
+                    />
                 </div>
                 <div className="box advertisement">Advertisement</div>
                 <div className="box footer">Footer</div>

@@ -2,13 +2,16 @@ import React, { Component } from 'react';
 
 class Information extends Component {
     renderList = (data, listProperty) => {
-        if (data[listProperty]) return <ul>{data[listProperty].map(b => <li key={b}>{b}</li>)}</ul>;
+        if (data[listProperty]) return (
+            <ul>
+                {data[listProperty].map(b => <li key={b}>{b}</li>)}
+            </ul>);
 
         return null;
     };
 
     render() {
-        const { goal: data, titleProperty, descriptionProperty, listProperty, valueProperty } = this.props;
+        const { data, titleProperty, descriptionProperty, listProperty, valueProperty } = this.props;
         if (!data[valueProperty]) return data;
 
         return (
