@@ -27,8 +27,6 @@ class Home extends Component {
         return findGoal(selectedGoal._id);
     }
 
-
-
     render() {
         const { selectedGoal, fitnessGoals } = this.state;
 

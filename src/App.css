@@ -28,7 +28,6 @@ body {
 .container {
   display: grid;
   min-height: 768px;
-  column-gap: 30px;
   row-gap: 10px;
   width: 100%;
   grid-template-columns: repeat(4, [col] auto);
@@ -65,17 +64,18 @@ body {
   grid-column: col / span 4;
   grid-row: row 2;
   display:grid;
-  column-gap: 20px;
   grid-template-columns: repeat(4, [col] 1fr);
 
 }
 
 .information {
   grid-column: col / span 2;
+  margin: 10%;
 }
 
 .carousel {
   grid-column: col 3 / span 2;
+  margin: 10%;
 }
 
 .advertisement {
