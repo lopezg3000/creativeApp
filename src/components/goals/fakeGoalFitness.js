@@ -41,3 +41,6 @@ export function getFitnessGoals() {
 export function findGoal(id) {
     return fitnessGoals.find(g => g._id === id);
 }
+
+
+{/* <p style="text-align: center; z-index: 5; top: 50%; bottom: 50%; postition: absolute; transform: translate(0%, -600%);"> */ }
