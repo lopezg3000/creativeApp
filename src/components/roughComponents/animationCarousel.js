@@ -3,7 +3,7 @@ import { JsxEmit } from 'typescript';
 
 class Carousel extends Component {
   state = {
-    carouselCells: ["cellOne", "cellTwo", 'cellThree', 'cellFour']
+    activeIndex = 0
   }
 
   render() {
