@@ -6,23 +6,27 @@ class Carousel extends Component {
     activeIndex = 0
   }
 
+
+
   render() {
     return (
       <React.fragment>
-        <div className="scene">
-          <div className="carousel">
-            <div key={0} className="carousel__cell">1</div>
-            <div key={1} className="carousel__cell">2</div>
-            <div key={2} className="carousel__cell">3</div>
-            <div key={3} className="carousel__cell">4</div>
+        <div className="buttonContainer">
+          <div className="buttons">
+            <button onClick={this.handlePrevClick}></button>
+            <button onClick={this.handleNextClick}></button>
+          </div>
+          <div className="scene">
+            <div className="carousel">
+              <div key={0} className="carousel__cell">1</div>
+              <div key={1} className="carousel__cell">2</div>
+              <div key={2} className="carousel__cell">3</div>
+              <div key={3} className="carousel__cell">4</div>
 
 
+            </div>
           </div>
         </div>
-        <p style="text-align: center;">
-          <button class="previous-button">Previous</button>
-          <button class="next-button">Next</button>
-        </p>
       </React.fragment>
     );
   }
