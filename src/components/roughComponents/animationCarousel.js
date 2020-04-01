@@ -1,38 +1,40 @@
 import React, { Component } from 'react';
-import { JsxEmit } from 'typescript';
 
 class Carousel extends Component {
   state = {
-    activeIndex = 0
+    activeIndex: 0
   }
 
+  handlePrevClick = () => {
+    console.log("Previous Button Clicked");
+  }
 
+  handleNextClick = () => {
+    console.log("Next Button Clicked");
+  }
 
   render() {
     return (
-      <React.fragment>
-        <div className="buttonContainer">
-          <div className="buttons">
-            <button onClick={this.handlePrevClick}></button>
-            <button onClick={this.handleNextClick}></button>
-          </div>
-          <div className="scene">
-            <div className="carousel">
-              <div key={0} className="carousel__cell">1</div>
-              <div key={1} className="carousel__cell">2</div>
-              <div key={2} className="carousel__cell">3</div>
-              <div key={3} className="carousel__cell">4</div>
-
-
-            </div>
+      <div className="buttonContainer">
+        <div className="buttons">
+          <button onClick={this.handlePrevClick}>Previous</button>
+          <button onClick={this.handleNextClick}>Next</button>
+        </div>
+        <div className="scene">
+          <div className="carousel">
+            <div key={0} className="carousel__cell">1</div>
+            <div key={1} className="carousel__cell">2</div>
+            <div key={2} className="carousel__cell">3</div>
+            <div key={3} className="carousel__cell">4</div>
           </div>
         </div>
-      </React.fragment>
+      </div>
     );
   }
 }
 
 export default Carousel;
+
 
 
 // Js
