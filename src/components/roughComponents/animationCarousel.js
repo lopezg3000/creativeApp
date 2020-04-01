@@ -9,12 +9,12 @@ class Carousel extends Component {
   render() {
     return (
       <React.fragment>
-        <div class="scene">
-          <div class="carousel">
-            <div class="carousel__cell">1</div>
-            <div class="carousel__cell">2</div>
-            <div class="carousel__cell">3</div>
-            <div class="carousel__cell">4</div>
+        <div className="scene">
+          <div className="carousel">
+            <div key={0} className="carousel__cell">1</div>
+            <div key={1} className="carousel__cell">2</div>
+            <div key={2} className="carousel__cell">3</div>
+            <div key={3} className="carousel__cell">4</div>
 
 
           </div>
