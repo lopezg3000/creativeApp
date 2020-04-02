@@ -8,10 +8,12 @@ const omit = (obj, omitKey) =>
         return result;
     }, {});
 
+
+
 const overlayStyles = {
     // position: "absolute",
-    filter: "blur(10px)",
-    transition: "opacity ease-in 1000ms",
+    filter: "blur(3px)",
+    transition: "opacity ease-in 50s",
     // clipPath: "inset(0)"
 
 };
