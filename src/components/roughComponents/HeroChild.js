@@ -1,51 +1,48 @@
-import React, { Component } from "react"
+import React, { Component } from 'react';
 
-const omit = (obj, omitKey) =>
-    Object.keys(obj).reduce((result, key) => {
-        if (key !== omitKey) {
-            result[key] = obj[key];
+class ProgressiveImage extends Component {
+    state = {
+        currentImage: this.props.preview,
+        loading: true,
+    }
+
+    componentDidMount() {
+        this.fetchImage(this.props.image)
+    }
+
+    componentWillReceiveProps(nextProps) {
+        if (nextProps.image !== this.props.image) {
+            this.setState({ currentImage: nextProps.preview, loading: true }, () => {
+                this.fetchImage(nextProps.image)
+            })
         }
-        return result;
-    }, {});
+    }
 
+    componentWillUnmount() {
+        if (this.loadingImage) {
+            this.loadingImage.onload = null
+        }
+    }
 
+    fetchImage = src => {
+        const image = new Image()
+        image.onload = () => this.setState({ currentImage: this.loadingImage.src, loading: false })
+        image.src = src
+        this.loadingImage = image
+    }
 
-const overlayStyles = {
-    // position: "absolute",
-    filter: "blur(1px)",
-    transition: "opacity ease-in 1000ms",
-    clipPath: "inset(0)"
-
-};
-
-class HeroChild extends Component {
-    constructor(props) {
-        super(props);
-        this.state = { highResImageLoaded: false };
+    style = loading => {
+        return {
+            transition: '0.5s filter linear',
+            filter: `${loading ? 'blur(50px)' : ''}`,
+        }
     }
 
     render() {
-        const { overlaySrc } = this.props;
-        const { highResImageLoaded } = this.state;
-        let filteredProps = omit(this.props, "overlaySrc");
-        return (
-            <span>
-                <img
-                    {...filteredProps}
-                    onLoad={() => { this.setState({ highResImageLoaded: true }) }}
-                    ref={img => this.highResImage = img}
-                    src={this.props.src}
-                />
-                <img
-                    {...filteredProps}
-                    className={`${this.props.className} ${overlayStyles}`}
-                    {...highResImageLoaded && { style: { opacity: "0" } }}
-                    src={overlaySrc}
-                />
-            </span>
-        );
+        const { currentImage, loading } = this.state
+        const { alt } = this.props
+        return <div className="heroContainer"><img className="heroStyled" style={this.style(loading)} src={currentImage} alt={alt} /></div>
     }
-
 }
 
-export default HeroChild;
+export default ProgressiveImage;

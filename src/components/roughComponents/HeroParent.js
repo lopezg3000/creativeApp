@@ -2,19 +2,14 @@ import React from 'react';
 import "./heroStyled.css"
 import HighResRecipe from "../../Img/highResHero.jpg";
 import LowResRecipe from "../../Img/lowResHero.jpg";
-import HeroChild from "./HeroChild";
+import ProgressiveImage from "./HeroChild";
 
 const HeroParent = () => {
     return (
-        <div className="heroContainer">
-            <HeroChild
-                className={"heroStyled"}
-                alt={"pasta"}
-                overlaySrc={LowResRecipe}
-                src={HighResRecipe}
-
-            />
-        </div >
+        <ProgressiveImage
+            preview={LowResRecipe}
+            image={HighResRecipe}
+        />
     );
 
 };
