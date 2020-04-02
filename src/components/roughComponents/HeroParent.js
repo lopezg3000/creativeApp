@@ -1,12 +1,12 @@
 import React from 'react';
 import "./heroStyled.css"
-import HighResRecipe from "../Img/highResHero.jpg";
-import LowResRecipe from "../Img/lowResHero.jpg";
+import HighResRecipe from "../../Img/highResHero.jpg";
+import LowResRecipe from "../../Img/lowResHero.jpg";
 import HeroChild from "./HeroChild";
 
 const HeroParent = () => {
     return (
-        <div className="App">
+        <div className="heroContainer">
             <HeroChild
                 className={"heroStyled"}
                 alt={"pasta"}

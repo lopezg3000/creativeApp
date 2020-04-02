@@ -1,6 +1,7 @@
 import React from 'react';
 import Home from './components/home/home'
 import './App.css';
+import HeroParent from "./components/roughComponents/HeroParent";
 // import Header from "./components/roughComponents/Header"
 // import Information from "./components/roughComponents/Information"
 // import Home from "./components/home/Home"
@@ -17,9 +18,12 @@ import './App.css';
 
 function App() {
   return (
-    <div className="container">
-      <Home />
-    </div>
+    <React.Fragment>
+      <HeroParent />
+      <div className="container">
+        <Home />
+      </div>
+    </React.Fragment>
   );
 }
 
