@@ -25,11 +25,9 @@
 .container {
   display: grid;
   min-height: 768px;
-  row-gap: 10px;
   width: 100%;
   grid-template-columns: repeat(4, [col] auto);
   grid-template-rows: [row] auto, repeat(3, [row] 1fr);
-  /* background-color: #fff; */
   color: #444;
 }
 
@@ -42,34 +40,52 @@
 }
 
 .box .box {
-  background-color: #ccc;
-  color: #444;
+  background-color: #faf0d7;
+  color: #034702;
 }
 
 .header {
   grid-column: col / span 4;
   grid-row: row;
-  height: 50px;
+  height: 40px;
   position: sticky;
+  border-radius: 1px;
   top: 0px;
+  color: #faf0d7;
+  z-index: 3;
+  background-color: #421d1ad9
 }
 
 .headerText {
   margin: 0;
 }
 
+.leftColumn {
+  padding: 60px;
+  grid-column: col 4;
+  grid-row: row 2 / span 2;
+}
+
+.rightColumn {
+  padding: 60px;
+  grid-column: col ;
+  grid-row: row 2;
+}
+
 .content {
   height: 650px;
-  grid-column: col  / span 4;
+  grid-column: col 2 / span 2;
   grid-row: row 2;
   display:grid;
   grid-template-columns: repeat(4, [col] 1fr);
-
+  z-index: 1;
+  background-color: #dbbb909e;
 }
 
 .information {
   grid-column: col / span 2;
   margin: 10%;
+  
 }
 
 .carousel {
@@ -78,11 +94,11 @@
 }
 
 .advertisement {
-  grid-column: col / span 4;
+  grid-column: col 2 / span 2;
   grid-row: row 3;
 }
 
 .footer {
-  grid-column: col /span 4;
+  grid-column: col 2 /span 2;
   grid-row: row 4;
 }

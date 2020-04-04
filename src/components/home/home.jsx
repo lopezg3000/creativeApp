@@ -39,6 +39,8 @@ class Home extends Component {
                 <div className="box header">
                     <PageHeader header={headerProperty} />
                 </div>
+                <div className="leftColumn"></div>
+                <div className="rightColumn"></div>
                 <div className="box content">
                     <Content
                         fitnessGoals={fitnessGoals}
