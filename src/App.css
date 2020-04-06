@@ -26,7 +26,7 @@
   display: grid;
   min-height: 768px;
   width: 100%;
-  grid-template-columns: repeat(4, [col] auto);
+  grid-template-columns: repeat(12, [col] 1fr);
   grid-template-rows: [row] auto, repeat(3, [row] 1fr);
   color: #444;
 }
@@ -45,9 +45,9 @@
 }
 
 .header {
-  grid-column: col / span 4;
+  grid-column: col / span 12;
   grid-row: row;
-  height: 40px;
+  height: 10px;
   position: sticky;
   border-radius: 1px;
   top: 0px;
@@ -61,40 +61,71 @@
 }
 
 .leftColumn {
-  padding: 60px;
-  grid-column: col 4;
+  grid-column: col;
   grid-row: row 2 / span 2;
 }
 
 .rightColumn {
-  padding: 60px;
-  grid-column: col ;
-  grid-row: row 2;
+  grid-column: col 12;
+  grid-row: row 2 / span 2;
 }
 
 .content {
-  height: 650px;
-  grid-column: col 2 / span 2;
+  height: 720px;
+  padding: 0 0 0 0;
+  grid-column: col 2 / span 10;
   grid-row: row 2;
   display:grid;
   grid-template-columns: repeat(4, [col] 1fr);
-  grid-template-rows: [row] 1fr, repeat(2, [row] 3fr), [row] 1fr;
+  grid-template-rows: [row] 1fr, repeat(2, [row] 1fr), [row] 1fr;
   z-index: 1;
   background-color: #dbbb909e;
 }
 
+.box .banner {
+  height: 70px;
+  background-color: #dbbb909e;
+  grid-column: col / span 4;
+  grid-row: 1;
+}
+
 .information {
-  grid-column: col / span 2;
+  height: 420px;
+  grid-column: col / span 4;
   grid-row: 2;
-  /* margin: 10%; */
   
 }
 
 .carousel {
-  grid-column: col 3 / span 2;
+  height: 110px;
+  grid-column: col 1 / span 4;
   grid-row: 3;
+  display: grid;
+  grid-template-columns: repeat(4, [col] 1fr);
   /* margin: 10%; */
 }
+
+.carousel-button:nth-child(1) {
+  grid-column: col;
+  list-style: none;
+  margin: auto;
+}
+
+.carousel-button:nth-child(2) {
+  grid-column: col 2;
+  margin: auto;
+}
+
+.carousel-button:nth-child(3) {
+  grid-column: col 3;
+  background-color: yellow;
+}
+
+.carousel-button:nth-child(4) {
+  grid-column: col 4;
+  background-color: purple;
+}
+
 
 .advertisement {
   grid-column: col 2 / span 2;
