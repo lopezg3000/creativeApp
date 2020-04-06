@@ -78,19 +78,22 @@
   grid-row: row 2;
   display:grid;
   grid-template-columns: repeat(4, [col] 1fr);
+  grid-template-rows: [row] 1fr, repeat(2, [row] 3fr), [row] 1fr;
   z-index: 1;
   background-color: #dbbb909e;
 }
 
 .information {
   grid-column: col / span 2;
-  margin: 10%;
+  grid-row: 2;
+  /* margin: 10%; */
   
 }
 
 .carousel {
   grid-column: col 3 / span 2;
-  margin: 10%;
+  grid-row: 3;
+  /* margin: 10%; */
 }
 
 .advertisement {
