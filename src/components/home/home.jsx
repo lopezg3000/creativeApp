@@ -30,14 +30,14 @@ class Home extends Component {
     render() {
         const { selectedGoal, fitnessGoals } = this.state;
 
-        const { headerProperty, titleProperty, paragraphProperty } = this.props;
+        const { headerProperty, subHeaderProperty, titleProperty, paragraphProperty } = this.props;
 
         const goal = this.getGoal(selectedGoal, titleProperty, paragraphProperty);
 
         return (
             <React.Fragment>
                 <div className="box header">
-                    <PageHeader header={headerProperty} />
+                    <PageHeader header={headerProperty} subHeader={subHeaderProperty} />
                 </div>
                 <div className="leftColumn"></div>
                 <div className="rightColumn"></div>
@@ -57,7 +57,8 @@ class Home extends Component {
 }
 
 Home.defaultProps = {
-    headerProperty: "The Daily Smoothie",
+    headerProperty: "Daily",
+    subHeaderProperty: "Smoothy",
     titleProperty: <h3>Live a Healthier Life</h3>,
     paragraphProperty: <p>Get matched with the right foods and make your fitness goals a reality.</p>
 };

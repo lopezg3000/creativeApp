@@ -46,18 +46,31 @@
 
 .header {
   grid-column: col / span 12;
+  position: relative;
   grid-row: row;
   height: 10px;
   position: sticky;
   border-radius: 1px;
   top: 0px;
-  color: #faf0d7;
+  /* color: #faf0d7; */
+  color: #421d1ad9;
   z-index: 3;
-  background-color: #421d1ad9
+  background-color: #421d1ad9;
 }
 
 .headerText {
   margin: 0;
+  position: absolute;
+  top: 70px;
+  left: 200px;
+  font-size: 2vw;
+}
+
+.subHeaderText {
+  margin: 0;
+  position: absolute;
+  top: 80px;
+  left: 175px;
 }
 
 .leftColumn {
@@ -118,12 +131,12 @@
 
 .carousel-button:nth-child(3) {
   grid-column: col 3;
-  background-color: yellow;
+  margin: auto
 }
 
 .carousel-button:nth-child(4) {
   grid-column: col 4;
-  background-color: purple;
+  margin: auto;
 }
 
 

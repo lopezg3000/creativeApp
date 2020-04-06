@@ -1,9 +1,12 @@
 import React from 'react'
 
 
-const PageHeader = ({ header }) => {
+const PageHeader = ({ header, subHeader }) => {
     return (
-        <h1 className="headerText">{header}</h1>
+        <React.Fragment>
+            <h1 className="headerText">{header}</h1>
+            <h2 className="subHeaderText">{subHeader}</h2>
+        </React.Fragment>
     );
 }
 
