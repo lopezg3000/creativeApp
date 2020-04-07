@@ -1,7 +1,7 @@
 import React from 'react';
 import "./heroStyled.css"
-import HighResRecipe from "../../Img/highResHero.jpg";
-import LowResRecipe from "../../Img/lowResHero.jpg";
+import HighResRecipe from "../../img/highResHero.jpg";
+import LowResRecipe from "../../img/lowResHero.jpg";
 import ProgressiveImage from "./HeroChild";
 
 const HeroParent = () => {

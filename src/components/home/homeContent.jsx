@@ -1,18 +1,42 @@
-import React from 'react';
+import React, { Component } from 'react';
 import Information from '../common/Information';
 
-const HomeContent = ({ fitnessGoals, goal, onGoalSelect }) => {
-    return (
-        <React.Fragment>
-            <div className="box banner"></div>
-            <div className="box information">
-                <Information data={goal} />
-            </div>
-            <div className="box carousel">
-                {fitnessGoals.map(g => <h6 className="carousel-button" onClick={() => onGoalSelect(g)}>{g.title}</h6>)}
-            </div>
-        </React.Fragment>
-    );
-}
+class HomeContent extends Component {
+    state = {}
+    render() {
+        const { fitnessGoals, goal, onGoalSelect } = this.props;
+        const imgArray = [
+            { fileName: "buildLeanMuscle", label: "Build More Lean Muscle" },
+            { fileName: "decreaseBodyFat", label: "Decrease Body Fat" },
+            { fileName: "drinkMoreWater", label: "Drink More Water" },
+            { fileName: "eatMoreGreens", label: "Eat More Greens" }
+        ];
+
+        return (
+            <React.Fragment>
+                <div className="box banner"></div>
+                <div className="box information">
+                    <Information data={goal} />
+                </div>
+                <div className="box carousel">
+                    {fitnessGoals.map(g => (
+                        <div>
+                            <h6 className="carousel-button" onClick={() => onGoalSelect(g)}>{g.title}</h6>
+                            {
+                                imgArray.map(img => {
+                                    if (img.label === g.title) return (
+                                        <img style={{ width: "10px", height: "10px" }} key={img} src={require(`../../img/${img.fileName}.jpg`)} />
+                                    )
+
+                                    return null;
+                                })
+                            }
+                        </div>
+                    ))}
+                </div>
+            </React.Fragment>
+        );
+    };
+};
 
 export default HomeContent;
