@@ -21,7 +21,7 @@ class HomeContent extends Component {
                 <div className="box carousel">
                     {fitnessGoals.map(g => (
                         <div className="carousel-button">
-                            <h6 className="carousel-text" onClick={() => onGoalSelect(g)}>{g.title}</h6>
+                            <span className="carousel-text" onClick={() => onGoalSelect(g)}>{g.title}</span>
                             {
                                 imgArray.map(img => {
                                     if (img.label === g.title) return (

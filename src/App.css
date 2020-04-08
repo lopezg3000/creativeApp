@@ -112,7 +112,7 @@
 
 .carousel {
   height: 165px;
-  position: relative;
+  /* position: relative; */
   grid-column: col 1 / span 4;
   grid-row: 3;
   display: grid;
@@ -120,31 +120,47 @@
   /* margin: 10%; */
 }
 
-.carousel-text {
-  top: 20px;
-  /* margin-left: 50px; */
+.carousel-text:nth-child(1) {
   position: absolute;
+  top: 20px;
+  display: block;
+  padding: 0 20px 0 60px;
   z-index: 2;
+  margin: auto;
+  font-size: 20px;
 }
+
+.carousel-text:nth-child(2) {
+  position: absolute;
+  display: inline-flex;
+  padding: 0 20px 0 90px;
+  z-index: 2;
+  /* margin: auto; */
+}
+
 
 .carousel-button:nth-child(1) {
   grid-column: col;
   overflow: hidden;
+  position: relative;
 }
 
 .carousel-button:nth-child(2) {
   grid-column: col 2;
   overflow: hidden;
+  position: relative;
 }
 
 .carousel-button:nth-child(3) {
   grid-column: col 3;
   overflow: hidden;
+  position: relative;
 }
 
 .carousel-button:nth-child(4) {
   grid-column: col 4;
   overflow: hidden;
+  position: relative;
 }
 
 
