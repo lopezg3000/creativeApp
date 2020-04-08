@@ -112,6 +112,7 @@
 
 .carousel {
   height: 165px;
+  position: relative;
   grid-column: col 1 / span 4;
   grid-row: 3;
   display: grid;
@@ -120,7 +121,10 @@
 }
 
 .carousel-text {
-  margin: 0;
+  top: 20px;
+  /* margin-left: 50px; */
+  position: absolute;
+  z-index: 2;
 }
 
 .carousel-button:nth-child(1) {
