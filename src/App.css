@@ -35,7 +35,7 @@
   background-color: #444;
   color: #fff;
   border-radius: 5px;
-  padding: 20px;
+  /* padding: 20px; */
   font-size: 120%;
 }
 
@@ -55,12 +55,13 @@
   color: #421d1ad9;
   z-index: 3;
   background-color: #421d1ad9;
+  padding-top: 40px;
 }
 
 .headerText {
   margin: 0;
   position: relative;
-  top: 70px;
+  top: 20px;
   left: 200px;
   font-size: 2vw;
 }
@@ -68,7 +69,7 @@
 .subHeaderText {
   margin: 0;
   position: relative;
-  top: 80px;
+  top: 20px;
   left: 175px;
 }
 
@@ -95,21 +96,22 @@
 }
 
 .box .banner {
-  height: 70px;
+  height: 105px;
   background-color: #dbbb909e;
+  /* background-color: #444; */
   grid-column: col / span 4;
   grid-row: 1;
 }
 
 .information {
-  height: 420px;
+  height: 450px;
   grid-column: col / span 4;
   grid-row: 2;
   
 }
 
 .carousel {
-  height: 110px;
+  height: 165px;
   grid-column: col 1 / span 4;
   grid-row: 3;
   display: grid;
@@ -117,25 +119,28 @@
   /* margin: 10%; */
 }
 
+.carousel-text {
+  margin: 0;
+}
+
 .carousel-button:nth-child(1) {
   grid-column: col;
-  list-style: none;
-  margin: auto;
+  overflow: hidden;
 }
 
 .carousel-button:nth-child(2) {
   grid-column: col 2;
-  margin: auto;
+  overflow: hidden;
 }
 
 .carousel-button:nth-child(3) {
   grid-column: col 3;
-  margin: auto
+  overflow: hidden;
 }
 
 .carousel-button:nth-child(4) {
   grid-column: col 4;
-  margin: auto;
+  overflow: hidden;
 }
 
 

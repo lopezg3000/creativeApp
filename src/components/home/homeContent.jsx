@@ -20,12 +20,12 @@ class HomeContent extends Component {
                 </div>
                 <div className="box carousel">
                     {fitnessGoals.map(g => (
-                        <div>
-                            <h6 className="carousel-button" onClick={() => onGoalSelect(g)}>{g.title}</h6>
+                        <div className="carousel-button">
+                            <h6 className="carousel-text" onClick={() => onGoalSelect(g)}>{g.title}</h6>
                             {
                                 imgArray.map(img => {
                                     if (img.label === g.title) return (
-                                        <img style={{ width: "10px", height: "10px" }} key={img} src={require(`../../img/${img.fileName}.jpg`)} />
+                                        <img style={{ height: "500px" }} key={img} src={require(`../../img/${img.fileName}.jpg`)} />
                                     )
 
                                     return null;
