@@ -20,9 +20,9 @@ class HomeContent extends Component {
                 </div>
                 <div className="box carousel">
                     {fitnessGoals.map(g => (
-                        <div className="carouselButton">
+                        <div className="carouselButton" style={{ cursor: "pointer" }} onClick={() => onGoalSelect(g)}>
                             <div className="carouselButtonText">
-                                <span onClick={() => onGoalSelect(g)}>{g.title}</span>
+                                <span>{g.title}</span>
                             </div>
                             {
                                 imgArray.map(img => {
