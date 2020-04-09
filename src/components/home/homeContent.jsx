@@ -1,15 +1,19 @@
 import React, { Component } from 'react';
 import Information from '../common/Information';
+import BuildMoreLeanMuscle from "../../img/buildMoreLeanMuscle.jpg";
+import DecreaseBodyFat from "../../img/decreaseBodyFat.jpg";
+import DrinkMoreWater from "../../img/drinkMoreWater.jpg";
+import EatMoreGreens from "../../img/eatMoreGreens.jpg";
 
 class HomeContent extends Component {
     state = {}
     render() {
         const { fitnessGoals, goal, onGoalSelect } = this.props;
         const imgArray = [
-            { id: "1", fileName: "buildLeanMuscle", label: "Build More Lean Muscle" },
-            { id: "2", fileName: "decreaseBodyFat", label: "Decrease Body Fat" },
-            { id: "3", fileName: "drinkMoreWater", label: "Drink More Water" },
-            { id: "4", fileName: "eatMoreGreens", label: "Eat More Greens" }
+            { id: "1", componentName: BuildMoreLeanMuscle, label: "Build More Lean Muscle" },
+            { id: "2", componentName: DecreaseBodyFat, label: "Decrease Body Fat" },
+            { id: "3", componentName: DrinkMoreWater, label: "Drink More Water" },
+            { id: "4", componentName: EatMoreGreens, label: "Eat More Greens" }
         ];
 
         return (
@@ -28,7 +32,7 @@ class HomeContent extends Component {
                                 imgArray.map(img => {
                                     if (img.label === g.title) return (
                                         <div className="carouselButtonImg">
-                                            <img className={`buttonImg${img.id}`} style={{ height: "500px" }} key={img} src={require(`/img/${img.fileName}.jpg`)} />
+                                            <img className={`buttonImg${img.id}`} style={{ height: "500px" }} key={img} src={img.componentName} />
                                         </div>
                                     )
 
