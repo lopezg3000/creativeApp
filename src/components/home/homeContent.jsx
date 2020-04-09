@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import Information from '../common/Information';
-import BuildMoreLeanMuscle from "../../img/buildMoreLeanMuscle.jpg";
-import DecreaseBodyFat from "../../img/decreaseBodyFat.jpg";
-import DrinkMoreWater from "../../img/drinkMoreWater.jpg";
-import EatMoreGreens from "../../img/eatMoreGreens.jpg";
+import BuildMoreLeanMuscle from "../../assets/img/buildMoreLeanMuscle.jpg";
+import DecreaseBodyFat from "../../assets/img/decreaseBodyFat.jpg";
+import DrinkMoreWater from "../../assets/img/drinkMoreWater.jpg";
+import EatMoreGreens from "../../assets/img/eatMoreGreens.jpg";
 
 class HomeContent extends Component {
     state = {}
