@@ -21,13 +21,12 @@
   color: #09d3ac;
 }
 
-
 .container {
   display: grid;
   min-height: 768px;
   width: 100%;
   grid-template-columns: repeat(12, [col] 1fr);
-  grid-template-rows: [row] auto, repeat(3, [row] 1fr);
+  grid-template-rows: [row] auto, repeat(3 [row] 1fr);
   color: #444;
 }
 
@@ -148,7 +147,6 @@
   overflow: hidden;
 }
 
-
 .carouselButtonText:nth-child(1){
   grid-row: 2;
   margin: auto;
@@ -166,35 +164,56 @@
   grid-row: 2;
 }
 
-
 .carouselButtonImg:nth-child(1) {
   grid-row: 1;
   overflow: hidden;
   margin: 0 20px 0 20px;
+  border-radius: 10px;
 }
-
-
 
 .carouselButtonImg:nth-child(2) {
   grid-row: 1;
   overflow: hidden;
   margin: 0 20px 0 20px;
+  border-radius: 10px;
 }
 
 .carouselButtonImg:nth-child(3) {
   grid-row: 1;
   overflow: hidden;
   margin: 0 20px 0 20px;
+  border-radius: 10px;
 }
 
 .carouselButtonImg:nth-child(4) {
   grid-row: 1;
   overflow: hidden;
   margin: 0 20px 0 20px;
+  border-radius: 10px;
 }
 
+.buttonImg1 {
+  position: relative;
+  bottom: 70px;
+  right: 200px;
+}
 
+.buttonImg2 {
+  position: relative;
+  bottom: 150px;
+  right: 140px;
+}
 
+.buttonImg3 {
+  position: relative;
+  bottom: 250px;
+  right: 450px;
+}
+
+.buttonImg4 {
+  position: relative;
+  right: 100px;
+}
 
 .advertisement {
   grid-column: col 2 / span 2;

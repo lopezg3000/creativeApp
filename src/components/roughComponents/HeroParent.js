@@ -1,6 +1,6 @@
 import React from 'react';
 import "./heroStyled.css"
-import HighResRecipe from "../../img/highResHero.jpg";
+import HighResRecipe from "../../img/highResHero.jpg"
 import LowResRecipe from "../../img/lowResHero.jpg";
 import ProgressiveImage from "./HeroChild";
 
