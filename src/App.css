@@ -49,27 +49,12 @@
   height: 10px;
   position: sticky;
   border-radius: 1px;
-  top: 0px;
-  /* color: #faf0d7; */
+  /* top: 0px; */
   color: #421d1ad9;
   z-index: 3;
   background-color: #421d1ad9;
   padding-top: 40px;
-}
-
-.headerText {
-  margin: 0;
-  position: relative;
-  top: 20px;
-  left: 200px;
-  font-size: 2vw;
-}
-
-.subHeaderText {
-  margin: 0;
-  position: relative;
-  top: 20px;
-  left: 175px;
+  /* color: #faf0d7; */
 }
 
 .leftColumn {
