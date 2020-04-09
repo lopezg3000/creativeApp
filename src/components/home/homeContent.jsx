@@ -6,10 +6,10 @@ class HomeContent extends Component {
     render() {
         const { fitnessGoals, goal, onGoalSelect } = this.props;
         const imgArray = [
-            { fileName: "buildLeanMuscle", label: "Build More Lean Muscle" },
-            { fileName: "decreaseBodyFat", label: "Decrease Body Fat" },
-            { fileName: "drinkMoreWater", label: "Drink More Water" },
-            { fileName: "eatMoreGreens", label: "Eat More Greens" }
+            { id: "1", fileName: "buildLeanMuscle", label: "Build More Lean Muscle" },
+            { id: "2", fileName: "decreaseBodyFat", label: "Decrease Body Fat" },
+            { id: "3", fileName: "drinkMoreWater", label: "Drink More Water" },
+            { id: "4", fileName: "eatMoreGreens", label: "Eat More Greens" }
         ];
 
         return (
@@ -20,12 +20,16 @@ class HomeContent extends Component {
                 </div>
                 <div className="box carousel">
                     {fitnessGoals.map(g => (
-                        <div className="carousel-button">
-                            <span className="carousel-text" onClick={() => onGoalSelect(g)}>{g.title}</span>
+                        <div className="carouselButton">
+                            <div className="carouselButtonText">
+                                <span onClick={() => onGoalSelect(g)}>{g.title}</span>
+                            </div>
                             {
                                 imgArray.map(img => {
                                     if (img.label === g.title) return (
-                                        <img style={{ height: "500px" }} key={img} src={require(`../../img/${img.fileName}.jpg`)} />
+                                        <div className="carouselButtonImg">
+                                            <img className={`buttonImg${img.id}`} style={{ height: "500px" }} key={img} src={require(`../../img/${img.fileName}.jpg`)} />
+                                        </div>
                                     )
 
                                     return null;

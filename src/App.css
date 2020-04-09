@@ -90,7 +90,7 @@
   grid-row: row 2;
   display:grid;
   grid-template-columns: repeat(4, [col] 1fr);
-  grid-template-rows: [row] 1fr, repeat(2, [row] 1fr), [row] 1fr;
+  grid-template-rows: repeat(3, [row] 1fr);
   z-index: 1;
   background-color: #dbbb909e;
 }
@@ -104,63 +104,89 @@
 }
 
 .information {
-  height: 450px;
+  height: 440px;
   grid-column: col / span 4;
   grid-row: 2;
   
 }
 
 .carousel {
-  height: 165px;
-  /* position: relative; */
   grid-column: col 1 / span 4;
   grid-row: 3;
   display: grid;
-  grid-template-columns: repeat(4, [col] 1fr);
-  /* margin: 10%; */
+  grid-template-columns: repeat(4, 1fr);
+  font-size: 18px;
 }
 
-.carousel-text:nth-child(1) {
-  position: absolute;
-  top: 20px;
-  display: block;
-  padding: 0 20px 0 60px;
-  z-index: 2;
+.carouselButton:nth-child(1){
+  position: relative;
+  grid-column: 1;
+  display: grid;
+  grid-template-rows: 135px 30px;
+  overflow: hidden;
+}
+
+.carouselButton:nth-child(2){
+  grid-column: 2;
+  display: grid;
+  grid-template-rows: 135px 30px;
+  overflow: hidden;
+}
+
+.carouselButton:nth-child(3){
+  grid-column: 3;
+  display: grid;
+  grid-template-rows: 135px 30px;
+  overflow: hidden;
+}
+
+.carouselButton:nth-child(4){
+  grid-column: 4;
+  display: grid;
+  grid-template-rows: 135px 40px;
+  overflow: hidden;
+}
+
+
+.carouselButtonText:nth-child(1){
+  grid-row: 2;
   margin: auto;
-  font-size: 20px;
 }
 
-.carousel-text:nth-child(2) {
-  position: absolute;
-  display: inline-flex;
-  padding: 0 20px 0 90px;
-  z-index: 2;
-  /* margin: auto; */
+.carouselButtonText:nth-child(2){
+  grid-row: 2;
+}
+
+.carouselButtonText:nth-child(3){
+  grid-row: 2;
+}
+
+.carouselText:nth-child(4){
+  grid-row: 2;
 }
 
 
-.carousel-button:nth-child(1) {
-  grid-column: col;
+.carouselButtonImg:nth-child(1) {
+  height: 100px;
+  grid-row: 1;
   overflow: hidden;
-  position: relative;
 }
 
-.carousel-button:nth-child(2) {
-  grid-column: col 2;
+
+
+.carouselButtonImg:nth-child(2) {
+  grid-row: 1;
   overflow: hidden;
-  position: relative;
 }
 
-.carousel-button:nth-child(3) {
-  grid-column: col 3;
+.carouselButtonImg:nth-child(3) {
+  grid-row: 1;
   overflow: hidden;
-  position: relative;
 }
 
-.carousel-button:nth-child(4) {
-  grid-column: col 4;
+.carouselButtonImg:nth-child(4) {
+  grid-row: 1;
   overflow: hidden;
-  position: relative;
 }
 
 
