@@ -171,6 +171,7 @@
   grid-row: 1;
   overflow: hidden;
   margin: 0 20px 0 20px;
+  border-radius: 10px;
 }
 
 
@@ -179,21 +180,45 @@
   grid-row: 1;
   overflow: hidden;
   margin: 0 20px 0 20px;
+  border-radius: 10px;
 }
 
 .carouselButtonImg:nth-child(3) {
   grid-row: 1;
   overflow: hidden;
   margin: 0 20px 0 20px;
+  border-radius: 10px;
 }
 
 .carouselButtonImg:nth-child(4) {
   grid-row: 1;
   overflow: hidden;
   margin: 0 20px 0 20px;
+  border-radius: 10px;
 }
 
+.buttonImg1 {
+  position: relative;
+  bottom: 70px;
+  right: 200px;
+}
 
+.buttonImg2 {
+  position: relative;
+  bottom: 150px;
+  right: 140px;
+}
+
+.buttonImg3 {
+  position: relative;
+  bottom: 250px;
+  right: 450px;
+}
+
+.buttonImg4 {
+  position: relative;
+  right: 100px;
+}
 
 
 .advertisement {
