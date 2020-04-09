@@ -32,7 +32,7 @@ class HomeContent extends Component {
                                 imgArray.map(img => {
                                     if (img.label === g.title) return (
                                         <div className="carouselButtonImg">
-                                            <img className={`buttonImg${img.id}`} style={{ height: "500px" }} key={img} src={img.componentName} />
+                                            <img className={`buttonImg${img.id}`} style={{ height: "200px" }} key={img} src={img.componentName} />
                                         </div>
                                     )
 
