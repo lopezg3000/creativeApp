@@ -177,29 +177,29 @@
   border-radius: 10px;
 }
 
-.buttonImg1 {
-  /* position: relative;
+/* .buttonImg1 {
+  position: relative;
   bottom: 70px;
-  right: 200px; */
-}
+  right: 200px;
+} */
 
-.buttonImg2 {
-  /* position: relative;
+/* .buttonImg2 {
+  position: relative;
   bottom: 150px;
-  right: 140px; */
+  right: 140px;
 }
 
 .buttonImg3 {
-  /* position: relative;
+  position: relative;
   bottom: 250px;
-  right: 450px; */
-  /* #40e82d */
-}
+  right: 450px;
+  #40e82d
+} */
 
-.buttonImg4 {
-  /* position: relative;
-  right: 100px; */
-}
+/* .buttonImg4 {
+  position: relative;
+  right: 100px;
+} */
 
 .advertisement {
   grid-column: col 2 / span 2;
