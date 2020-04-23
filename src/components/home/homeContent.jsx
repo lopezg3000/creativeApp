@@ -20,7 +20,7 @@ class HomeContent extends Component {
             <React.Fragment>
                 <div className="box banner"></div>
                 <div className="box information">
-                    <Information data={goal} />
+                    <Information data={goal} imgArr={imgArray} />
                 </div>
                 <div className="box carousel">
                     {fitnessGoals.map(g => (
