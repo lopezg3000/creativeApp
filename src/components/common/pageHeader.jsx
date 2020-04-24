@@ -10,4 +10,9 @@ const PageHeader = ({ header, subHeader }) => {
     );
 }
 
+PageHeader.defaultProps = {
+    header: "Daily",
+    subHeader: "Smoothy"
+};
+
 export default PageHeader;

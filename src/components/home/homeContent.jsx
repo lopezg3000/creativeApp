@@ -5,40 +5,49 @@ import DecreaseBodyFat from "../../assets/img/decreaseBodyFat.jpg";
 import DrinkMoreWater from "../../assets/img/drinkMoreWater.jpg";
 import EatMoreGreens from "../../assets/img/eatMoreGreens.jpg";
 
+
 class HomeContent extends Component {
-    state = {}
+
+    images = [
+        { id: "1", src: BuildMoreLeanMuscle },
+        { id: "2", src: DecreaseBodyFat },
+        { id: "3", src: DrinkMoreWater },
+        { id: "4", src: EatMoreGreens }
+    ];
+
     render() {
-        const { fitnessGoals, goal, onGoalSelect } = this.props;
-        const imgArray = [
-            { id: "1", componentName: BuildMoreLeanMuscle, label: "Build More Lean Muscle" },
-            { id: "2", componentName: DecreaseBodyFat, label: "Decrease Body Fat" },
-            { id: "3", componentName: DrinkMoreWater, label: "Drink More Water" },
-            { id: "4", componentName: EatMoreGreens, label: "Eat More Greens" }
-        ];
+        const { fitnessGoals, onGoalSelect, selectedGoal } = this.props;
 
         return (
             <React.Fragment>
                 <div className="box banner"></div>
                 <div className="box information">
-                    <Information data={goal} imgArr={imgArray} />
+                    <Information data={selectedGoal} images={this.images} />
                 </div>
                 <div className="box carousel">
                     {fitnessGoals.map(g => (
-                        <div className="carouselButton" style={{ cursor: "pointer" }} onClick={() => onGoalSelect(g)}>
-                            <div className="carouselButtonText">
-                                <span>{g.title}</span>
-                            </div>
-                            {
-                                imgArray.map(img => {
-                                    if (img.label === g.title) return (
-                                        <div className="carouselButtonImg">
-                                            <img className={`buttonImg${img.id}`} style={{ height: "200px" }} key={img} src={img.componentName} />
+                        <div
+                            className="carouselButton"
+                            style={{ cursor: "pointer" }}
+                            onClick={() => onGoalSelect(g)}
+                        >
+                            {this.images.map(img => {
+                                if (img.id === g.imgId) return (
+                                    <React.Fragment>
+                                        <div className="carouselButtonText">
+                                            <span>{g.title}</span>
                                         </div>
-                                    )
-
-                                    return null;
-                                })
-                            }
+                                        <div className="carouselButtonImg">
+                                            <img
+                                                className={`buttonImg${img.id}`}
+                                                style={{ height: "200px" }}
+                                                key={img}
+                                                src={img.src}
+                                            />
+                                        </div>
+                                    </React.Fragment>
+                                )
+                            })}
                         </div>
                     ))}
                 </div>

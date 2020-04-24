@@ -15,20 +15,24 @@ class Information extends Component {
     };
 
     render() {
-        const { data, titleProperty, descriptionProperty, listProperty, valueProperty, imgArr } = this.props;
-        if (!data[valueProperty]) return data;
-
+        const { data, titleProperty, descriptionProperty, listProperty, valueProperty, images } = this.props;
+        if (!data) return (
+            <React.Fragment>
+                <h3>Live a Healthier Life</h3>,
+                <p>Get matched with the right foods and make your fitness goals a reality.</p>
+            </React.Fragment>);
 
         return (
             <React.Fragment>
-                {imgArr.map(img => {
-                    if (img.label === data.title) return (
-                        <span><img style={{ width: "auto", height: 200 }} src={img.componentName} /></span>
-                    )
-                })}
-                <h3>{data[titleProperty]}</h3>
-                <p>{data[descriptionProperty]}</p>
-                {this.renderList(data, listProperty)}
+                {images.map(img => (
+                    <div>
+                        <span><img style={{ width: "auto", height: 200 }} src={img.src} /></span>
+                        <h3>{data[titleProperty]}</h3>
+                        <p>{data[descriptionProperty]}</p>
+                        {this.renderList(data, listProperty)}
+                    </div>
+                ))}
+
             </React.Fragment>
         );
     };

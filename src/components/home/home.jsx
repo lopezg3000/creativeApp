@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { getFitnessGoals, findGoal } from '../goals/fakeGoalFitness';
+import { getFitnessGoals, getGoal } from '../goals/fakeGoalFitness';
 import PageHeader from '../common/pageHeader';
 import Content from './homeContent';
 
@@ -11,40 +11,28 @@ class Home extends Component {
     }
 
     componentDidMount() {
-        this.setState({ fitnessGoals: getFitnessGoals() });
+        const fitnessGoals = getFitnessGoals();
+        this.setState({ fitnessGoals });
     };
 
     handleGoalSelect = (goal) => {
-        // console.log(goal);
         this.setState({ selectedGoal: goal })
     };
 
-    getGoal = (selectedGoal, titleProperty, paragraphProperty) => {
-        if (!selectedGoal) return (
-            <React.Fragment> {titleProperty}{paragraphProperty}</React.Fragment>
-        );
-
-        return findGoal(selectedGoal._id);
-    }
-
     render() {
-        const { selectedGoal, fitnessGoals } = this.state;
-
-        const { headerProperty, subHeaderProperty, titleProperty, paragraphProperty } = this.props;
-
-        const goal = this.getGoal(selectedGoal, titleProperty, paragraphProperty);
+        const { fitnessGoals, selectedGoal } = this.state;
 
         return (
             <React.Fragment>
                 <div className="box header">
-                    <PageHeader header={headerProperty} subHeader={subHeaderProperty} />
+                    <PageHeader />
                 </div>
                 <div className="leftColumn"></div>
                 <div className="rightColumn"></div>
                 <div className="box content">
                     <Content
+                        selectedGoal={selectedGoal}
                         fitnessGoals={fitnessGoals}
-                        goal={goal}
                         onGoalSelect={this.handleGoalSelect}
                     />
                 </div>
@@ -57,8 +45,6 @@ class Home extends Component {
 }
 
 Home.defaultProps = {
-    headerProperty: "Daily",
-    subHeaderProperty: "Smoothy",
     titleProperty: <h3>Live a Healthier Life</h3>,
     paragraphProperty: <p>Get matched with the right foods and make your fitness goals a reality.</p>
 };
