@@ -24,33 +24,6 @@ class HomeContent extends Component {
                 <div className="box information">
                     <Information data={selectedGoal} images={this.images} />
                 </div>
-                <div className="box carousel">
-                    {fitnessGoals.map(g => (
-                        <div
-                            className="carouselButton"
-                            style={{ cursor: "pointer" }}
-                            onClick={() => onGoalSelect(g)}
-                        >
-                            {this.images.map(img => {
-                                if (img.id === g.imgId) return (
-                                    <React.Fragment>
-                                        <div className="carouselButtonText">
-                                            <span>{g.title}</span>
-                                        </div>
-                                        <div className="carouselButtonImg">
-                                            <img
-                                                className={`buttonImg${img.id}`}
-                                                style={{ height: "200px" }}
-                                                key={img}
-                                                src={img.src}
-                                            />
-                                        </div>
-                                    </React.Fragment>
-                                )
-                            })}
-                        </div>
-                    ))}
-                </div>
             </React.Fragment>
         );
     };
