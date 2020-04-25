@@ -16,7 +16,7 @@ class Information extends Component {
     };
 
     render() {
-        const { data, titleProperty, descriptionProperty, listProperty, valueProperty, images } = this.props;
+        const { data, width, titleProperty, descriptionProperty, listProperty, valueProperty, images } = this.props;
         if (!data) return (
             <React.Fragment>
                 <h3>Live a Healthier Life</h3>,
@@ -28,8 +28,8 @@ class Information extends Component {
                 {images.map(img => (
                     data.map(item => {
                         if (item.imgId === img.id) return (
-                            <div className="slide">
-                                <span><img style={{ width: "auto", height: "200px" }} src={img.src} /></span>
+                            <div className="slide" >
+                                <img style={{ width: width, height: "auto" }} src={img.src} />
                                 <h3>{item[titleProperty]}</h3>
                                 <p>{item[descriptionProperty]}</p>
                                 {this.renderList(item, listProperty)}

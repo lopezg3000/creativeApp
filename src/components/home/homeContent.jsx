@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Information from '../common/Information';
+import SliderContainer from '../common/sliderContainer';
 import CarouselButton from '../carouselButton';
 import BuildMoreLeanMuscle from "../../assets/img/buildMoreLeanMuscle.jpg";
 import DecreaseBodyFat from "../../assets/img/decreaseBodyFat.jpg";
@@ -8,6 +8,9 @@ import EatMoreGreens from "../../assets/img/eatMoreGreens.jpg";
 
 
 class HomeContent extends Component {
+    state = {
+        width: 0
+    }
 
     images = [
         { id: "1", src: BuildMoreLeanMuscle },
@@ -16,14 +19,23 @@ class HomeContent extends Component {
         { id: "4", src: EatMoreGreens }
     ];
 
+    componentDidMount() {
+        const width = this.slider.clientWidth;
+        this.setState({ width })
+    };
+
     render() {
         const { fitnessGoals, onGoalSelect, selectedGoal } = this.props;
 
         return (
             <React.Fragment>
                 <div className="box banner"></div>
-                <div className="box slideShow">
-                    <Information data={fitnessGoals} images={this.images} />
+                <div className="box slideShow" ref={(slider) => { this.slider = slider }}>
+                    <SliderContainer
+                        width={this.state.width}
+                        data={fitnessGoals}
+                        images={this.images}
+                    />
                 </div>
                 <div className="box carousel">
                     <CarouselButton
