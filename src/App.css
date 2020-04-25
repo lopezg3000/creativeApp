@@ -87,12 +87,24 @@
   grid-row: 1;
 }
 
-.information {
+.slideShow {
+  /* overflow: hidden; */
   height: 440px;
   grid-column: col / span 4;
   grid-row: 2;
   
 }
+
+.slider-container {
+  /* position: relative; */
+  height: 100%;
+  width: 100%;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  background-color: red;
+}
+
 
 .carousel {
   grid-column: col 1 / span 4;

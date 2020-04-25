@@ -22,7 +22,7 @@ class HomeContent extends Component {
         return (
             <React.Fragment>
                 <div className="box banner"></div>
-                <div className="box information">
+                <div className="box slideShow">
                     <Information data={fitnessGoals} images={this.images} />
                 </div>
                 <div className="box carousel">

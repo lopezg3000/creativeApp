@@ -1,5 +1,10 @@
 import React, { Component } from 'react';
 
+//Need to implement ref in slider component to get height of slider div.
+//width of slider container should be set to this
+//Also, not sure if I should set the image to background image but that
+//would cause more problems since i would have to set it to background image 
+
 class Information extends Component {
     renderList = (data, listProperty) => {
         if (data[listProperty]) return (
@@ -19,12 +24,12 @@ class Information extends Component {
             </React.Fragment>);
 
         return (
-            <React.Fragment>
+            <div className="slider-container">
                 {images.map(img => (
                     data.map(item => {
                         if (item.imgId === img.id) return (
-                            <div>
-                                <span><img style={{ width: "auto", height: 200 }} src={img.src} /></span>
+                            <div className="slide">
+                                <span><img style={{ width: "auto", height: "200px" }} src={img.src} /></span>
                                 <h3>{item[titleProperty]}</h3>
                                 <p>{item[descriptionProperty]}</p>
                                 {this.renderList(item, listProperty)}
@@ -32,7 +37,7 @@ class Information extends Component {
                         )
                     })
                 ))}
-            </React.Fragment>
+            </div>
         );
     };
 };
