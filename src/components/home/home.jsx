@@ -44,9 +44,4 @@ class Home extends Component {
     }
 }
 
-Home.defaultProps = {
-    titleProperty: <h3>Live a Healthier Life</h3>,
-    paragraphProperty: <p>Get matched with the right foods and make your fitness goals a reality.</p>
-};
-
 export default Home;

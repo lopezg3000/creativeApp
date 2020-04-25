@@ -1,8 +1,4 @@
 import React, { Component } from 'react';
-import BuildMoreLeanMuscle from "../../assets/img/buildMoreLeanMuscle.jpg";
-import DecreaseBodyFat from "../../assets/img/decreaseBodyFat.jpg";
-import DrinkMoreWater from "../../assets/img/drinkMoreWater.jpg";
-import EatMoreGreens from "../../assets/img/eatMoreGreens.jpg";
 
 class Information extends Component {
     renderList = (data, listProperty) => {
@@ -25,14 +21,17 @@ class Information extends Component {
         return (
             <React.Fragment>
                 {images.map(img => (
-                    <div>
-                        <span><img style={{ width: "auto", height: 200 }} src={img.src} /></span>
-                        <h3>{data[titleProperty]}</h3>
-                        <p>{data[descriptionProperty]}</p>
-                        {this.renderList(data, listProperty)}
-                    </div>
+                    data.map(item => {
+                        if (item.imgId === img.id) return (
+                            <div>
+                                <span><img style={{ width: "auto", height: 200 }} src={img.src} /></span>
+                                <h3>{item[titleProperty]}</h3>
+                                <p>{item[descriptionProperty]}</p>
+                                {this.renderList(item, listProperty)}
+                            </div>
+                        )
+                    })
                 ))}
-
             </React.Fragment>
         );
     };
