@@ -15,9 +15,9 @@ class Home extends Component {
         this.setState({ fitnessGoals });
     };
 
-    handleGoalSelect = (goal) => {
-        this.setState({ selectedGoal: goal })
-    };
+    // handleGoalSelect = (goal) => {
+    //     this.setState({ selectedGoal: goal })
+    // };
 
     render() {
         const { fitnessGoals, selectedGoal } = this.state;

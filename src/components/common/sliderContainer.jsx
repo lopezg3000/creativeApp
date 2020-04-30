@@ -1,11 +1,8 @@
 import React, { Component } from 'react';
 
-//Need to implement ref in slider component to get height of slider div.
-//width of slider container should be set to this
-//Also, not sure if I should set the image to background image but that
-//would cause more problems since i would have to set it to background image 
 
 class Information extends Component {
+
     renderList = (data, listProperty) => {
         if (data[listProperty]) return (
             <ul>
@@ -43,7 +40,7 @@ class Information extends Component {
                 {images.map(img => (
                     data.map(item => {
                         if (item.imgId === img.id) return (
-                            <div className="slide" >
+                            <div key={img.id} className="slide" >
                                 <img style={{ width: width, height: "auto" }} src={img.src} />
                                 <h3>{item[titleProperty]}</h3>
                                 <p>{item[descriptionProperty]}</p>

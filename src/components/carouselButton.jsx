@@ -4,12 +4,13 @@ const CarouselButton = ({ data, images, onGoalSelect }) => {
     return (
         <React.Fragment>
             {data.map(g => (
-                images.map(img => {
+                images.map((img, index) => {
                     if (img.id === g.imgId) return (
                         <div
+                            key={img.id}
                             className="carouselButton"
                             style={{ cursor: "pointer" }}
-                            onClick={() => onGoalSelect(g)}
+                            onClick={() => onGoalSelect(g, index)}
                         >
                             <div className="carouselButtonText">
                                 <span>{g.title}</span>

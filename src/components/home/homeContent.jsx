@@ -34,6 +34,11 @@ class HomeContent extends Component {
         this.setState({ width })
     };
 
+    onGoalSelect = (g, index) => {
+        this.setState({ activeIndex: index });
+        console.log(index);
+    };
+
 
 
     render() {
@@ -53,7 +58,7 @@ class HomeContent extends Component {
                 <div className="box carousel">
                     <CarouselButton
                         data={fitnessGoals}
-                        onGoalSelect={onGoalSelect}
+                        onGoalSelect={this.onGoalSelect}
                         images={this.images}
                     />
                 </div>
