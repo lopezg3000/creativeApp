@@ -20,9 +20,20 @@ class HomeContent extends Component {
     ];
 
     componentDidMount() {
+        this.updateDimensions();
+        window.addEventListener('resize', this.updateDimensions);
+    };
+
+    componentWillUnmount() {
+        window.removeEventListener('resize', this.updateDimensions);
+    };
+
+    updateDimensions = () => {
         const width = this.slider.clientWidth;
         this.setState({ width })
     };
+
+
 
     render() {
         const { fitnessGoals, onGoalSelect, selectedGoal } = this.props;
