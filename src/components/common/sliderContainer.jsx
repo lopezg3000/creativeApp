@@ -16,7 +16,22 @@ class Information extends Component {
     };
 
     render() {
-        const { data, width, titleProperty, descriptionProperty, listProperty, valueProperty, images } = this.props;
+        const {
+            data,
+            width,
+            titleProperty,
+            descriptionProperty,
+            listProperty,
+            activeIndex,
+            valueProperty,
+            images
+        } = this.props;
+
+        let sliderStyle = {
+            transform: `translateX(${activeIndex * -100}%)`,
+            transition: '0.2s'
+        }
+
         if (!data) return (
             <React.Fragment>
                 <h3>Live a Healthier Life</h3>,
@@ -24,7 +39,7 @@ class Information extends Component {
             </React.Fragment>);
 
         return (
-            <div className="slider-container">
+            <div className="slider-container" style={sliderStyle}>
                 {images.map(img => (
                     data.map(item => {
                         if (item.imgId === img.id) return (

@@ -44,6 +44,7 @@ class HomeContent extends Component {
                 <div className="box banner"></div>
                 <div className="box slideShow" ref={(slider) => { this.slider = slider }}>
                     <SliderContainer
+                        activeIndex={this.state.activeIndex}
                         width={this.state.width}
                         data={fitnessGoals}
                         images={this.images}
