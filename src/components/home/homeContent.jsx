@@ -9,7 +9,8 @@ import EatMoreGreens from "../../assets/img/eatMoreGreens.jpg";
 
 class HomeContent extends Component {
     state = {
-        width: 0
+        width: 0,
+        activeIndex: 0
     }
 
     images = [
