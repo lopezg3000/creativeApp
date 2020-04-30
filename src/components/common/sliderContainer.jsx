@@ -26,7 +26,7 @@ class Information extends Component {
 
         let sliderStyle = {
             transform: `translateX(${activeIndex * -100}%)`,
-            transition: '0.2s'
+            transition: '0.5s'
         }
 
         if (!data) return (
