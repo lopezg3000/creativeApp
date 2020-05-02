@@ -5,7 +5,7 @@ class Information extends Component {
 
     renderList = (data, listProperty) => {
         if (data[listProperty]) return (
-            <ul>
+            <ul classaName='listItems'>
                 {data[listProperty].map(b => <li key={b}>{b}</li>)}
             </ul>);
 
@@ -41,9 +41,9 @@ class Information extends Component {
                     data.map(item => {
                         if (item.imgId === img.id) return (
                             <div key={img.id} className="slide" >
-                                <img style={{ width: width, height: "auto" }} src={img.src} />
-                                <h3>{item[titleProperty]}</h3>
-                                <p>{item[descriptionProperty]}</p>
+                                <img style={{ width: width, height: "auto", zIndex: 5 }} src={img.src} />
+                                <h3 className="heading">{item[titleProperty]}</h3>
+                                <p className="paragraph">{item[descriptionProperty]}</p>
                                 {this.renderList(item, listProperty)}
                             </div>
                         )
