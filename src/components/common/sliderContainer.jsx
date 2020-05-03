@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 
+//Text in slideshow are not visible when window shrinks
+
 
 class Information extends Component {
 
