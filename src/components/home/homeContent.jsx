@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import SliderContainer from '../common/sliderContainer';
+import PageHeader from '../common/pageHeader';
 import CarouselButton from '../carouselButton';
 import BuildMoreLeanMuscle from "../../assets/img/buildMoreLeanMuscle.jpg";
 import DecreaseBodyFat from "../../assets/img/decreaseBodyFat.jpg";
@@ -46,7 +47,9 @@ class HomeContent extends Component {
 
         return (
             <React.Fragment>
-                <div className="box banner"></div>
+                <div className="box banner">
+                    <PageHeader />
+                </div>
                 <div className="box slideShow" ref={(slider) => { this.slider = slider }}>
                     <SliderContainer
                         activeIndex={this.state.activeIndex}
