@@ -34,7 +34,6 @@
   background-color: #444;
   color: #fff;
   border-radius: 5px;
-  /* padding: 20px; */
   font-size: 120%;
 }
 
@@ -54,8 +53,12 @@
   z-index: 3;
   background-color: #421d1ad9;
   padding-top: 40px;
-  padding-left: 120px;
+  /* padding-left: 120px; */
   /* color: #faf0d7; */
+}
+
+.banner {
+  font-size: 80%;
 }
 
 .leftColumn {

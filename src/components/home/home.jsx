@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { getFitnessGoals, getGoal } from '../goals/fakeGoalFitness';
-import PageHeader from '../common/pageHeader';
 import Content from './homeContent';
 
 
@@ -24,9 +23,7 @@ class Home extends Component {
 
         return (
             <React.Fragment>
-                <div className="box header">
-                    <PageHeader />
-                </div>
+                <div className="box header"> </div>
                 <div className="leftColumn"></div>
                 <div className="rightColumn"></div>
                 <div className="box content">
