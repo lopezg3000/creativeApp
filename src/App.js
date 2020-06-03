@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route, Switch } from 'react-router-dom';
+import { Route, Switch, Redirect } from 'react-router-dom';
 import Header from './homepage/header';
 import NavBar from './homepage/navbar';
 import Home from './homepage/homepage';
