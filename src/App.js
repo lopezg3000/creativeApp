@@ -8,6 +8,7 @@ import OurPromise from './homepage/ourPromise';
 import HealthyRewards from './homepage/healthyRewards';
 import Locations from './homepage/locations';
 import Franchise from './homepage/franchise';
+import NotFound from './homepage/notFound';
 // import Home from './components/home/home'
 import './App.css';
 // import HeroParent from "./components/roughComponents/HeroParent";
