@@ -2,6 +2,7 @@ import React from 'react';
 import { Route } from 'react-router-dom';
 import Header from './homepage/header';
 import NavBar from './homepage/navbar';
+import Home from './homepage/homepage';
 import Menu from './homepage/menu';
 import OurPromise from './homepage/ourPromise';
 import HealthyRewards from './homepage/healthyRewards';
@@ -22,6 +23,7 @@ function App() {
       <Route path='/healthyRewards' component={HealthyRewards} />
       <Route path='/locations' component={Locations} />
       <Route path='/franchise' component={Franchise} />
+      <Route path='/' component={Home} />
     </React.Fragment>
   );
 }
