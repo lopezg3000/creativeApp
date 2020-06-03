@@ -1,4 +1,5 @@
 import React from 'react';
+import { Route } from 'react-router-dom';
 import Header from './homepage/header';
 import NavBar from './homepage/navbar';
 import Menu from './homepage/menu';
@@ -17,7 +18,7 @@ function App() {
       <Header />
       <NavBar />
       <Route path='/menu' component={Menu} />
-      <Route path='/promise' component={OurPromise} />
+      <Route path='/ourPromise' component={OurPromise} />
       <Route path='/healthyRewards' component={HealthyRewards} />
       <Route path='/locations' component={Locations} />
       <Route path='/franchise' component={Franchise} />
