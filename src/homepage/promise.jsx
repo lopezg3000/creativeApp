@@ -1,7 +1,7 @@
 import React from 'react'
 
-const OurPromise = () => {
+const Promise = () => {
     return <h1>Our Promise</h1>
 }
 
-export default OurPromise;
+export default Promise;

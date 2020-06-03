@@ -1,11 +1,11 @@
 import React from 'react';
 import Header from './homepage/header';
 import NavBar from './homepage/navbar';
-import OurMenu from './homepage/ourMenu';
-import OurPromise from './homepage/ourPromise';
+import Menu from './homepage/menu';
+import Promise from './homepage/promise';
 import HealthyRewards from './homepage/healthyRewards';
 import Locations from './homepage/locations';
-import FranchiseInformation from './homepage/franchiseInformation';
+import Franchise from './homepage/franchise';
 // import Home from './components/home/home'
 import './App.css';
 // import HeroParent from "./components/roughComponents/HeroParent";
@@ -16,6 +16,7 @@ function App() {
     <React.Fragment>
       <Header />
       <NavBar />
+      <Route path='/menu' component={OurMenu} />
     </React.Fragment>
   );
 }
