@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 import Header from './homepage/header';
 import NavBar from './homepage/navbar';
 import Home from './homepage/homepage';
@@ -18,12 +18,19 @@ function App() {
     <React.Fragment>
       <Header />
       <NavBar />
-      <Route path='/menu' component={Menu} />
-      <Route path='/ourPromise' component={OurPromise} />
-      <Route path='/healthyRewards' component={HealthyRewards} />
-      <Route path='/locations' component={Locations} />
-      <Route path='/franchise' component={Franchise} />
-      <Route path='/' component={Home} />
+      <main className='container'>
+        <Switch>
+          <Route path='/home' component={Home} />
+          <Route path='/menu' component={Menu} />
+          <Route path='/ourPromise' component={OurPromise} />
+          <Route path='/healthyRewards' component={HealthyRewards} />
+          <Route path='/locations' component={Locations} />
+          <Route path='/franchise' component={Franchise} />
+          <Route path='/not-found' component={NotFound} />
+          <Redirect from='/' exact to='/home' />
+          <Redirect to="/not-found" />
+        </Switch>
+      </main>
     </React.Fragment>
   );
 }
