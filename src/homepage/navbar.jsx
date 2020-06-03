@@ -9,6 +9,7 @@ const NavBar = () => {
             <NavLink>Our Promise</NavLink>
             <NavLink>Healthy Rewards</NavLink>
             <NavLink>Locations</NavLink>
+            <NavLink>Franchise Locations</NavLink>
             <button>Order Now</button>
         </React.Fragment>
 
