@@ -1,5 +1,33 @@
 .navbar {
     background-color: #fff;
     box-shadow: 0 2px 8px 0 rgba(0,0,0,.25);
-    
+    height: 100px;
+    width: 100%;
+}
+
+.navbar .navbar-wrapper {
+    height: 100px;
+    display: flex;
+    margin: 0 auto;
+    width: 70%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    width: 18%;
+}
+
+.navtabs-wrapper {
+    width: 60%;
+}
+
+.navbar-tabs {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.order-button {
+    width: 15%;
 }
