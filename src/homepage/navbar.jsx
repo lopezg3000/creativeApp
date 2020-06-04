@@ -18,7 +18,9 @@ const NavBar = () => {
                         <NavLink className="nav-link" to='/franchise'>Franchise Information</NavLink>
                     </div>
                 </div>
-                <button className='order-button'>Order Now</button>
+                <div className='order-button'>
+                    <button>Order Now</button>
+                </div>
             </div>
         </nav>
 
