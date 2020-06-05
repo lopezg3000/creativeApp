@@ -19,7 +19,7 @@ const NavBar = () => {
                     </div>
                 </div>
                 <div className='order-button'>
-                    <button>Order Now</button>
+                    <button><i className="fas fa-laptop"></i> Order Now</button>
                 </div>
             </div>
         </nav>
