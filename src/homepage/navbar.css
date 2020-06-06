@@ -52,7 +52,7 @@ button {
     outline: none;
 }
 
-@media only screen and (max-width: 1439px) {
+@media only screen and (max-width: 1400px) {
     .navbar-wrapper {
         height: 100px;
         display: flex;
@@ -69,7 +69,7 @@ button {
     img {
         width: 6rem;
     }
-    
+
     .navtabs-wrapper {
         width: 62%;
     }
