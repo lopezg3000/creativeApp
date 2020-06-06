@@ -35,8 +35,8 @@
 }
 
 .order-button {
-    width: 15%;
-    margin: 0 3% 0 0;
+    width: 12%;
+    margin: 0 5% 0 0;
 }
 
 button {
@@ -44,7 +44,7 @@ button {
     color: #fff;
     height: 3rem;
     border-radius: 1.5rem;
-    padding: 0 1.875rem 0 1.25rem;
+    padding: 0 1rem 0 1rem;
     text-decoration: none;
     font-family: inherit;
     text-transform: inherit;
@@ -60,10 +60,14 @@ button {
         width: 100%;
         justify-content: space-between;
     }
-
+    
     .logo {
         width: 14%;
         margin: 0 0 0 2%;
+    }
+    
+    img {
+        width: 6rem;
     }
     
     .navtabs-wrapper {
@@ -76,19 +80,62 @@ button {
     }
 
     button {
-        background-color:  #e31b23;
-        color: #fff;
-        height: 3rem;
         border-radius: 1.5rem;
         padding: 0 0.875rem 0 1.25rem;
-        text-decoration: none;
-        font-family: inherit;
-        text-transform: inherit;
-        border: none;
-        outline: none;
+    }
+
+  }
+
+  @media only screen and (max-width: 1023px) {
+
+    .navbar {
+        font-size: .8rem;
+    }
+
+    .navbar-wrapper {
+        height: 77px;
+        display: flex;
+        margin: 0 auto;
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .logo {
+        width: 13%;
+        margin: 0 0 0 2%;
     }
 
     img {
-        width: 61%;
+        width: 4.5rem;
+    }
+    
+    .navtabs-wrapper {
+        width: 65%;
+        margin: 6px;
+    }
+
+    .navbar-tabs {
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    .order-button {
+        width: 16%;
+        margin: 0 2% 0 0;
+    }
+
+    button {
+        border-radius: 1.5rem;
+        padding: 0 .5rem 0 .5rem;
+        font-size: .8rem;
+    }
+
+    .nav-link {
+        line-height: 1rem;
+        padding: 11px;
+    }
+
+    .width {
+        width: min-content;
     }
   }

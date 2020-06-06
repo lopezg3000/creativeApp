@@ -13,9 +13,9 @@ const NavBar = () => {
                     <div className='navbar-tabs'>
                         <NavLink className="nav-link" to='/menu'>Our Menu</NavLink>
                         <NavLink className="nav-link" to='/ourPromise'>Our Promise</NavLink>
-                        <NavLink className="nav-link" to='/healthyRewards'>Healthy Rewards</NavLink>
+                        <NavLink className="nav-link width" to='/healthyRewards'>Healthy Rewards</NavLink>
                         <NavLink className="nav-link" to='/locations'>Locations</NavLink>
-                        <NavLink className="nav-link" to='/franchise'>Franchise Information</NavLink>
+                        <NavLink className="nav-link width" to='/franchise'>Franchise Information</NavLink>
                     </div>
                 </div>
                 <div className='order-button'>
