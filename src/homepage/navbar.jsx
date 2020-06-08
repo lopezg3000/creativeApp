@@ -2,6 +2,8 @@ import React from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import './navbar.css';
 
+//learning how to create a hamburger menu
+
 const NavBar = () => {
     return (
         <nav className='navbar'>
