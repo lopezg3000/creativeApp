@@ -3,6 +3,7 @@ import { Link, NavLink } from 'react-router-dom';
 import './navbar.css';
 
 //learning how to create a hamburger menu
+//still working on hamburger menu in codepen
 
 const NavBar = () => {
     return (
