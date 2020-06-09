@@ -12,10 +12,10 @@ const NavBar = () => {
                 <div className='logo'>
                     <Link to='/'><img src='https://skprod.objects.frb.io/images/static/smoothie-king-logo.svg' /></Link>
                 </div>
-                <div className='navtabs-wrapper'>
+                <div className='menu-wrap'>
                     <input type='checkbox' class='toggler' />
                     <div class='hamburger'><div></div></div>
-                    <div className='navbar-tabs'>
+                    <div className='menu'>
                         <div>
                             <div>
                                 <ul>
