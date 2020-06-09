@@ -13,12 +13,31 @@ const NavBar = () => {
                     <Link to='/'><img src='https://skprod.objects.frb.io/images/static/smoothie-king-logo.svg' /></Link>
                 </div>
                 <div className='navtabs-wrapper'>
+                    <input type='checkbox' class='toggler' />
+                    <div class='hamburger'><div></div></div>
                     <div className='navbar-tabs'>
-                        <NavLink className="nav-link" to='/menu'>Our Menu</NavLink>
-                        <NavLink className="nav-link" to='/ourPromise'>Our Promise</NavLink>
-                        <NavLink className="nav-link width" to='/healthyRewards'>Healthy Rewards</NavLink>
-                        <NavLink className="nav-link" to='/locations'>Locations</NavLink>
-                        <NavLink className="nav-link width" to='/franchise'>Franchise Information</NavLink>
+                        <div>
+                            <div>
+                                <ul>
+                                    <li>
+                                        <NavLink className="nav-link" to='/menu'>Our Menu</NavLink>
+                                    </li>
+                                    <li>
+                                        <NavLink className="nav-link" to='/ourPromise'>Our Promise</NavLink>
+                                    </li>
+                                    <li>
+                                        <NavLink className="nav-link width" to='/healthyRewards'>Healthy Rewards</NavLink>
+                                    </li>
+                                    <li>
+                                        <NavLink className="nav-link" to='/locations'>Locations</NavLink>
+                                    </li>
+                                    <li>
+                                        <NavLink className="nav-link width" to='/franchise'>Franchise Information</NavLink>
+                                    </li>
+                                </ul>
+
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div className='order-button'>
