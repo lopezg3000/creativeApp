@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Piedra&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap');
 
 :root {
     --overlay-color: rgba(24, 39, 51, 0.85);
@@ -8,7 +8,7 @@
 .navbar {
     background-color: #fff;
     box-shadow: 0 2px 8px 0 rgba(0,0,0,.25);
-    font-family: nimbus-sans-condensed,sans-serif;
+    font-family: 'Balsamiq Sans', sans-serif;
     text-transform: uppercase;
     font-size: .875rem;
 }
