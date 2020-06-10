@@ -13,7 +13,7 @@ const NavBar = () => {
                     <Link to='/'><img src='https://skprod.objects.frb.io/images/static/smoothie-king-logo.svg' /></Link>
                 </div>
                 <div className='menu-wrap'>
-                    <input type='checkbox' class='toggler' />
+                    <input type='checkbox' className='toggler' />
                     <div className='hamburger'><div></div></div>
                     <div className='menu'>
                         <div>
