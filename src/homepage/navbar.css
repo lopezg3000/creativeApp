@@ -172,10 +172,52 @@ button {
 
     .menu-wrap .toggler {
         display: block;
+        opacity: 0;
         width: 3rem;
         height: 3rem;
         margin: 0;
     }
+
+    .menu-wrap .hamburger {
+        position: relative;
+        width: 2rem;
+        height: 2rem;
+        padding: .52rem;
+        display: flex;
+        top: -3rem;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .menu-wrap .hamburger > div {
+        position: relative;
+        width: 1.5rem;
+        height: 3px;
+        background-color: #e31b23;
+        border-radius: 10.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.4s ease;
+    }
+
+    .menu-wrap .hamburger > div:before,
+    .menu-wrap .hamburger > div:after {
+        content: '';
+        position: absolute;
+        top: -7px;
+        right: 0;
+        width: 71%;
+        height: 3px;
+        background: inherit;
+        border-radius: inherit;
+    }
+
+    .menu-wrap .hamburger > div:after {
+        top: 7px;
+        width: 54%;
+    }
+
 
     .order-button {
         display: none;
