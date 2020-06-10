@@ -153,3 +153,7 @@ button {
         line-height: 1rem;
     }
   }
+
+  @media only screen and (max-width: 767px) {
+    
+  }
