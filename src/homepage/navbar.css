@@ -1,5 +1,4 @@
 :root {
-    --primary-color: rgba(13, 110, 139, 0.75);
     --overlay-color: rgba(24, 39, 51, 0.85);
     --menu-speed: 0.75s;
   }
@@ -73,7 +72,7 @@ button {
 
 @media only screen and (max-width: 1400px) {
     .navbar-wrapper {
-        height: 100px;
+        height: 77px;
         display: flex;
         margin: 0 auto;
         width: 100%;
@@ -162,10 +161,28 @@ button {
 
   @media only screen and (max-width: 767px) {
     .menu-wrap {
-        position: fixed;
-        top: 0;
-        right: 0;
+      width: 4%;
+      height: 22%;
+      margin: 0 4% 0 0;
     }
+
+    .logo {
+        margin: 0 0 0 5%;
+    }
+
+    .menu-wrap .toggler {
+        position: absolute;
+        display: block;
+    }
+
+    .order-button {
+        display: none;
+    }
+
+    .menu {
+        display: none;
+    }
+
     .menu > div > div > ul {
         display: flex;
         flex-direction: column;
