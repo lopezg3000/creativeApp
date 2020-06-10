@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Piedra&display=swap');
+
 :root {
     --overlay-color: rgba(24, 39, 51, 0.85);
     --menu-speed: 0.75s;
@@ -160,6 +162,11 @@ button {
   }
 
   @media only screen and (max-width: 767px) {
+
+    .navbar-wrapper {
+        height: 63px;
+    }
+
     .menu-wrap {
       width: 3rem;
       height: 3rem;
@@ -168,6 +175,10 @@ button {
 
     .logo {
         margin: 0 0 0 5%;
+    }
+
+    img {
+        width: 4.3rem;
     }
 
     .menu-wrap .toggler {
@@ -232,6 +243,4 @@ button {
         flex-direction: column;
         padding: 0;
     }
-
-    
   }
