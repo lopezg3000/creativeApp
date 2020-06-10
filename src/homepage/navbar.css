@@ -48,7 +48,7 @@
 }
 
 .order-button {
-    width: 12%;
+    width: 13%;
     margin: 0 7% 0 0;
 }
 
@@ -57,7 +57,7 @@ button {
     color: #fff;
     height: 3rem;
     border-radius: 1.5rem;
-    padding: 0 1rem 0 1rem;
+    padding: 0 1.2rem 0 1.2rem;
     text-decoration: none;
     font-family: inherit;
     text-transform: inherit;
@@ -127,13 +127,14 @@ button {
         margin: 6px;
     }
 
-    .menu {
+    .menu > div > div > ul {
         display: flex;
         justify-content: space-evenly;
+        padding: 0;
     }
 
     .order-button {
-        width: 16%;
+        width: 15.2%;
         margin: 0 2% 0 0;
     }
 
@@ -141,14 +142,14 @@ button {
         border-radius: 1.5rem;
         padding: 0 .5rem 0 .5rem;
         font-size: .8rem;
+        height: 2.6rem;
+    }
+
+    .menu > div > div > ul > li {
+        width: min-content;
     }
 
     .nav-link {
         line-height: 1rem;
-        padding: 11px;
-    }
-
-    .width {
-        width: min-content;
     }
   }
