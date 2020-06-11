@@ -224,7 +224,7 @@ button {
         height: 3px;
         background: inherit;
         border-radius: inherit;
-        z-index: 1;
+        z-index: -2;
     }
 
     .menu-wrap .hamburger > div:after {
@@ -235,8 +235,6 @@ button {
     .menu-wrap .toggler:checked + .hamburger > div {
         transform: rotate(135deg);
         background-color: red;
-        z-index: 4;
-        visibility: visible;
     }
 
     .menu-wrap .toggler:checked + .hamburger > div:before,
@@ -244,8 +242,6 @@ button {
           top: 0;
           transform: rotate(90deg);
           width: 100%;
-          z-index: 4;
-          visibility: visible;
     }
 
     .menu-wrap .toggler:checked:hover + .hamburger > div {
@@ -254,7 +250,7 @@ button {
 
     .menu-wrap .toggler:checked ~ .menu {
           visibility: visible;
-          z-index: -2;
+          z-index: -3;
     }
 
     .menu-wrap .toggler:checked ~ .menu > div {
