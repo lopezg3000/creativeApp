@@ -235,6 +235,7 @@ button {
     .menu-wrap .toggler:checked + .hamburger > div {
         transform: rotate(135deg);
         background-color: #fff;
+        z-index: 4;
     }
 
     .menu-wrap .toggler:checked + .hamburger > div:before,
@@ -242,6 +243,7 @@ button {
           top: 0;
           transform: rotate(90deg);
           width: 100%;
+          z-index: 4;
     }
 
     .menu-wrap .toggler:checked:hover + .hamburger > div {
