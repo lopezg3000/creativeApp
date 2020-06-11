@@ -234,6 +234,7 @@ button {
 
     .menu-wrap .toggler:checked + .hamburger > div {
         transform: rotate(135deg);
+        background-color: #fff;
     }
 
     .menu-wrap .toggler:checked + .hamburger > div:before,
@@ -267,7 +268,7 @@ button {
         height: 100%;
         top: 0;
         left: 0;
-        z-index: -1;
+        z-index: -3;
         visibility: hidden;
         overflow: hidden;
         display: flex;
@@ -318,5 +319,4 @@ button {
     .order-button {
         display: none;
     }
-
   }
