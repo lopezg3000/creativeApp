@@ -168,7 +168,7 @@ button {
         width: 3rem;
         height: 3rem;
         margin: 0 4% 0 0;
-        z-index: 0;
+        z-index: 2;
     }
 
     .logo {
@@ -180,9 +180,10 @@ button {
     }
 
     .menu-wrap .toggler {
+        position: relative;
         display: block;
         background: grey;
-        z-index: 3;
+        z-index: 2;
         opacity: 0;
         width: 3rem;
         height: 3rem;
@@ -198,7 +199,7 @@ button {
         top: -3rem;
         align-items: center;
         justify-content: center;
-        z-index: -1;
+        z-index: 0;
     }
 
     .menu-wrap .hamburger > div {
@@ -233,7 +234,7 @@ button {
 
     .menu-wrap .toggler:checked + .hamburger > div {
         transform: rotate(135deg);
-        background-color: red;
+        background-color: #fff;
     }
 
     .menu-wrap .toggler:checked + .hamburger > div:before,
@@ -249,7 +250,6 @@ button {
 
     .menu-wrap .toggler:checked ~ .menu {
           visibility: visible;
-          z-index: -2;
     }
 
     .menu-wrap .toggler:checked ~ .menu > div {
