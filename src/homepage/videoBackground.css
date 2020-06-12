@@ -13,7 +13,9 @@
 }
 
 .video-wrap video {
+    /* position: relative; */
     width: 100vw;
+    /* bottom: 20vh; */
 }
 
 /* @media only screen and (max-width: 1024) {
