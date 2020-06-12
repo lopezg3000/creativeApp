@@ -20,5 +20,5 @@ body {
 .video-wrap video {
     position: relative;
     width: 100vw;
-    bottom: 160px;
+    bottom: 160px; /*can be changed to change view of video */
 }
