@@ -11,7 +11,7 @@ const VideoBackground = () => {
                     loop={true}
                     type="video/mp4"
                     muted
-                    playsinline>
+                    playsInLine>
                 </video>
             </div>
         </div>
