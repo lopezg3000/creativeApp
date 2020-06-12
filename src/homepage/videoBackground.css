@@ -1,6 +1,9 @@
 .hero-background {
     background: #000;
-    height: auto;
+}
+
+.container {
+    height: 55vh;
 }
 
 .video-wrap {
@@ -11,7 +14,6 @@
 
 .video-wrap video {
     width: 100vw;
-    height: auto;
 }
 
 /* @media only screen and (max-width: 1024) {
