@@ -9,6 +9,7 @@ body {
 
 .hero-background {
     background: #000;
+    height: auto;
 }
 
 .video-wrap {
@@ -18,7 +19,10 @@ body {
 }
 
 .video-wrap video {
-    position: relative;
     width: 100vw;
-    bottom: 160px; /*can be changed to change view of video */
+    height: auto;
 }
+
+/* @media only screen and (max-width: 1024) {
+
+} */
