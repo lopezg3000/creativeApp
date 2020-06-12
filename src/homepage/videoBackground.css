@@ -20,6 +20,19 @@
     }
 } 
 
-@media only screen and (max-width: 1023px) {
-    
+@media only screen and (max-width: 767px) {
+    .hero-background .container {
+        height: 55vh;
+    }
+
+    .video-wrap {
+        width: 100vw;
+    }
+
+    .video-wrap video {
+        width: 230vw;
+        right: 60%;
+        bottom: 0;
+    }
+
 }
