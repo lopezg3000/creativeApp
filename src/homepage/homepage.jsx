@@ -4,7 +4,10 @@ import VideoBackground from './videoBackground'
 const HomePage = () => {
     return (
         <React.Fragment>
-            <VideoBackground />
+            <section>
+                <VideoBackground />
+
+            </section>
             <h1>Home</h1>
         </React.Fragment>
     );
