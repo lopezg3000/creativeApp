@@ -1,0 +1,18 @@
+.hero-copyblock {
+    position: relative;
+    box-sizing: border-box;
+    margin: auto;
+    width: 80rem;
+    height: 8rem;
+    bottom: 7rem;
+}
+
+.hero-copyblock .max-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 44px 110px;
+    background-image: linear-gradient(-229deg,#f3f4f5,#fff);
+    box-shadow: 0 2px 19px 0 rgba(0,0,0,.15);
+}
