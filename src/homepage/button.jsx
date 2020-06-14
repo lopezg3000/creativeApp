@@ -1,9 +1,9 @@
 import React from 'react'
 
-const Button = () => {
+const Button = ({ text }) => {
     return (
         <a href='#' className='link link-default'>
-            <span>Read More</span>
+            <span>{text}</span>
             <i class="fas fa-caret-right"></i>
         </a>
     );

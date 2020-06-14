@@ -1,4 +1,5 @@
 import React from 'react';
+import Button from './button';
 
 const HeroCopyBlock = () => {
     return (
@@ -19,7 +20,7 @@ const HeroCopyBlock = () => {
                     of all people, and are updating our training to further ensure inclusion
                     and respect in our stores and throughout our organization.
                     </p>
-                    <a href='#' className='link link-default'>Read More</a>
+                    <Button text='Read More' />
                 </div>
             </div>
         </div>
