@@ -2,23 +2,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;1,900&display=swap');
 
 
+.hero-copyblock {
+    position: relative;
+    bottom: 7rem;
+}
 
 .hero-container {
-    /* margin: 0 17vw 0 17vw; */
     /*Keeps photo in the center while margin disapears*/
+    position: inherit;
     width: 1000px;
     margin: 0 auto;
     overflow: hidden;
-    position: relative;
     height: 100rem;
-}
-
-.hero-copyblock {
-    position: relative;
-    box-sizing: border-box;
-    width: 100vw;
-    height: 23rem;
-    bottom: 7rem;
 }
 
 .hero-copyblock .max-wrapper {
@@ -61,4 +56,29 @@
     margin: 0 0 25px;
     text-align: center;
 }
+
+@media only screen and (max-width: 1023px) {
+    .hero-container {
+        width: 753px;
+    }
+
+    .eyebrow {
+        font-size: .8125rem;
+    }
+
+    .headline.large {
+        line-height: 2.875rem;
+    }
+
+    .description {
+        font-size: 1rem;
+        line-height: 1.3125rem;
+        margin: 0 0 20px;
+    }
+
+    .hero-copyblock .max-wrapper {
+        padding: 33px 66px;
+    }
+}
+
 
