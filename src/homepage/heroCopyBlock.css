@@ -1,9 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;1,900&display=swap');
+
+
+
+.hero-container {
+    /* margin: 0 17vw 0 17vw; */
+    /*Keeps photo in the center while margin disapears*/
+    width: 1000px;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+    height: 100rem;
+}
+
 .hero-copyblock {
     position: relative;
     box-sizing: border-box;
-    margin: auto;
-    width: 80rem;
-    height: 8rem;
+    width: 100vw;
+    height: 23rem;
     bottom: 7rem;
 }
 
@@ -16,3 +30,35 @@
     background-image: linear-gradient(-229deg,#f3f4f5,#fff);
     box-shadow: 0 2px 19px 0 rgba(0,0,0,.15);
 }
+
+.eyebrow {
+    font-size: .875rem;
+    line-height: 1.125rem;
+    margin: 0 0 35px;
+    font-family: Montserrat, sans-serif;
+    font-weight: normal;
+}
+
+.headline {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 900;
+    font-style: italic;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 0 1rem 35px 1rem;
+}
+
+.headline.large {
+    font-size:  2.75rem;
+    line-height: 3.25rem;
+}
+
+.description {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.28rem;
+    font-weight: 300;
+    line-height: 1.375rem;
+    margin: 0 0 25px;
+    text-align: center;
+}
+
