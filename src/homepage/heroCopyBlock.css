@@ -62,6 +62,10 @@
         width: 753px;
     }
 
+    .hero-copyblock .max-wrapper {
+        padding: 33px 66px;
+    }
+
     .eyebrow {
         font-size: .8125rem;
     }
@@ -76,8 +80,50 @@
         margin: 0 0 20px;
     }
 
+}
+
+@media only screen and (max-width: 767px) {
+    .hero-copyblock {
+        bottom: 2rem;
+    }
+    
+    .hero-container {
+        /*Set to initial to reset css properties*/
+        width: initial;
+        overflow: initial;
+        height: initial;
+        margin: 0 5% 0 5%;
+    }
+
     .hero-copyblock .max-wrapper {
-        padding: 33px 66px;
+        padding: 22px;
+    }
+
+    .eyebrow {
+        /*width changed to 100% so that text will align left.*/
+        font-size: .75rem;
+        line-height: .9375rem;
+        margin: 0 0 10px;
+        text-align: left;
+        width: 100%;
+    }
+
+    .headline {
+        /*width changed to 100% so that text will align left.*/
+        margin: 0 0 10px;
+        text-align: left;
+        width: 100%;
+    }
+
+    .headline.large {
+        font-size: 1.7rem;
+        line-height: 1.7rem;
+    }
+    
+    .description {
+        font-size: .875rem;
+        line-height: 1.125rem;
+        text-align: left;
     }
 }
 
