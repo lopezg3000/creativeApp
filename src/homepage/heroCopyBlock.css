@@ -96,7 +96,10 @@
     }
 
     .hero-copyblock .max-wrapper {
+        /*justify-content and align-items no longer needed because everything is aligned left*/
         padding: 22px;
+        justify-content: initial;
+        align-items: initial;
     }
 
     .eyebrow {

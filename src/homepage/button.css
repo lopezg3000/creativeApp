@@ -17,8 +17,14 @@
 }
 
 .link .icon {
-    /* margin: 0 2rem 0 0; */
     width: 2rem;
     font-size: 1.5rem;
+}
+
+@media only screen and (max-width: 767px) {
+    .link {
+        /*fit-content allows button to be aligned left without stretching entire herocopyblock*/
+        width: fit-content;
+    }
 }
 
