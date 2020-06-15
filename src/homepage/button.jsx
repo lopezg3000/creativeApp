@@ -1,10 +1,11 @@
-import React from 'react'
+import React from 'react';
+import './button.css';
 
 const Button = ({ text }) => {
     return (
         <a href='#' className='link link-default'>
             <span>{text}</span>
-            <i class="fas fa-caret-right"></i>
+            <i className="fas fa-caret-right icon"></i>
         </a>
     );
 }
