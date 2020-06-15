@@ -1,0 +1,44 @@
+.content-slider {
+    display: grid;
+    grid-template-rows: auto;
+}
+
+.content-intro {
+    margin: 0 0 80px;
+}
+
+.content-row.with-gradient {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 0 0 20px;
+}
+
+.content-column:nth-child(1) {
+    background: linear-gradient(90deg, #dadfe1, #fff);
+    height: 10px;
+    align-self: center;
+}
+
+.content-column:nth-child(2) {
+    margin: auto;
+}
+
+.content-column:nth-child(3) {
+    background: linear-gradient(90deg, #fff, #dadfe1);
+    height: 10px;
+    align-self: center;
+}
+
+.content-row .headline {
+    font-size: 2.25rem;
+    margin: 0;
+}
+
+.content-row {
+    margin: auto;
+    width: fit-content;
+}
+
+.content-row .description {
+    font-size: 1.19rem;
+}
