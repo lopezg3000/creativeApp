@@ -10,7 +10,7 @@ const ContentIntro = () => {
                 </div>
                 <div className='content-column'></div>
             </div>
-            <div className='content-row'>
+            <div className='content-row without-gradient'>
                 <p className='description'>
                     Keep tabs on new products, partnerships, and limited-time offers.
                 </p>

@@ -21,6 +21,7 @@
 
 .content-column:nth-child(2) {
     margin: auto;
+    width: 37rem;
 }
 
 .content-column:nth-child(3) {
@@ -34,7 +35,7 @@
     margin: 0;
 }
 
-.content-row {
+.content-row.without-gradient {
     margin: auto;
     width: fit-content;
 }
@@ -42,3 +43,4 @@
 .content-row .description {
     font-size: 1.19rem;
 }
+

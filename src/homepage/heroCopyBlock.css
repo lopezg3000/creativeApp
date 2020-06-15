@@ -17,7 +17,7 @@
     position: inherit;
     width: 1000px;
     margin: 0 auto;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
 .hero-copyblock .max-wrapper {
