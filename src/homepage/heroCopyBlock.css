@@ -2,6 +2,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;1,900&display=swap');
 
 
+.hero {
+    /*height of section set to auto so that space underneath is minimized*/
+    height: auto;
+}
+
 .hero-copyblock {
     position: relative;
     bottom: 7rem;
@@ -13,7 +18,6 @@
     width: 1000px;
     margin: 0 auto;
     overflow: hidden;
-    height: 100rem;
 }
 
 .hero-copyblock .max-wrapper {
