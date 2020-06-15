@@ -31,16 +31,35 @@
 }
 
 .content-row .headline {
-    font-size: 2.25rem;
+    font-size: 2rem;
     margin: 0;
 }
 
 .content-row.without-gradient {
     margin: auto;
-    width: fit-content;
+    width: 28rem;
+    text-align: center;
 }
 
 .content-row .description {
     font-size: 1.19rem;
 }
 
+@media only screen and (max-width: 767px) {
+    .content-column:nth-child(2) {
+        width: 16rem;
+    }
+
+    .content-row .headline {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
+    .content-row.without-gradient {
+        width: 91%;
+    }
+
+    .content-row .description {
+        font-size: 1.125rem;
+    }
+}
