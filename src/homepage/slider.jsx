@@ -27,7 +27,7 @@ const Slider = () => {
                     </div>
                     <div className='slide-image-column'>
                         <div className='image-wrapper'>
-                            <img src={ImmuneBuilder} />
+                            <img alt='Immune builder image' src={ImmuneBuilder} />
                         </div>
                     </div>
                 </div>
