@@ -8,6 +8,8 @@
     display: flex;
     flex-direction: row;
     align-items: center;
+    width: fit-content; 
+    /* fit-content allows button to be aligned left without stretching entire herocopyblock */
 }
 
 .link span {
@@ -23,8 +25,8 @@
 
 @media only screen and (max-width: 767px) {
     .link {
-        /*fit-content allows button to be aligned left without stretching entire herocopyblock*/
-        width: fit-content;
+
+        /* width: fit-content; */
     }
 }
 

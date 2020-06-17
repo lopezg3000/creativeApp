@@ -1,6 +1,7 @@
 import React from 'react'
 import Button from './button'
 import ImmuneBuilder from '../assets/img/immuneBuilder.jpg'
+import './slider.css';
 
 
 const Slider = () => {

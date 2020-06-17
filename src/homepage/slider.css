@@ -1,0 +1,41 @@
+.slider-items {
+    left: 0px;
+    transform: translateX(15.35%); 
+}
+
+.carousel-cell.slide {
+    display: flex;
+    flex-direction: row;
+    max-width: 960px;
+}
+
+.slide .slide-info-column {
+    display: flex;
+    flex: 0 1 57.5%;
+    width: 57.5%;
+    align-items: center;
+}
+
+.slide-info-column .max-wrapper {
+    background: #f3f4f5;
+    padding: 44px 21.5% 44px 33px;
+    text-align: left;
+}
+
+.slide-info-column .max-wrapper .eyebrow {
+    margin: 0 0 25px 0;
+    text-align: inherit;
+}
+
+.slide-info-column .max-wrapper .headline {
+    font-size: 1.99rem;
+    margin: 0 0 25px 0;
+    text-align: inherit;
+}
+
+.slide-info-column .max-wrapper .description {
+    display: block;
+    text-align: inherit;
+    font-size: 1.125rem;
+    margin: 0 0 25px 0;
+}
