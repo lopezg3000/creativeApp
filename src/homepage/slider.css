@@ -1,7 +1,7 @@
-.slider-items {
-    /* left: 0px; */
-    /* transform: translateX(15.35%);  */
-}
+/* .slider-items {
+    left: 0px;
+    transform: translateX(15.35%); 
+} */
 
 .carousel-cell.slide {
     display: flex;
