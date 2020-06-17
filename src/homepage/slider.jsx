@@ -1,6 +1,6 @@
 import React from 'react'
 import Button from './button'
-import ImmuneBuilder from '../assets/img/immuneBuilder.jpg';
+// import ImmuneBuilder from '../assets/img/immuneBuilder.jpg';
 import './slider.css';
 
 
@@ -27,7 +27,7 @@ const Slider = () => {
                     </div>
                     <div className='slide-image-column'>
                         <div className='image-wrapper'>
-                            <img alt='Immune builder image' src={ImmuneBuilder} />
+                            <img alt='Immune builder image' src='https://cdn.smoothieking.com/images/site/card/_card420x510Crop/28459/immune-builder-veggie-card.jpg' />
                         </div>
                     </div>
                 </div>
