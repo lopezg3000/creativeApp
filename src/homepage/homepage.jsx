@@ -4,7 +4,7 @@ import HeroCopyBlock from './heroCopyBlock';
 import ContentIntro from './contentIntro';
 import Slider from './slider';
 import './heroCopyBlock.css'; //need to move this to heroCopyBlock.jsx to be consistent
-import './slider.css';
+import './contentIntro.css';
 
 const HomePage = () => {
     return (

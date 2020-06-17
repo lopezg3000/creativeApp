@@ -1,7 +1,4 @@
-.content-slider {
-    display: grid;
-    grid-template-rows: auto;
-}
+/* Code below styles content intro so that it is responsive. */
 
 .content-intro {
     margin: 0 0 80px;
