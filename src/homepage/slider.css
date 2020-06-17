@@ -108,5 +108,18 @@
         margin: 0 0 10px 0;
     }
 
+    .slide .slide-image-column {
+        margin: 0 5% 0 5%;
+        width: 90%;
+    }
+
+    .slide-image-column .image-wrapper {
+        display: flex;
+        align-items: center;
+        flex: initial;
+        max-height: 327px;
+        overflow: hidden;
+    }
+
 }
 
