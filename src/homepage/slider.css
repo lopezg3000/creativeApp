@@ -3,6 +3,11 @@
     transform: translateX(15.35%); 
 } */
 
+.slider-items {
+    display: grid;
+    grid-template-rows: repeat(3, auto);
+}
+
 .carousel-cell.slide {
     display: flex;
     flex-direction: row;
@@ -98,7 +103,7 @@
     }
 
     .slide-info-column .max-wrapper .headline {
-        font-size: 1.3rem;
+        font-size: 1.4rem;
         line-height: 1.4rem;
         margin: 0 0 10px 0;
     }
