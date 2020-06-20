@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Slide from './slide';
+import SliderNav from './sliderNav';
 import ImmuneBuilder from '../assets/img/immuneBuilder.jpg';
 import CleanBlends from '../assets/img/cleanBlends.jpg';
 import FiveDollarFriday from '../assets/img/fiveDollarFriday.jpg';
@@ -59,34 +60,37 @@ class Slider extends Component {
 
     render() {
         return (
-            <div className='slider-container'>
-                <div className='slider-items'>
-                    <Slide
-                        eyebrow='New flavor. Same benefits.'
-                        headline={this.immuneBuilderHeadline()}
-                        description={this.immuneBuilderDescription()}
-                        src={ImmuneBuilder}
-                        text='Show me more'
-                        width={this.state.width}
-                    />
-                    <Slide
-                        eyebrow='Our Promise'
-                        headline='Clean Blends'
-                        description={this.cleanBlendsDescription()}
-                        src={CleanBlends}
-                        text='Get the Clean Blends Detail'
-                        width={this.state.width}
-                    />
-                    <Slide
-                        eyebrow='Is it Friday?'
-                        headline='Get Yours For Just $5'
-                        description='Every Friday, any regular 32 oz. Smoothie is just $5.'
-                        src={FiveDollarFriday}
-                        text='How do you Friday?'
-                        width={this.state.width}
-                    />
+            <React.Fragment>
+                <div className='slider-container' ref={(slider) => { this.slider = slider }}>
+                    <div className='slider-items'>
+                        <Slide
+                            eyebrow='New flavor. Same benefits.'
+                            headline={this.immuneBuilderHeadline()}
+                            description={this.immuneBuilderDescription()}
+                            src={ImmuneBuilder}
+                            text='Show me more'
+                            width={this.state.width}
+                        />
+                        <Slide
+                            eyebrow='Our Promise'
+                            headline='Clean Blends'
+                            description={this.cleanBlendsDescription()}
+                            src={CleanBlends}
+                            text='Get the Clean Blends Detail'
+                            width={this.state.width}
+                        />
+                        <Slide
+                            eyebrow='Is it Friday?'
+                            headline='Get Yours For Just $5'
+                            description='Every Friday, any regular 32 oz. Smoothie is just $5.'
+                            src={FiveDollarFriday}
+                            text='How do you Friday?'
+                            width={this.state.width}
+                        />
+                    </div>
                 </div>
-            </div>
+                <SliderNav />
+            </React.Fragment>
         );
     }
 }

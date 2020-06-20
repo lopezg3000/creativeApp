@@ -55,12 +55,12 @@
     color: #000;
 }
 
-.order-button {
+.order-btn.container {
     width: 13%;
     margin: 0 7% 0 0;
 }
 
-button {
+.order-btn.container button {
     background-color:  #e31b23;
     color: #fff;
     height: 3rem;
@@ -95,12 +95,12 @@ button {
         width: 62%;
     }
 
-    .order-button {
+    .order-btn.container {
         width: 15%;
         margin: 0 2% 0 0;
     }
 
-    button {
+    .order-btn.container button {
         border-radius: 1.5rem;
         padding: 0 0.875rem 0 1.25rem;
     }
@@ -139,12 +139,12 @@ button {
         padding: 0;
     }
 
-    .order-button {
+    .order-btn.container {
         width: 15.2%;
         margin: 0 2% 0 0;
     }
 
-    button {
+    .order-btn.container button {
         border-radius: 1.5rem;
         padding: 0 .5rem 0 .5rem;
         font-size: .8rem;
@@ -317,7 +317,7 @@ button {
         transition: color 0.4s ease;
     }
 
-    .order-button {
+    .order-btn.container {
         display: none;
     }
   }

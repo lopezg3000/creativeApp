@@ -3,7 +3,7 @@ import React from 'react';
 const SliderNav = () => {
     return (
         <div className='slider-nav'>
-            <button>
+            <button >
                 <i className="far fa-arrow-alt-circle-left"></i>
             </button>
             <span className='slider-nav-current'>01</span>

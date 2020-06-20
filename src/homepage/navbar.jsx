@@ -40,7 +40,7 @@ const NavBar = () => {
                         </div>
                     </div>
                 </div>
-                <div className='order-button'>
+                <div className='order-btn container'>
                     <button><i className="fas fa-laptop"></i> Order Now</button>
                 </div>
             </div>
