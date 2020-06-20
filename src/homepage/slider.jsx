@@ -8,7 +8,8 @@ import './slider.css';
 
 class Slider extends Component {
     state = {
-        width: 0
+        width: 0,
+        activeIndex: 0
     }
 
     componentDidMount() {
