@@ -58,6 +58,15 @@ class Slider extends Component {
         );
     }
 
+    handlePrevClick = () => {
+        console.log('Previous Clicked')
+    }
+
+    handleNextClick = () => {
+        console.log('Next Clicked')
+    }
+
+
     render() {
         return (
             <React.Fragment>
@@ -89,7 +98,10 @@ class Slider extends Component {
                         />
                     </div>
                 </div>
-                <SliderNav />
+                <SliderNav
+                    onPrevClick={this.handlePrevClick}
+                    onNextClick={this.handleNextClick}
+                />
             </React.Fragment>
         );
     }

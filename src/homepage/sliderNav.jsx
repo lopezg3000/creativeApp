@@ -1,16 +1,16 @@
 import React from 'react';
 
-const SliderNav = () => {
+const SliderNav = ({ onPrevClick, onNextClick }) => {
     return (
         <div className='slider-nav'>
-            <button >
+            <button onClick={onPrevClick}>
                 <i className="far fa-arrow-alt-circle-left"></i>
             </button>
             <span className='slider-nav-current'>01</span>
             &nbsp;/&nbsp;
             <span className='slider-nav-total'>03</span>
-            <button>
-                <i class="far fa-arrow-alt-circle-right"></i>
+            <button onClick={onNextClick}>
+                <i className="far fa-arrow-alt-circle-right"></i>
             </button>
         </div>
     );

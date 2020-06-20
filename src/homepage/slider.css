@@ -1,14 +1,8 @@
-/* .slider-items {
-    left: 0px;
-    transform: translateX(15.35%); 
-} */
-
 .content-slider {
     overflow: hidden;
 }
 
 .slider-container {
-    /* overflow: hidden; */
     transform: translateX(7%);
 }
 
@@ -67,7 +61,6 @@
 }
 
 .slide-image-column .image-wrapper {
-    /* margin: 0 auto; */
     width: 100%;
     height: 100%;
 }
@@ -79,7 +72,6 @@
 
 @media only screen and (max-width: 1024px) {
     .slider-container {
-        /* overflow: hidden; */
         transform: translateX(-4%);
     }
 
@@ -98,12 +90,10 @@
     }
 
     .slider-container {
-        /* overflow: hidden; */
         transform: translateX(0%);
     }
 
     .carousel-cell.slide {
-        /* width: 100%; */
         display: flex;
         flex-direction: column-reverse;
         margin: 0 0% 0 0%;
