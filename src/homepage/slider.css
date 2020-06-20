@@ -3,6 +3,10 @@
     transform: translateX(15.35%); 
 } */
 
+.content-slider {
+    overflow: hidden;
+}
+
 .slider-container {
     /* overflow: hidden; */
     transform: translateX(15.35%);
@@ -11,7 +15,7 @@
 .slider-items {
     display: grid;
     grid-template-columns: repeat(3, auto);
-    width: 2712px;
+    width: 2716px;
 }
 
 .carousel-cell.slide {
@@ -74,6 +78,11 @@
 }
 
 @media only screen and (max-width: 1024px) {
+    .slider-container {
+        /* overflow: hidden; */
+        transform: translateX(-2%);
+    }
+
     .slide-info-column .max-wrapper .headline {
         font-size: 1.59rem;
     }
