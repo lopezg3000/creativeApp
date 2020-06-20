@@ -60,19 +60,32 @@ class Slider extends Component {
     }
 
     handlePrevClick = () => {
-        console.log('Previous Clicked')
+        if (this.state.activeIndex > 0) {
+            this.setState({ activeIndex: this.state.activeIndex - 1 });
+        } else {
+            this.setState({ activeIndex: 2 })
+        }
     }
 
     handleNextClick = () => {
-        console.log('Next Clicked')
+        if (this.state.activeIndex < 2) {
+            this.setState({ activeIndex: this.state.activeIndex + 1 });
+        } else {
+            this.setState({ activeIndex: 0 })
+        }
     }
 
 
     render() {
+        let sliderStyle = {
+            transform: `translateX(${this.state.activeIndex * -38}%)`,
+            transition: '0.2s'
+        }
+
         return (
             <React.Fragment>
                 <div className='slider-container' ref={(slider) => { this.slider = slider }}>
-                    <div className='slider-items'>
+                    <div className='slider-items' style={sliderStyle}>
                         <Slide
                             eyebrow='New flavor. Same benefits.'
                             headline={this.immuneBuilderHeadline()}
