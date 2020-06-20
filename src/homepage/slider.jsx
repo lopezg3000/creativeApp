@@ -78,7 +78,7 @@ class Slider extends Component {
 
     render() {
         let sliderStyle = {
-            transform: `translateX(${this.state.activeIndex * -38}%)`,
+            transform: `translateX(${this.state.activeIndex * -33.3}%)`,
             transition: '0.2s'
         }
 
