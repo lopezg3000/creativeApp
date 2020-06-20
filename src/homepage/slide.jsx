@@ -1,9 +1,9 @@
 import React from 'react';
 import Button from './button';
 
-const Slide = ({ eyebrow, headline, description, text, src }) => {
+const Slide = ({ eyebrow, headline, description, text, src, width }) => {
     return (
-        <div className='carousel-cell slide'>
+        <div className='carousel-cell slide' style={{ width: width }}>
             <div className='slide-info-column'>
                 <div className='max-wrapper'>
                     <h2 className='eyebrow'>{eyebrow}</h2>

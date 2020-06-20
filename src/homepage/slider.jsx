@@ -6,7 +6,23 @@ import FiveDollarFriday from '../assets/img/fiveDollarFriday.jpg';
 import './slider.css';
 
 class Slider extends Component {
-    state = {}
+    state = {
+        width: 0
+    }
+
+    componentDidMount() {
+        this.updateDimensions();
+        window.addEventListener('resize', this.updateDimensions);
+    };
+
+    componentWillUnmount() {
+        window.removeEventListener('resize', this.updateDimensions);
+    };
+
+    updateDimensions = () => {
+        const width = this.slider.clientWidth;
+        this.setState({ width })
+    };
 
     immuneBuilderHeadline() {
         return (
@@ -43,7 +59,7 @@ class Slider extends Component {
 
     render() {
         return (
-            <div className='slider-container'>
+            <div className='slider-container' ref={(slider) => { this.slider = slider }}>
                 <div className='slider-items'>
                     <Slide
                         eyebrow='New flavor. Same benefits.'
@@ -51,6 +67,7 @@ class Slider extends Component {
                         description={this.immuneBuilderDescription()}
                         src={ImmuneBuilder}
                         text='Show me more'
+                        width={this.state.width}
                     />
                     <Slide
                         eyebrow='Our Promise'
@@ -58,6 +75,7 @@ class Slider extends Component {
                         description={this.cleanBlendsDescription()}
                         src={CleanBlends}
                         text='Get the Clean Blends Detail'
+                        width={this.state.width}
                     />
                     <Slide
                         eyebrow='Is it Friday?'
@@ -65,6 +83,7 @@ class Slider extends Component {
                         description='Every Friday, any regular 32 oz. Smoothie is just $5.'
                         src={FiveDollarFriday}
                         text='How do you Friday?'
+                        width={this.state.width}
                     />
                 </div>
             </div>
