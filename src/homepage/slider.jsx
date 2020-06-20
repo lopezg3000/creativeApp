@@ -59,7 +59,7 @@ class Slider extends Component {
 
     render() {
         return (
-            <div className='slider-container' ref={(slider) => { this.slider = slider }}>
+            <div className='slider-container'>
                 <div className='slider-items'>
                     <Slide
                         eyebrow='New flavor. Same benefits.'
