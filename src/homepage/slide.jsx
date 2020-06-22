@@ -3,7 +3,7 @@ import Button from './button';
 
 const Slide = ({ eyebrow, headline, description, text, src, width }) => {
     return (
-        <div className='carousel-cell slide' style={{ width: width }}>
+        <div className='carousel-cell slide' style={{ width }}>
             <div className='slide-info-column'>
                 <div className='max-wrapper'>
                     <h2 className='eyebrow'>{eyebrow}</h2>

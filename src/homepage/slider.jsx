@@ -6,6 +6,8 @@ import CleanBlends from '../assets/img/cleanBlends.jpg';
 import FiveDollarFriday from '../assets/img/fiveDollarFriday.jpg';
 import './slider.css';
 
+//learning about touch events today
+
 class Slider extends Component {
     state = {
         width: 0,
