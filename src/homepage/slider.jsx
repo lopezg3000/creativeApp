@@ -76,11 +76,23 @@ class Slider extends Component {
         }
     }
 
-    handleTouchStart = () => {
-        console.log('Start touch')
+    unify(e) {
+        return e.changedTouches ? e.changedTouches[0] : e;
     }
 
-    handleTouchEnd = () => {
+    handleTouchStart = (e) => {
+
+    }
+
+    handleMouseUp = (e) => {
+
+    }
+
+    handleTouchEnd = (e) => {
+        console.log('End touch')
+    }
+
+    handleMouseDown = (e) => {
         console.log('End touch')
     }
 
@@ -88,7 +100,7 @@ class Slider extends Component {
     render() {
         let sliderStyle = {
             transform: `translateX(${this.state.activeIndex * -33.3}%)`,
-            transition: '0.2s'
+            transition: '0.5s'
         }
 
         return (
@@ -97,6 +109,8 @@ class Slider extends Component {
                     className='slider-container'
                     ref={(slider) => { this.slider = slider }}
                     onTouchStart={this.handleTouchStart}
+                    onMouseDown={this.handleMouseDown}
+                    onMouseUp={this.handleMouseUp}
                     onTouchEnd={this.handleTouchEnd}
                 >
                     <div className='slider-items' style={sliderStyle}>
