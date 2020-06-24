@@ -11,7 +11,8 @@ class Slider extends Component {
     state = {
         width: 0,
         activeIndex: 0,
-        xInitial: ''
+        xInitial: '',
+        containerLength: 3
     }
 
     componentDidMount() {
@@ -77,33 +78,49 @@ class Slider extends Component {
         }
     };
 
-    // unify(e) {
-    //     return e.changedTouches ? e.changedTouches[0] : e;
-    // };
-
-    // lock(e) {
-    //     xInitial = unify(e).clientX
-    // };
-
-    handleTouchStart = (e, xInitial) => {
-        console.log('start', xInitial);
+    unify(e) {
+        return e.changedTouches ? e.changedTouches[0] : e;
     };
 
-    // handleMouseUp = (e, xInitial) => {
-    //     console.log('up', xInitial);
-    // };
-
-    handleTouchEnd = (e, xInitial) => {
-        console.log('end', xInitial);
+    lock(e) {
+        const xInitial = this.unify(e).clientX;
+        this.setState({ xInitial });
     };
 
-    // handleMouseDown = (e, xInitial) => {
-    //     console.log('down', xInitial);
-    // };
+    move(e) {
+        const containerLength = this.state.containerLength;
+        const xInitial = this.state.xInitial;
+        let activeIndex = this.state.activeIndex;
+        if (xInitial || xInitial === 0) {
+            let deltaX = this.unify(e).clientX - xInitial, s = Math.sign(deltaX);
+
+            if ((activeIndex > 0 || s < 0) && (activeIndex < containerLength - 1 || s > 0)) {
+                activeIndex -= s;
+                this.setState({ activeIndex });
+            }
+
+            this.setState({ xInitial: '' });
+        }
+    }
+
+    handleTouchStart = e => {
+        this.lock(e);
+    };
+
+    handleMouseUp = e => {
+        this.lock(e);
+    };
+
+    handleTouchEnd = e => {
+        this.move(e);
+    };
+
+    handleMouseDown = e => {
+        this.move(e);
+    };
 
 
     render() {
-        let { xInitial } = this.state;
         let sliderStyle = {
             transform: `translateX(${this.state.activeIndex * -33.3}%)`,
             transition: '0.5s'
@@ -114,10 +131,10 @@ class Slider extends Component {
                 <div
                     className='slider-container'
                     ref={(slider) => { this.slider = slider }}
-                    onTouchStart={(e) => this.handleTouchStart(e, xInitial)}
-                    // onMouseDown={(e) => this.handleMouseDown(e, xInitial)}
-                    // onMouseUp={(e) => this.handleMouseUp(e, xInitial)}
-                    onTouchEnd={(e) => this.handleTouchEnd(e, xInitial)}
+                    onTouchStart={this.handleTouchStart}
+                    onMouseUp={this.handleMouseUp}
+                    onMouseDown={this.handleMouseDown}
+                    onTouchEnd={this.handleTouchEnd}
                 >
                     <div className='slider-items' style={sliderStyle}>
                         <Slide

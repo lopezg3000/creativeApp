@@ -17,6 +17,7 @@
     flex-direction: row;
     max-width: 960px;
     margin: 17px 100px 24px -39px;
+    pointer-events: none;
 }
 
 /* Code below styles slide info column */
