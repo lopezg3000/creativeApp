@@ -10,7 +10,8 @@ import './slider.css';
 class Slider extends Component {
     state = {
         width: 0,
-        activeIndex: 0
+        activeIndex: 0,
+        xInitial: ''
     }
 
     componentDidMount() {
@@ -35,7 +36,7 @@ class Slider extends Component {
                 <span>&nbsp; Veggie Superfood</span>
             </React.Fragment>
         );
-    }
+    };
 
     immuneBuilderDescription() {
         return (
@@ -48,7 +49,7 @@ class Slider extends Component {
                 </span>
             </React.Fragment>
         );
-    }
+    };
 
     cleanBlendsDescription() {
         return (
@@ -58,7 +59,7 @@ class Slider extends Component {
                 <span>From the bottom of the cup up.</span>
             </React.Fragment>
         );
-    }
+    };
 
     handlePrevClick = () => {
         if (this.state.activeIndex > 0) {
@@ -66,7 +67,7 @@ class Slider extends Component {
         } else {
             this.setState({ activeIndex: 2 })
         }
-    }
+    };
 
     handleNextClick = () => {
         if (this.state.activeIndex < 2) {
@@ -74,30 +75,35 @@ class Slider extends Component {
         } else {
             this.setState({ activeIndex: 0 })
         }
-    }
+    };
 
-    unify(e) {
-        return e.changedTouches ? e.changedTouches[0] : e;
-    }
+    // unify(e) {
+    //     return e.changedTouches ? e.changedTouches[0] : e;
+    // };
 
-    handleTouchStart = (e) => {
+    // lock(e) {
+    //     xInitial = unify(e).clientX
+    // };
 
-    }
+    handleTouchStart = (e, xInitial) => {
+        console.log('start', xInitial);
+    };
 
-    handleMouseUp = (e) => {
+    // handleMouseUp = (e, xInitial) => {
+    //     console.log('up', xInitial);
+    // };
 
-    }
+    handleTouchEnd = (e, xInitial) => {
+        console.log('end', xInitial);
+    };
 
-    handleTouchEnd = (e) => {
-        console.log('End touch')
-    }
-
-    handleMouseDown = (e) => {
-        console.log('End touch')
-    }
+    // handleMouseDown = (e, xInitial) => {
+    //     console.log('down', xInitial);
+    // };
 
 
     render() {
+        let { xInitial } = this.state;
         let sliderStyle = {
             transform: `translateX(${this.state.activeIndex * -33.3}%)`,
             transition: '0.5s'
@@ -108,10 +114,10 @@ class Slider extends Component {
                 <div
                     className='slider-container'
                     ref={(slider) => { this.slider = slider }}
-                    onTouchStart={this.handleTouchStart}
-                    onMouseDown={this.handleMouseDown}
-                    onMouseUp={this.handleMouseUp}
-                    onTouchEnd={this.handleTouchEnd}
+                    onTouchStart={(e) => this.handleTouchStart(e, xInitial)}
+                    // onMouseDown={(e) => this.handleMouseDown(e, xInitial)}
+                    // onMouseUp={(e) => this.handleMouseUp(e, xInitial)}
+                    onTouchEnd={(e) => this.handleTouchEnd(e, xInitial)}
                 >
                     <div className='slider-items' style={sliderStyle}>
                         <Slide
