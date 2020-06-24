@@ -6,13 +6,19 @@ import CleanBlends from '../assets/img/cleanBlends.jpg';
 import FiveDollarFriday from '../assets/img/fiveDollarFriday.jpg';
 import './slider.css';
 
+//improvements: 
+// 1. stop swipe when trying to scroll up
+// 2. drag slide to preview next or see past
+// 3. Refactor code
+// 4. make count change with state
+
 
 class Slider extends Component {
     state = {
         width: 0,
         activeIndex: 0,
         xInitial: '',
-        containerLength: 3
+        sliderItems: 3
     }
 
     componentDidMount() {
@@ -88,13 +94,13 @@ class Slider extends Component {
     };
 
     move(e) {
-        const containerLength = this.state.containerLength;
+        const sliderItems = this.state.sliderItems;
         const xInitial = this.state.xInitial;
         let activeIndex = this.state.activeIndex;
         if (xInitial || xInitial === 0) {
             let deltaX = this.unify(e).clientX - xInitial, s = Math.sign(deltaX);
 
-            if ((activeIndex > 0 || s < 0) && (activeIndex < containerLength - 1 || s > 0)) {
+            if ((activeIndex > 0 || s < 0) && (activeIndex < sliderItems - 1 || s > 0)) {
                 activeIndex -= s;
                 this.setState({ activeIndex });
             }
@@ -119,8 +125,14 @@ class Slider extends Component {
         this.move(e);
     };
 
+    formatActiveSlide() {
+        const activeIndex = this.state.activeIndex;
+        return `0${activeIndex + 1}`;
+    }
+
 
     render() {
+        const { width, sliderItems } = this.state;
         let sliderStyle = {
             transform: `translateX(${this.state.activeIndex * -33.3}%)`,
             transition: '0.5s'
@@ -143,7 +155,7 @@ class Slider extends Component {
                             description={this.immuneBuilderDescription()}
                             src={ImmuneBuilder}
                             text='Show me more'
-                            width={this.state.width}
+                            width={width}
                         />
                         <Slide
                             eyebrow='Our Promise'
@@ -151,7 +163,7 @@ class Slider extends Component {
                             description={this.cleanBlendsDescription()}
                             src={CleanBlends}
                             text='Get the Clean Blends Detail'
-                            width={this.state.width}
+                            width={width}
                         />
                         <Slide
                             eyebrow='Is it Friday?'
@@ -159,13 +171,16 @@ class Slider extends Component {
                             description='Every Friday, any regular 32 oz. Smoothie is just $5.'
                             src={FiveDollarFriday}
                             text='How do you Friday?'
-                            width={this.state.width}
+                            width={width}
                         />
                     </div>
                 </div>
                 <SliderNav
                     onPrevClick={this.handlePrevClick}
                     onNextClick={this.handleNextClick}
+                    activeSlide={this.formatActiveSlide()}
+                    sliderItems={`0${sliderItems}`}
+
                 />
             </React.Fragment>
         );
