@@ -6,9 +6,6 @@ import CleanBlends from '../assets/img/cleanBlends.jpg';
 import FiveDollarFriday from '../assets/img/fiveDollarFriday.jpg';
 import './slider.css';
 
-//learning about touch events today
-//break day
-//will commit tomorrow
 
 class Slider extends Component {
     state = {
@@ -79,6 +76,14 @@ class Slider extends Component {
         }
     }
 
+    handleTouchStart = () => {
+        console.log('Start touch')
+    }
+
+    handleTouchEnd = () => {
+        console.log('End touch')
+    }
+
 
     render() {
         let sliderStyle = {
@@ -88,7 +93,12 @@ class Slider extends Component {
 
         return (
             <React.Fragment>
-                <div className='slider-container' ref={(slider) => { this.slider = slider }}>
+                <div
+                    className='slider-container'
+                    ref={(slider) => { this.slider = slider }}
+                    onTouchStart={this.handleTouchStart}
+                    onTouchEnd={this.handleTouchEnd}
+                >
                     <div className='slider-items' style={sliderStyle}>
                         <Slide
                             eyebrow='New flavor. Same benefits.'
