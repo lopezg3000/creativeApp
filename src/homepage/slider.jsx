@@ -8,6 +8,7 @@ import './slider.css';
 
 //learning about touch events today
 //break day
+//will commit tomorrow
 
 class Slider extends Component {
     state = {
