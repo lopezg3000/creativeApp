@@ -20,8 +20,9 @@
     margin: 0;
     text-decoration: none;
     outline: none;
-    background: none;
+    background: transparent;
     cursor: pointer;
+    transition: 0.3s;
 }
 
 .slider-nav span {
@@ -37,10 +38,11 @@
 }
 
 .slider-nav .icon {
-    font-size: 1.2rem;
+    font-size: 1rem;
 }
 
-.slider-nav .icon:hover {
+.slider-nav button:hover {
     color: rgb(53, 49, 49);
+    /* opacity: 1; */
 }
 
