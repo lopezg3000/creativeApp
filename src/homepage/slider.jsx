@@ -11,6 +11,7 @@ import './slider.css';
 // 2. drag slide to preview next or see past
 // 3. Refactor code
 // 4. make count change with state
+// 5. bug with pressing button since on-pointer events set to none
 
 
 class Slider extends Component {
