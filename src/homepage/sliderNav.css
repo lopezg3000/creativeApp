@@ -7,7 +7,7 @@
     transform: translateX(4%);
     margin: 10px 0 0 0;
     font-family: Montserrat, sans-serif;
-    font-size: .85rem;
+    font-size: .75rem;
     font-weight: 700;
     font-style: normal;
     color: #000;
@@ -21,13 +21,26 @@
     text-decoration: none;
     outline: none;
     background: none;
+    cursor: pointer;
 }
 
 .slider-nav span {
     padding: 0 5px;
 }
 
+.slider-nav-current {
+    color: #e31b23;
+}
+
+.slider-nav-total {
+    color: rgba(0,0,0,.2);
+}
+
 .slider-nav .icon {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
+}
+
+.slider-nav .icon:hover {
+    color: rgb(53, 49, 49);
 }
 
