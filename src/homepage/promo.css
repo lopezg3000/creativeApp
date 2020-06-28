@@ -1,7 +1,12 @@
+
+/* column grid styles */
+
 .full-width-promo {
+    display: flex;
     position: relative;
     width: 100%;
-    height: 745px;
+    top: -100px;
+    height: auto;
     margin: -50px auto 116px;
 }
 
@@ -11,7 +16,6 @@
     top: 50%;
     transform: translateY(-50%);
     width: 100%;
-    z-index: -1;
 }
 
 .promo-stripe .max-wrapper {
@@ -20,9 +24,7 @@
     color: #fff;
 }
 
-.max-wrapper .image-column{
-    width: 100%;
-}
+/* styles for body column */
 
 .max-wrapper .body-column {
     box-sizing: border-box;
@@ -31,17 +33,82 @@
     padding: 44px 0 44px 100px;
 }
 
+.body-column .eyebrow {
+    margin: 0 0 25px;
+}
+
+.body-column .headline {
+    font-size: 2.25rem;
+    line-height: 2.375rem;
+    text-align: inherit;
+    margin: 0 0 25px;
+}
+
+.body-column .description {
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+    margin: initial;
+}
+
+.body-column .link {
+    margin: 25px 0;
+}
+
+.body-column .link span {
+    font-size: 1.2rem;
+}
+
+/* styles for image */
+
+.body-column .download-buttons {
+    display: flex;
+    align-items: center;
+    margin: 0 10% 0 0;
+}
+
+.download-buttons .apple-button {
+    margin: 0 5px 0 0;
+}
+
+.apple-button img, .google-button img {
+    width: 100%;
+}
+
 .full-width-promo .promo-image {
     /* position: relative; */
     display: flex;
     justify-content: flex-end;
     align-items: center;
     padding: 44px 0;
-    max-width: 50%;
-
+    width: 50%;
 }
 
 .promo-image .image-wrapper {
     z-index: 1;
     width: 85%;
+}
+
+
+@media only screen and (max-width: 1024px) {
+    .max-wrapper .body-column {
+        padding: 33px 0 33px 68px;
+    }
+
+    .body-column .eyebrow {
+        margin: 0 0 20px;
+    }
+
+    .body-column .headline {
+        font-size: 1.75rem;
+        margin: 0 0 20px;
+    }
+
+    .body-column .link {
+        margin: 20px 0;
+    }
+
+    .promo-image .image-wrapper {
+        z-index: 1;
+        width: 100%;
+    }
 }
