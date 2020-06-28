@@ -38,7 +38,7 @@ const Promo = () => {
             </div>
             <div className='promo-image'>
                 <div className='image-wrapper'>
-                    <img style={{ height: 'auto', width: '40%' }} src='https://cdn.smoothieking.com/images/site/companion/phone-new-tilted.png' />
+                    <img src='https://cdn.smoothieking.com/images/site/companion/phone-new-tilted.png' />
                 </div>
             </div>
         </React.Fragment>
