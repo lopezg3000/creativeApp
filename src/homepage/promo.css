@@ -1,0 +1,36 @@
+.full-width-promo {
+    position: relative;
+    width: 100%;
+    height: 745px;
+    margin: -50px auto 116px;
+}
+
+.full-width-promo .promo-stripe {
+    background-color: #d02c30;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    z-index: -1;
+}
+
+.promo-stripe .max-wrapper {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    color: #fff;
+}
+
+.max-wrapper .image-column{
+    width: 100%;
+}
+
+.max-wrapper .body-column {
+    box-sizing: border-box;
+    text-align: left;
+    width: 100%;
+    padding: 44px 0 44px 100px;
+}
+
+.promo-image .image-wrapper {
+    z-index: 1;
+}

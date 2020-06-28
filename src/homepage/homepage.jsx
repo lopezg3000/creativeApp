@@ -6,6 +6,7 @@ import Slider from './slider';
 import Promo from './promo';
 import './heroCopyBlock.css'; //need to move this to heroCopyBlock.jsx to be consistent
 import './contentIntro.css';
+import './promo.css';
 
 const HomePage = () => {
     return (
