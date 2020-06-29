@@ -79,7 +79,7 @@
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    padding: 44px 0 10px 0; /* might need to change if need more space between next session*/
+    padding: 44px 0 44px 0; /* might need to change if need more space between next session*/
     width: 50%;
 }
 

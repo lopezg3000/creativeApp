@@ -1,6 +1,7 @@
 import React from 'react';
 
 const ContentIntro = ({ eyebrow, headline, description }) => {
+    //not displayed if eyebrow not passed
     let classes = 'content-row without-gradient';
     if (!eyebrow) classes += ' not-displayed';
 
