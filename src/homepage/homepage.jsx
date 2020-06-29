@@ -22,6 +22,9 @@ const HomePage = () => {
             <section className='full-width-promo'>
                 <Promo />
             </section>
+            <section>
+                <h1>Home</h1>
+            </section>
         </React.Fragment>
     );
 }

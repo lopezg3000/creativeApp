@@ -9,7 +9,7 @@ const Promo = () => {
                     <div className='image-column'>
                         <div className='mobile-image'>
                             <img
-                                style={{ display: 'none' }}
+                                // style={{ display: 'none' }}
                                 src='https://cdn.smoothieking.com/images/site/companion/phone-new-tilted.png'
                             />
                         </div>

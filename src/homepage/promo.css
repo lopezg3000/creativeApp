@@ -2,12 +2,12 @@
 /* column grid styles */
 
 .full-width-promo {
-    display: flex;
+    /* display: flex; */
     position: relative;
     width: 100%;
-    top: -100px;
+    /* top: -100px; */
     height: auto;
-    margin: -50px auto 116px;
+    /* margin: -50px auto 116px; */
 }
 
 .full-width-promo .promo-stripe {
@@ -60,6 +60,10 @@
 
 /* styles for image */
 
+.mobile-image {
+    display: none;
+}
+
 .body-column .download-buttons {
     display: flex;
     align-items: center;
@@ -79,7 +83,7 @@
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    padding: 44px 0;
+    padding: 44px 0 10px 0; /* might need to change if need more space between next session*/
     width: 50%;
 }
 
@@ -111,4 +115,28 @@
         z-index: 1;
         width: 100%;
     }
+}
+
+@media only screen and (max-width: 768px) {
+    .full-width-promo {
+        /* top: initial; */
+    }
+
+    .full-width-promo .promo-stripe {
+        /* transform: initial; */
+    }
+
+    .promo-stripe .max-wrapper {
+        /* grid-template-columns: initial; */
+        grid-template-rows: 1fr 1fr;
+    }
+
+    .full-width-promo .promo-image {
+        display: none;
+    }
+
+    .mobile-image {
+        display: block;
+    }
+
 }
