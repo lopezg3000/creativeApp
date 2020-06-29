@@ -16,14 +16,21 @@ const HomePage = () => {
                 <HeroCopyBlock />
             </section>
             <section className='content-slider carousel'>
-                <ContentIntro />
+                <ContentIntro
+                    headline='The Latest Smoothie Goodness'
+                    description='Keep tabs on new products, partnerships, and limited-time offers.'
+                />
                 <Slider />
             </section>
             <section className='full-width-promo'>
                 <Promo />
             </section>
             <section className='smoothie-category stacked'>
-                <h1>Home</h1>
+                <ContentIntro
+                    eyebrow='Purpose Blends'
+                    headline='Blended to Fuel Your Passion'
+                    description='Our Smoothies are packed with nutrient-rich fuel for experience-rich lives.'
+                />
             </section>
         </React.Fragment>
     );

@@ -32,6 +32,10 @@
     margin: 0;
 }
 
+.content-row.without-gradient.not-displayed {
+    display: none;
+}
+
 .content-row.without-gradient {
     margin: auto;
     width: 28rem;
