@@ -119,16 +119,19 @@
 
 @media only screen and (max-width: 768px) {
     .full-width-promo {
-        /* top: initial; */
+        position: initial;
     }
 
     .full-width-promo .promo-stripe {
-        /* transform: initial; */
+        position: initial;
+        transform: initial;
+        background-color: none;
     }
 
     .promo-stripe .max-wrapper {
-        /* grid-template-columns: initial; */
-        grid-template-rows: 1fr 1fr;
+        display: block;
+        grid-template-columns: initial;
+        /* grid-template-rows: 1fr 1fr; */
     }
 
     .full-width-promo .promo-image {
@@ -136,7 +139,28 @@
     }
 
     .mobile-image {
-        display: block;
+        display: flex;
+        justify-content: center;
+    }
+
+    .image-column .mobile-image {
+        position: relative;
+    }
+
+    .mobile-image img {
+        width: 320px;
+        position: absolute;
+        transform: translateY(-44%)
+    }
+
+    .max-wrapper .body-column {
+        background-color: #d02c30;
+        padding: 212px 0 33px 22px;
+    }
+
+    .body-column .download-buttons {
+        margin: initial;
+        justify-content: center;
     }
 
 }

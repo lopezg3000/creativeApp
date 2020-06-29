@@ -89,7 +89,7 @@
 @media only screen and (max-width: 767px) {
     /* need to change max-width to 768px but need to know how it will affect promo  */
     .content-slider {
-        margin: 0 auto 80px;
+        margin: 0 auto 192px;
     }
 
     .slide {
