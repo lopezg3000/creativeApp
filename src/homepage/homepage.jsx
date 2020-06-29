@@ -22,7 +22,7 @@ const HomePage = () => {
             <section className='full-width-promo'>
                 <Promo />
             </section>
-            <section>
+            <section className='smoothie-category stacked'>
                 <h1>Home</h1>
             </section>
         </React.Fragment>

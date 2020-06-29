@@ -1,6 +1,15 @@
 import React from 'react';
 import Button from './button';
 
+/*
+Improvements: 
+1. Refactor i.e. put img tag in another component so that now we can reuse it 
+    in promoimage and mobile image, as well as bodycolumn children. leave divs behind
+2. Make download buttons smaller when width is less than 768px
+3. Increase margin between children of body column for widths less than 768px
+
+*/
+
 const Promo = () => {
     return (
         <React.Fragment>
