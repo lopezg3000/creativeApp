@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import Slide from './slide';
 import SliderNav from './sliderNav';
-import ImmuneBuilder from '../assets/img/immuneBuilder.jpg';
-import CleanBlends from '../assets/img/cleanBlends.jpg';
-import FiveDollarFriday from '../assets/img/fiveDollarFriday.jpg';
+import ImmuneBuilder from '../assets/homepageImages/immuneBuilder.jpg';
+import CleanBlends from '../assets/homepageImages/cleanBlends.jpg';
+import FiveDollarFriday from '../assets/homepageImages/fiveDollarFriday.jpg';
 import './slider.css';
 
 //improvements: 

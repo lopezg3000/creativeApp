@@ -4,6 +4,7 @@ import HeroCopyBlock from './heroCopyBlock';
 import ContentIntro from './contentIntro';
 import Slider from './slider';
 import Promo from './promo';
+import SmoothieCategories from './smoothieCategories';
 import './heroCopyBlock.css'; //need to move this to heroCopyBlock.jsx to be consistent
 import './contentIntro.css';
 import './promo.css';
@@ -31,6 +32,7 @@ const HomePage = () => {
                     headline='Blended to Fuel Your Passion'
                     description='Our Smoothies are packed with nutrient-rich fuel for experience-rich lives.'
                 />
+                <SmoothieCategories />
             </section>
         </React.Fragment>
     );
