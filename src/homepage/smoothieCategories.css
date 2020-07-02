@@ -1,0 +1,35 @@
+.smoothie-categories.stacked {
+    margin: 0 auto 160px;
+}
+
+.categories {
+    max-width: 1242px;
+    margin: 0 auto;
+}
+
+
+.category {
+    margin-bottom: 80px;
+    display: grid;
+    grid-template-columns: 555px calc(100% - 555px);
+}
+
+.card-image {
+    width: 535px;
+    min-height: 335px;
+    margin: 0 0 0 25px;
+}
+
+.card-image img{
+    width: 100%;
+}
+
+.ingredient-stripe {
+    overflow: hidden;
+}
+
+.ingredient-stripe .image-wrapper {
+    width: 100%;
+    min-width: 685px;
+    float: right;
+}

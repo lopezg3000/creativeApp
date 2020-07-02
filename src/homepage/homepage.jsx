@@ -8,6 +8,7 @@ import SmoothieCategories from './smoothieCategories';
 import './heroCopyBlock.css'; //need to move this to heroCopyBlock.jsx to be consistent
 import './contentIntro.css';
 import './promo.css';
+import './smoothieCategories.css';
 
 //Hello, I'm Gabriel Lopez. I am a Frontend developer in Houston Texas. I have a serious passion for visual and responsive design as well as creating dynamic, user friendly experiences. In short, crafting great software matters to me. What matters to you?
 //learning canvas today.
@@ -29,7 +30,7 @@ const HomePage = () => {
             <section className='full-width-promo'>
                 <Promo />
             </section>
-            <section className='smoothie-category stacked'>
+            <section className='smoothie-categories stacked'>
                 <ContentIntro
                     eyebrow='Purpose Blends'
                     headline='Blended to Fuel Your Passion'
