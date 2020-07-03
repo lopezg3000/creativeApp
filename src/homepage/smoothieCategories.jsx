@@ -16,7 +16,7 @@ const SmoothieCategories = () => {
                         <div className='card-stripe'>
                             <p className='blend-count'>
                                 <span className='blend-count-number'>27</span>
-                                <span className='blend-count-number'>
+                                <span className='blend-count-text'>
                                     Blends <br /> Available
                                 </span>
                             </p>
