@@ -140,7 +140,7 @@ Bold 700
     }
 
     .category .category-card .card-stripe {
-        height: 123.672px;
+        height: 120px;
         align-items: center;
     }
     
@@ -170,11 +170,31 @@ Bold 700
     }
 
     .card-body .description {
-        font-size: 1.125rem; /*1.19rem if wanting to revert*/
-        line-height: 1.3125rem; /*1.45rem if wanting to revert back to previous style*/
+        font-size: 1.125rem; 
+        line-height: 1.3125rem;
+    }
+
+    .card-body .link {
+        margin: 20px 0 0 0;
+    }
+
+    .category-feature .ingredient-stripe {
+        position: relative;
+        top: 47.1%;
+        overflow: hidden;
+    }
+
+    .ingredient-stripe .image-wrapper {
+        min-width: 588px;
+        height: 120px;
     }
 
     .featured-item img {
-        width: 350px;
+        width: 334px;
     }
 }
+
+@media only screen and (max-width: 767px) {
+    
+}
+
