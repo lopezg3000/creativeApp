@@ -210,11 +210,22 @@ Bold 700
         height: 65px;
     }
 
+    .category .category-card .card-stripe {
+        order: 1;
+    }
+
     .category .category-card .card-image {
+        order: 2;
         width: 320px;
     }
 
+    .category .category-card .card-body {
+        order: 3
+    }
+
     .category .category-card {
+        display: flex;
+        flex-direction: column;
         order: 2;
     }
 
