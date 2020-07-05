@@ -230,7 +230,9 @@ Bold 700
 
     .category .category-card .card-image {
         order: 2;
-        width: 320px;
+        width: calc(100% - 44px);
+        padding: 0 22px;
+        min-height: initial;
     }
 
     .category .category-card .card-body {
