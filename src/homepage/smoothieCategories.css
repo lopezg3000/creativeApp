@@ -164,6 +164,16 @@ Bold 700
         line-height: 2.65rem;
     }
 
+    .category .category-card .card-body {
+        padding: 22px 29px 33px 102px;
+        margin: 0;
+    }
+
+    .card-body .description {
+        font-size: 1.125rem; /*1.19rem if wanting to revert*/
+        line-height: 1.3125rem; /*1.45rem if wanting to revert back to previous style*/
+    }
+
     .featured-item img {
         width: 350px;
     }
