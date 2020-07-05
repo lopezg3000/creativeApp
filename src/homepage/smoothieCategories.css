@@ -195,6 +195,44 @@ Bold 700
 }
 
 @media only screen and (max-width: 767px) {
-    
+    .categories .category {
+        grid-template-columns: 100%;
+        grid-template-rows: auto auto;
+    }
+
+    .category-feature .ingredient-stripe {
+        position: initial;
+        top: initial;
+    }
+
+    .ingredient-stripe .image-wrapper {
+        min-width: 767px;
+        height: 65px;
+    }
+
+    .category .category-card .card-image {
+        width: 320px;
+    }
+
+    .category .category-card {
+        order: 2;
+    }
+
+    .category .category-feature {
+        position: relative;
+        order: 1;
+    }
+
+    .category-feature .featured-item {
+        position: absolute;
+        width: 160px;
+        margin: 0;
+        top: -83%;
+    }
+
+    .featured-item img {
+        width: 100%;
+    }
+
 }
 
