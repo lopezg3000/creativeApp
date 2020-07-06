@@ -144,10 +144,10 @@ class Slider extends Component {
                 <div
                     className='slider-container'
                     ref={(slider) => { this.slider = slider }}
-                    onTouchStart={this.handleTouchStart}
-                    onMouseUp={this.handleMouseUp}
-                    onMouseDown={this.handleMouseDown}
-                    onTouchEnd={this.handleTouchEnd}
+                // onTouchStart={this.handleTouchStart}
+                // onMouseUp={this.handleMouseUp}
+                // onMouseDown={this.handleMouseDown}
+                // onTouchEnd={this.handleTouchEnd}
                 >
                     <div className='slider-items' style={sliderStyle}>
                         <Slide
