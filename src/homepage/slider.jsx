@@ -16,25 +16,27 @@ import './slider.css';
 
 class Slider extends Component {
     state = {
-        width: 375,
+        width: 0,
         activeIndex: 0,
         xInitial: '',
         sliderItems: 3
     }
 
-    // componentDidMount() {
-    //     this.updateDimensions();
-    //     window.addEventListener('resize', this.updateDimensions);
-    // };
+    componentDidMount() {
+        this.updateDimensions();
+        window.addEventListener('resize', this.updateDimensions);
+        window.addEventListener('orientationchange', this.updateDimensions);
+    };
 
-    // componentWillUnmount() {
-    //     window.removeEventListener('resize', this.updateDimensions);
-    // };
+    componentWillUnmount() {
+        window.removeEventListener('resize', this.updateDimensions);
+        window.removeEventListener('orientationchange', this.updateDimensions);
+    };
 
-    // updateDimensions = () => {
-    //     const width = this.slider.clientWidth;
-    //     this.setState({ width })
-    // };
+    updateDimensions = () => {
+        const width = this.slider.clientWidth;
+        this.setState({ width })
+    };
 
     immuneBuilderHeadline() {
         return (
@@ -143,7 +145,7 @@ class Slider extends Component {
             <React.Fragment>
                 <div
                     className='slider-container'
-                    // ref={(slider) => { this.slider = slider }}
+                    ref={(slider) => { this.slider = slider }}
                     onTouchStart={this.handleTouchStart}
                     onMouseUp={this.handleMouseUp}
                     onMouseDown={this.handleMouseDown}
