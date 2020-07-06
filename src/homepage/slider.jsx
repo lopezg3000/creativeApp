@@ -33,7 +33,6 @@ class Slider extends Component {
 
     updateDimensions = () => {
         const width = this.slider.clientWidth;
-        alert(`orientation width ${width}`);
         this.setState({ width })
     };
 
