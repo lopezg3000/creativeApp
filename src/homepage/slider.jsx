@@ -25,16 +25,15 @@ class Slider extends Component {
     componentDidMount() {
         this.updateDimensions();
         window.addEventListener('resize', this.updateDimensions);
-        window.addEventListener('orientationchange', this.updateDimensions);
     };
 
     componentWillUnmount() {
         window.removeEventListener('resize', this.updateDimensions);
-        window.removeEventListener('orientationchange', this.updateDimensions);
     };
 
     updateDimensions = () => {
         const width = this.slider.clientWidth;
+        alert(`orientation width ${width}`);
         this.setState({ width })
     };
 
