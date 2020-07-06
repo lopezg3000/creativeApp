@@ -86,7 +86,7 @@
     }
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 768px), (orientation: portrait) {
     /* need to change max-width to 768px but need to know how it will affect promo  */
     .content-slider {
         margin: 0 auto 192px;
