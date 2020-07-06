@@ -237,7 +237,7 @@ Bold 700
 
     .category .category-card .card-body {
         order: 3;
-        padding: 22px 44px 33px;
+        padding: 22px 22px 33px;
     }
 
     .card-body .description {
@@ -247,6 +247,9 @@ Bold 700
 
     .card-body .link {
         margin: 15px 0 0 0;
+    }
+
+    .card-body .link span {
         font-size: .9375rem;
     }
 
