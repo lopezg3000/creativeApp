@@ -236,7 +236,17 @@ Bold 700
     }
 
     .category .category-card .card-body {
-        order: 3
+        order: 3;
+        padding: 22px 44px 33px;
+    }
+
+    .card-body .description {
+        font-size: .9375rem; 
+        line-height: 1.1875rem;
+    }
+
+    .card-body .link {
+        margin: 15px 0 0 0;
     }
 
     .category-feature .ingredient-stripe {
