@@ -1,51 +1,40 @@
-import React from 'react'
-import Button from './button';
+import React, { Component } from 'react';
+import SmoothieCategory from './smoothieCategory';
 import FitnessBlendsImage from '../assets/homepageImages/fitnessBlendsImage.jpg';
 import FitnessBlendsStripe from '../assets/homepageImages/fitnessBlendsStripe.jpg';
 import FitnessBlendsShake from '../assets/homepageImages/fitnessBlendsShake.png';
 
-const SmoothieCategories = () => {
-    return (
-        <div className='categories-container'>
-            <div className='categories'>
-                <div className='category fitness-blend-red'>
-                    <div className='category-card'>
-                        <div className='card-image'>
-                            <img src={FitnessBlendsImage} />
-                        </div>
-                        <div className='card-stripe'>
-                            <p className='blend-count'>
-                                <span className='blend-count-number'>27</span>
-                                <span className='blend-count-text'>
-                                    Blends <br /> Available
-                                </span>
-                            </p>
-                            <h3 className='card-title'>
-                                Fitness <br /> Blends
-                            </h3>
-                        </div>
-                        <div className='card-body'>
-                            <p className='description'>
-                                Purposefully blended with protein-rich ingredients to help
-                                you fuel up or recover faster.
-                            </p>
-                            <Button text='Explore All Fitness Blends' />
-                        </div>
-                    </div>
-                    <div className='category-feature'>
-                        <div className='ingredient-stripe'>
-                            <div className='image-wrapper'>
-                                <img src={FitnessBlendsStripe} />
-                            </div>
-                        </div>
-                        <div className='featured-item'>
-                            <img src={FitnessBlendsShake} />
-                        </div>
-                    </div>
+class SmoothieCategories extends Component {
+
+    insertBreak(firstWord, secondWord) {
+        return (
+            <React.Fragment>
+                {firstWord}
+                <br />
+                {secondWord}
+            </React.Fragment>
+        );
+    }
+
+    render() {
+        return (
+            <div className='categories-container'>
+                <div className='categories'>
+                    <SmoothieCategory
+                        image={FitnessBlendsImage}
+                        description='Purposefully blended with protein-rich ingredients to help you fuel up or recover faster.'
+                        stripe={FitnessBlendsStripe}
+                        shake={FitnessBlendsShake}
+                        blendNumber='27'
+                        blendText={this.insertBreak('Blends', 'Available')}
+                        title={this.insertBreak('Fitness', 'Blends')}
+                        buttonText='Explore All Fitness Blends'
+                    />
                 </div>
             </div>
-        </div>
-    );
+        );
+    }
 }
+
 
 export default SmoothieCategories;
