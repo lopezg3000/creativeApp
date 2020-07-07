@@ -100,7 +100,7 @@ Bold 700
 
 .category-feature .ingredient-stripe {
     position: relative;
-    top: 51.25%;
+    top: 51.1%;
     overflow: hidden;
 }
 
@@ -223,15 +223,35 @@ Bold 700
         overflow: hidden;
     }
 
+    .category.reverse .category-feature .ingredient-stripe {
+        top: 49%;
+    } /*style reverse*/
+
     .ingredient-stripe .image-wrapper {
-        min-width: 588px;
+        min-width: 666px; /*588px original min width */
         height: 120px;
     }
 
     .featured-item img {
         width: 334px;
     }
+
+    /*category reverse styles for max 1023px*/
+
+    .categories .category.reverse {
+        grid-template-columns: calc(100% - 435px) 435px;
+    }
+
+    .category.reverse .category-card .card-body {
+        margin: 0;
+    }
+
+    .category.reverse .category-feature .ingredient-stripe {
+        top: 47.1%;
+    }
+
 }
+
 
 @media only screen and (max-width: 767px) {
     .categories .category {
