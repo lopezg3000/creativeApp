@@ -1,7 +1,9 @@
 import React from 'react';
 import Button from './button';
 
-const SmoothieCategory = ({ image, blendNumber, title, stripe, shake, description, blendText, buttonText, reverse }) => {
+const SmoothieCategory = ({ image, blendNumber, title, blendColor, stripe, shake, description, buttonText, reverse }) => {
+    let blendColorClass = blendColor;
+
     let reverseClass = '';
     if (reverse) reverseClass += reverse;
 
@@ -11,16 +13,20 @@ const SmoothieCategory = ({ image, blendNumber, title, stripe, shake, descriptio
                 <div className='card-image'>
                     <img src={image} />
                 </div>
-                <div className='card-stripe'>
+                <div className={`card-stripe ${blendColorClass}`}>
                     <p className='blend-count'>
                         <span className='blend-count-number'>{blendNumber}</span>
-                        <span className='blend-count-text'>{blendText}</span>
+                        <span className='blend-count-text'>
+                            Blends
+                            <br />
+                            Available
+                        </span>
                     </p>
                     <h3 className='card-title'>{title}</h3>
                 </div>
                 <div className='card-body'>
                     <p className='description'>{description}</p>
-                    <Button text={buttonText} />
+                    <Button blendColorClass={blendColorClass} text={buttonText} />
                 </div>
             </div>
             <div className='category-feature'>

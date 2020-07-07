@@ -45,8 +45,30 @@ Bold 700
     padding: 0 0 0 22px;
     margin: -3px 0 0 0;
     height: 123.594px;
-    /* justify-content: left; Don't know if this is needed */
 }
+
+/*Different stripe colors based off of blendColor prop passed*/
+
+.category .category-card .card-stripe {
+    background: #d02c30;
+}
+
+.category .category-card .card-stripe.blue {
+    background: #6e7c9f;
+}
+
+.category .category-card .card-stripe.green {
+    background: #7a9a44;
+}
+
+.category .category-card .card-stripe.orange {
+    background: #de8b05;
+}
+
+.category .category-card .card-stripe.pink {
+    background: #d75d73;
+}
+
 
 .card-stripe .blend-count {
     padding: 0 22px 0 15px;
@@ -94,6 +116,28 @@ Bold 700
     margin: 25px 0 0 0;
     background: #d02c30;
     color: #fff;
+}
+
+/*Different button colors based off of blendColor prop passed*/
+
+.card-body .link.red {
+    background: #d02c30;
+}
+
+.card-body .link.blue {
+    background: #6e7c9f;
+}
+
+.card-body .link.green {
+    background: #7a9a44;
+}
+
+.card-body .link.orange {
+    background: #de8b05;
+}
+
+.card-body .link.pink {
+    background: #d75d73;
 }
 
 /*styles for category feature for width above 1240px*/
