@@ -1,9 +1,12 @@
 import React from 'react';
 import Button from './button';
 
-const SmoothieCategory = ({ image, blendNumber, title, stripe, shake, description, blendText, buttonText }) => {
+const SmoothieCategory = ({ image, blendNumber, title, stripe, shake, description, blendText, buttonText, reverse }) => {
+    let reverseClass = '';
+    if (reverse) reverseClass += reverse;
+
     return (
-        <div className='category fitness-blend-red'>
+        <div className={`category ${reverseClass}`}>
             <div className='category-card'>
                 <div className='card-image'>
                     <img src={image} />

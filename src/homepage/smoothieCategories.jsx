@@ -30,6 +30,17 @@ class SmoothieCategories extends Component {
                         title={this.insertBreak('Fitness', 'Blends')}
                         buttonText='Explore All Fitness Blends'
                     />
+                    <SmoothieCategory
+                        image={FitnessBlendsImage}
+                        description='Purposefully blended with protein-rich ingredients to help you fuel up or recover faster.'
+                        stripe={FitnessBlendsStripe}
+                        shake={FitnessBlendsShake}
+                        blendNumber='27'
+                        blendText={this.insertBreak('Blends', 'Available')}
+                        title={this.insertBreak('Fitness', 'Blends')}
+                        buttonText='Explore All Fitness Blends'
+                        reverse='reverse'
+                    />
                 </div>
             </div>
         );

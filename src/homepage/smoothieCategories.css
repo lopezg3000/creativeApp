@@ -21,7 +21,6 @@ Bold 700
     margin: 0 auto;
 }
 
-
 .categories .category {
     margin-bottom: 80px;
     display: grid;
@@ -46,7 +45,7 @@ Bold 700
     padding: 0 0 0 22px;
     margin: -3px 0 0 0;
     height: 123.594px;
-    justify-content: left;
+    /* justify-content: left; Don't know if this is needed */
 }
 
 .card-stripe .blend-count {
@@ -73,7 +72,7 @@ Bold 700
 .card-stripe .card-title {
     font-family: 'Bitter', serif;
     font-size: 3.2rem;
-    margin: .35rem 0% 0 0;
+    margin: .35rem 0 0 0;
     padding: 0 0 0 2%;
     line-height: 3.4rem;
     color: #fff;
@@ -120,6 +119,37 @@ Bold 700
 
 .featured-item img {
     width: 410px;
+}
+
+/*category reverse styles for min width 1024px*/
+
+.categories .category.reverse {
+    grid-template-columns: calc(100% - 560px) 560px;
+}
+
+.category.reverse .category-card {
+    order: 2;
+} 
+
+.category.reverse .category-card .card-image {
+    margin: 0 25px 0 0;
+} 
+
+.category.reverse .category-card .card-stripe {
+    flex-direction: row-reverse;
+    padding: 0 22px 0 0;
+}
+
+.category.reverse .card-stripe .card-title {
+    margin: .35rem auto 0 99px;
+}
+
+.category.reverse .category-card .card-body {
+    margin: 0 22px 0 0;
+}
+
+.category.reverse .ingredient-stripe .image-wrapper {
+    float: left;
 }
 
 
