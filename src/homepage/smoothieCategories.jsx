@@ -12,6 +12,9 @@ import WellnessBlendsShake from '../assets/homepageImages/smoothieCategories/wel
 import BreakTimeBlendsImage from '../assets/homepageImages/smoothieCategories/breakTimeBlendsImage.jpg';
 import BreakTimeBlendsStripe from '../assets/homepageImages/smoothieCategories/breakTimeBlendsStripe.jpg';
 import BreakTimeBlendsShake from '../assets/homepageImages/smoothieCategories/breakTimeBlendsShake.png';
+import KidsBlendsImage from '../assets/homepageImages/smoothieCategories/kidsBlendsImage.jpg';
+import KidsBlendsStripe from '../assets/homepageImages/smoothieCategories/kidsBlendsStripe.jpg';
+import KidsBlendsShake from '../assets/homepageImages/smoothieCategories/kidsBlendsShake.png';
 
 /*
     renamed image files different from original name then switched 
@@ -79,14 +82,13 @@ class SmoothieCategories extends Component {
                         blendColor='orange'
                     />
                     <SmoothieCategory
-                        image={FitnessBlendsImage}
-                        description='Purposefully blended with protein-rich ingredients to help you fuel up or recover faster.'
-                        stripe={FitnessBlendsStripe}
-                        shake={FitnessBlendsShake}
-                        blendNumber='27'
-                        blendText={this.insertBreak('Blends', 'Available')}
-                        title={this.insertBreak('Fitness', 'Blends')}
-                        buttonText='Explore All Fitness Blends'
+                        image={KidsBlendsImage}
+                        description='Purposefully blended to help them stay happy, with flavors they’ll love.'
+                        stripe={KidsBlendsStripe}
+                        shake={KidsBlendsShake}
+                        blendNumber='6'
+                        title={this.insertBreak('Kids', 'Blends')}
+                        buttonText='Explore All Kids Blends'
                         blendColor='pink'
                     />
                 </div>
