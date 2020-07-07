@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import SmoothieCategory from './smoothieCategory';
-import FitnessBlendsImage from '../assets/homepageImages/fitnessBlendsImage.jpg';
-import FitnessBlendsStripe from '../assets/homepageImages/fitnessBlendsStripe.jpg';
-import FitnessBlendsShake from '../assets/homepageImages/fitnessBlendsShake.png';
+import FitnessBlendsImage from '../assets/homepageImages/smoothieCategories/fitnessBlendsImage.jpg';
+import FitnessBlendsStripe from '../assets/homepageImages/smoothieCategories/fitnessBlendsStripe.jpg';
+import FitnessBlendsShake from '../assets/homepageImages/smoothieCategories/fitnessBendsShake.png';
 
 class SmoothieCategories extends Component {
 
