@@ -246,6 +246,10 @@ Bold 700
         margin: 0;
     }
 
+    .category.reverse .card-stripe .card-title {
+        margin: 0 auto 0 99px;
+    }
+
     .category.reverse .category-feature .ingredient-stripe {
         top: 47.1%;
     }
@@ -316,6 +320,8 @@ Bold 700
         font-size: .9375rem;
     }
 
+    /*styles for category feature for max width 767px*/
+
     .category-feature .ingredient-stripe {
         position: initial;
         top: initial;
@@ -325,9 +331,7 @@ Bold 700
         min-width: 767px;
         height: 65px;
     }
-
-    /*styles for category feature for max width 767px*/
-
+    
     .category .category-feature {
         position: relative;
         order: 1;
@@ -356,7 +360,43 @@ Bold 700
     }
 
     .category.reverse .card-stripe .card-title {
-        margin: .35rem auto 0 120px
+        margin: 0 auto 0 120px;
+        padding: 0 0 0 1%;
     }
 }
+
+@media only screen and (max-width: 480px) {
+    .category .category-card .card-stripe {
+        height: 70px;
+    }
+
+    .blend-count .blend-count-number {
+        font-size: 1.75rem;
+        line-height: 1.5625rem;
+        text-align: center;
+        letter-spacing: -0.2rem;
+    }
+
+    .blend-count .blend-count-text {
+        font-size: .625rem;
+    }
+
+    .card-stripe .card-title {
+        font-size: 1.375rem;
+        line-height: 1.625rem;
+        margin: 0 auto 0 100px;
+    }
+
+    .category-feature .featured-item {
+        width: 135px;
+    }
+
+    /*reverse styles for max width 480px*/
+
+    .category.reverse .card-stripe .card-title {
+        margin: 0 auto 0 100px;
+    }
+}
+
+
 
