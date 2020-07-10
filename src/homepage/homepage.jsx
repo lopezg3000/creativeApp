@@ -39,7 +39,7 @@ const HomePage = () => {
                 />
                 <SmoothieCategories />
             </section>
-            <section className='content-slider carousel'>
+            <section className='content-slider partnerships carousel'>
                 <PartnershipsSlider />
             </section>
         </React.Fragment>
