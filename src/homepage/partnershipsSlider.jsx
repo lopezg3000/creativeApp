@@ -50,12 +50,12 @@ class Slider extends Component {
         if (this.state.activeIndex > 0) {
             this.setState({ activeIndex: this.state.activeIndex - 1 });
         } else {
-            this.setState({ activeIndex: 2 })
+            this.setState({ activeIndex: 3 })
         }
     };
 
     handleNextClick = () => {
-        if (this.state.activeIndex < 2) {
+        if (this.state.activeIndex < 3) {
             this.setState({ activeIndex: this.state.activeIndex + 1 });
         } else {
             this.setState({ activeIndex: 0 })
@@ -111,8 +111,9 @@ class Slider extends Component {
 
     render() {
         const { width, sliderItems } = this.state;
+        const translatePercent = -Math.abs(100 / sliderItems);
         let sliderStyle = {
-            transform: `translateX(${this.state.activeIndex * -33.3}%)`,
+            transform: `translateX(${this.state.activeIndex * translatePercent}%)`,
             transition: '0.5s'
         }
 
