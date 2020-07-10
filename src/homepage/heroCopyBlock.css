@@ -132,6 +132,10 @@
         line-height: 1.125rem;
         text-align: left;
     }
+
+    .hero-container .max-wrapper .link span {
+        font-size: 1rem;
+    }
 }
 
 

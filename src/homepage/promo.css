@@ -152,6 +152,10 @@
         margin: 10px 0;
     }
 
+    .body-column .link span {
+        font-size: 1rem;
+    }
+
     .full-width-promo .promo-image {
         display: none;
     }

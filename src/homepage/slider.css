@@ -75,7 +75,7 @@
     height: 100%;
 }
 
-/*styles for partnerships slider*/
+/*styles for partnerships slider for width above 1024px*/
 
 .content-slider.partnerships .slider-items {
     display: grid;
@@ -148,6 +148,11 @@
         margin: 0 0 10px 0;
     }
 
+    .slide-info-column .max-wrapper .link span{
+        font-size: .9735rem;
+        padding: 0 20px;
+    }
+
     .slide .slide-image-column {
         margin: 0 5% 0 5%;
         width: 90%;
@@ -165,5 +170,11 @@
         height: initial;
     }
 
+    /*styles for partnerships slider for width above 1024px*/
+    
+    .content-slider.partnerships .slide-info-column .max-wrapper .link span {
+       font-size: .86rem;
+       padding: 0px 15px;
+    }
 }
 

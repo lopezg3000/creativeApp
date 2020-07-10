@@ -362,6 +362,7 @@ Bold 700
 
     .card-body .link span {
         font-size: .9375rem;
+        padding: 0 20px;
     }
 
     /*styles for category feature for max width 767px*/
