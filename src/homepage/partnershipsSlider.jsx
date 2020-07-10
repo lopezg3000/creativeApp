@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import Slide from './slide';
 import SliderNav from './sliderNav';
-import ImmuneBuilder from '../assets/homepageImages/immuneBuilder.jpg';
-import CleanBlends from '../assets/homepageImages/cleanBlends.jpg';
-import FiveDollarFriday from '../assets/homepageImages/fiveDollarFriday.jpg';
+import DrewBrees from '../assets/homepageImages/partnerships/drewBrees.jpg';
+import ChallengedAthletes from '../assets/homepageImages/partnerships/challengedAthletes.jpg';
+import SmoothieKingCenter from '../assets/homepageImages/partnerships/smoothieKingCenter.jpg';
+import Premama from '../assets/homepageImages/partnerships/Premama.jpg';
 import './slider.css';
 
 //improvements: 
@@ -36,12 +37,21 @@ class Slider extends Component {
         this.setState({ width })
     };
 
-    cleanBlendsDescription() {
+    premamaHeadline() {
         return (
             <React.Fragment>
-                <span>It’s our commitment to blend a more nutritious Smoothie.</span>
-                <br />
-                <span>From the bottom of the cup up.</span>
+                <span>Premama</span>
+                <sup><i className="far fa-registered"></i></sup>
+            </React.Fragment>
+        );
+    };
+
+    premamaDescription() {
+        return (
+            <React.Fragment>
+                <span>Packed with prenatal multivitamins, whole fruits and organic spinach, the Premama</span>
+                <sup>&reg;</sup>
+                <span>&nbsp;Smoothie is just what mom needs to help keep herself and baby strong.</span>
             </React.Fragment>
         );
     };
@@ -110,6 +120,8 @@ class Slider extends Component {
 
 
     render() {
+        //Need to change translatePercent based on viewport. i.e -33.33 above 1024
+        //-25 for width below 767px
         const { width, sliderItems } = this.state;
         const translatePercent = -Math.abs(100 / sliderItems);
         let sliderStyle = {
@@ -129,29 +141,38 @@ class Slider extends Component {
                 >
                     <div className='slider-items' style={sliderStyle}>
                         <Slide
-                            eyebrow='New flavor. Same benefits.'
-                            headline={this.immuneBuilderHeadline()}
-                            description={this.immuneBuilderDescription()}
-                            src={ImmuneBuilder}
-                            text='Show me more'
+                            eyebrow="Smoothie King'\s MVP"
+                            headline='Drew Brees'
+                            description='Drew Brees has teamed up with Smoothie King to show everyone how delicious and convenient healthier eating can be.'
+                            src={DrewBrees}
+                            text='Learn more about Drew Brees'
                             width={width}
                         />
                         <Slide
-                            eyebrow='Our Promise'
-                            headline='Clean Blends'
-                            description={this.cleanBlendsDescription()}
-                            src={CleanBlends}
-                            text='Get the Clean Blends Detail'
+                            eyebrow='Our Partnerships'
+                            headline='Challenged Athletes Foundation'
+                            description='Help athletes with physical challenges find success through sports.'
+                            src={ChallengedAthletes}
+                            text='Learn more about CAF'
                             width={width}
                         />
                         <Slide
-                            eyebrow='Is it Friday?'
-                            headline='Get Yours For Just $5'
-                            description='Every Friday, any regular 32 oz. Smoothie is just $5.'
-                            src={FiveDollarFriday}
-                            text='How do you Friday?'
+                            eyebrow='Our Partnerships'
+                            headline='Smoothie King Center'
+                            description='By supporting the Smoothie King Center and the New Orleans Pelicans franchise, this partnership reflects joint interests in nutrition, health and athletics from an international to a local perspective.'
+                            src={SmoothieKingCenter}
+                            text='Smoothie King Center Details'
                             width={width}
                         />
+                        <Slide
+                            eyebrow='Our Partnerships'
+                            headline={this.premamaHeadline()}
+                            description={this.premamaDescription()}
+                            src={Premama}
+                            text='Learn more about The Premama&reg;'
+                            width={width}
+                        />
+
                     </div>
                 </div>
                 <SliderNav

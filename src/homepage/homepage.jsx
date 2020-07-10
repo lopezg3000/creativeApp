@@ -5,6 +5,7 @@ import ContentIntro from './contentIntro';
 import Slider from './slider';
 import Promo from './promo';
 import SmoothieCategories from './smoothieCategories';
+import PartnershipsSlider from './partnershipsSlider';
 import './heroCopyBlock.css'; //need to move this to heroCopyBlock.jsx to be consistent
 import './contentIntro.css';
 import './promo.css';
@@ -37,6 +38,9 @@ const HomePage = () => {
                     description='Our Smoothies are packed with nutrient-rich fuel for experience-rich lives.'
                 />
                 <SmoothieCategories />
+            </section>
+            <section className='content-slider carousel'>
+                <PartnershipsSlider />
             </section>
         </React.Fragment>
     );
