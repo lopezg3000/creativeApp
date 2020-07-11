@@ -57,3 +57,44 @@
         margin: 20px 0 0 0;
     }
 }
+
+@media only screen and (max-width: 768px) {
+    .promo-unit.left {
+        margin: 0 0 80px;
+    }
+
+    .promo-unit.left .promo-container {
+        padding: 0 22px;
+    }
+
+    .promo-container .max-wrapper {
+        max-width: initial;
+        max-height: initial;
+    }
+
+    .max-wrapper .promo-info-column {
+        padding: 22px;
+        position: initial;
+        bottom: 0;
+    }
+
+    .promo-info-column .headline {
+        font-size: 1.5rem;
+        line-height: 1.625rem;
+        margin: 0 0 10px;
+        letter-spacing: -.07rem;
+    }
+
+    .promo-info-column .description {
+        font-size: .875rem;
+    }
+
+    .promo-info-column .link {
+        margin: 10px 0 0 0;
+    }
+
+    .promo-info-column .link span {
+        padding: 0 20px;
+        font-size: .9375rem;
+    }
+}
