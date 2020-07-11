@@ -25,9 +25,31 @@
 
 .promo-info-column .description {
     font-size: 1.125rem;
-    margin: 0 20px 0 0;
 }
 
 .promo-info-column .link {
     margin: 25px 0 0 0;
+}
+
+
+@media only screen and (max-width: 1024px) {
+    .promo-unit.left {
+        margin: 0 0 120px;
+    }
+
+    .max-wrapper .promo-info-column {
+        padding: 0 100px 0 100px;
+    }
+
+    .promo-info-column .headline {
+        margin: 0 0 20px;
+    }
+
+    .promo-info-column .description {
+        font-size: 1rem;
+    }
+
+    .promo-info-column .link {
+        margin: 20px 0 0 0;
+    }
 }
