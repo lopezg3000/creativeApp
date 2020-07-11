@@ -1,4 +1,5 @@
 import React from 'react';
+import Button from './button';
 import './promoUnit.css';
 
 
@@ -13,6 +14,7 @@ const PromoUnit = () => {
                         our guests and team members stay healthy and safe with the recent
                         outbreak of Coronavirus (COVID-19).
                     </p>
+                    <Button text='Learn More' />
                 </div>
             </div>
         </div>
