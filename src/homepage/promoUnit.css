@@ -31,6 +31,10 @@
     margin: 25px 0 0 0;
 }
 
+.promo-info-column .link span {
+    padding: 0 24px;
+}
+
 
 @media only screen and (max-width: 1024px) {
     .promo-unit.left {
