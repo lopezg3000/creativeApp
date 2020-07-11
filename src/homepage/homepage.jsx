@@ -6,6 +6,7 @@ import Slider from './slider';
 import Promo from './promo';
 import SmoothieCategories from './smoothieCategories';
 import PartnershipsSlider from './partnershipsSlider';
+import PromoUnit from './promoUnit';
 import './heroCopyBlock.css'; //need to move this to heroCopyBlock.jsx to be consistent
 import './contentIntro.css';
 import './promo.css';
@@ -41,6 +42,9 @@ const HomePage = () => {
             </section>
             <section className='content-slider partnerships carousel'>
                 <PartnershipsSlider />
+            </section>
+            <section className='promo-unit left'>
+                <PromoUnit />
             </section>
         </React.Fragment>
     );

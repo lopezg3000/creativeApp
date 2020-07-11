@@ -37,25 +37,6 @@ class Slider extends Component {
         this.setState({ width })
     };
 
-    premamaHeadline() {
-        return (
-            <React.Fragment>
-                <span>Premama</span>
-                <sup><i className="far fa-registered"></i></sup>
-            </React.Fragment>
-        );
-    };
-
-    premamaDescription() {
-        return (
-            <React.Fragment>
-                <span>Packed with prenatal multivitamins, whole fruits and organic spinach, the Premama</span>
-                <sup>&reg;</sup>
-                <span>&nbsp;Smoothie is just what mom needs to help keep herself and baby strong.</span>
-            </React.Fragment>
-        );
-    };
-
     handlePrevClick = () => {
         if (this.state.activeIndex > 0) {
             this.setState({ activeIndex: this.state.activeIndex - 1 });
@@ -118,10 +99,27 @@ class Slider extends Component {
         return `0${activeIndex + 1}`;
     }
 
+    premamaHeadline() {
+        return (
+            <React.Fragment>
+                <span>Premama</span>
+                <sup><i className="far fa-registered"></i></sup>
+            </React.Fragment>
+        );
+    };
+
+    premamaDescription() {
+        return (
+            <React.Fragment>
+                <span>Packed with prenatal multivitamins, whole fruits and organic spinach, the Premama</span>
+                <sup>&reg;</sup>
+                <span>&nbsp;Smoothie is just what mom needs to help keep herself and baby strong.</span>
+            </React.Fragment>
+        );
+    };
+
 
     render() {
-        //Need to change translatePercent based on viewport. i.e -33.33 above 1024
-        //-25 for width below 767px
         const { width, sliderItems } = this.state;
         const translatePercent = -Math.abs(100 / sliderItems);
         let sliderStyle = {
@@ -141,7 +139,7 @@ class Slider extends Component {
                 >
                     <div className='slider-items' style={sliderStyle}>
                         <Slide
-                            eyebrow="Smoothie King'\s MVP"
+                            eyebrow="Smoothie King's MVP"
                             headline='Drew Brees'
                             description='Drew Brees has teamed up with Smoothie King to show everyone how delicious and convenient healthier eating can be.'
                             src={DrewBrees}
@@ -172,7 +170,6 @@ class Slider extends Component {
                             text='Learn more about The Premama&reg;'
                             width={width}
                         />
-
                     </div>
                 </div>
                 <SliderNav
@@ -180,7 +177,6 @@ class Slider extends Component {
                     onNextClick={this.handleNextClick}
                     activeSlide={this.formatActiveSlide()}
                     sliderItems={`0${sliderItems}`}
-
                 />
             </React.Fragment>
         );

@@ -259,6 +259,10 @@ Bold 700
         margin: 20px 0 0 0;
     }
 
+    .card-body .link span {
+        padding: 0 16px;
+    }
+
     /*styles for category feature for max width 1023px*/
 
     .category-feature .ingredient-stripe {
@@ -297,11 +301,14 @@ Bold 700
     .category.reverse .category-feature .ingredient-stripe {
         top: 47.1%;
     }
-
 }
 
 
 @media only screen and (max-width: 767px) {
+    .smoothie-categories.stacked {
+        margin: 0 auto 80px;
+    }
+
     .categories .category {
         grid-template-columns: 100%;
         grid-template-rows: auto auto;

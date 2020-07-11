@@ -1,6 +1,10 @@
 import React from 'react';
 import Button from './button';
 
+/*Improvements
+    1. make a reusable eyebrow, headline, and description component.
+*/
+
 const Slide = ({ eyebrow, headline, description, text, src, width }) => {
     return (
         <div className='carousel-cell slide' style={{ width }}>
