@@ -110,6 +110,12 @@
         /*margin to the bottom added*/
         margin: 0 auto 120px; 
     }
+
+    .content-slider.partnerships .slide-info-column .max-wrapper .link span {
+        padding: 0 17px;
+        font-size: 1rem;
+    }
+
 }
 
 

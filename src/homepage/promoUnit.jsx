@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import './promoUnit.css';
 
 
 const PromoUnit = () => {
