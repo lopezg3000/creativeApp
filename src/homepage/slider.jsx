@@ -36,39 +36,6 @@ class Slider extends Component {
         this.setState({ width })
     };
 
-    immuneBuilderHeadline() {
-        return (
-            <React.Fragment>
-                <span>Immune Builder</span>
-                <sup><i className="far fa-registered"></i></sup>
-                <span>&nbsp; Veggie Superfood</span>
-            </React.Fragment>
-        );
-    };
-
-    immuneBuilderDescription() {
-        return (
-            <React.Fragment>
-                <span>
-                    Rich in antioxidants, each smoothie is
-                    blended with more than 800% of your daily vitamin C,
-                    plus zinc,iron and calcium to support a healthier
-                    immune system.
-                </span>
-            </React.Fragment>
-        );
-    };
-
-    cleanBlendsDescription() {
-        return (
-            <React.Fragment>
-                <span>It’s our commitment to blend a more nutritious Smoothie.</span>
-                <br />
-                <span>From the bottom of the cup up.</span>
-            </React.Fragment>
-        );
-    };
-
     handlePrevClick = () => {
         if (this.state.activeIndex > 0) {
             this.setState({ activeIndex: this.state.activeIndex - 1 });
@@ -130,6 +97,39 @@ class Slider extends Component {
         const activeIndex = this.state.activeIndex;
         return `0${activeIndex + 1}`;
     }
+
+    immuneBuilderHeadline() {
+        return (
+            <React.Fragment>
+                <span>Immune Builder</span>
+                <sup><i className="far fa-registered"></i></sup>
+                <span>&nbsp; Veggie Superfood</span>
+            </React.Fragment>
+        );
+    };
+
+    immuneBuilderDescription() {
+        return (
+            <React.Fragment>
+                <span>
+                    Rich in antioxidants, each smoothie is
+                    blended with more than 800% of your daily vitamin C,
+                    plus zinc,iron and calcium to support a healthier
+                    immune system.
+                </span>
+            </React.Fragment>
+        );
+    };
+
+    cleanBlendsDescription() {
+        return (
+            <React.Fragment>
+                <span>It’s our commitment to blend a more nutritious Smoothie.</span>
+                <br />
+                <span>From the bottom of the cup up.</span>
+            </React.Fragment>
+        );
+    };
 
 
     render() {

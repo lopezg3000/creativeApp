@@ -7,13 +7,12 @@ import Promo from './promo';
 import SmoothieCategories from './smoothieCategories';
 import PartnershipsSlider from './partnershipsSlider';
 import PromoUnit from './promoUnit';
+import LocationBlock from './locationBlock';
 import './heroCopyBlock.css'; //need to move this to heroCopyBlock.jsx to be consistent
 import './contentIntro.css';
 import './promo.css';
 import './smoothieCategories.css';
 
-//Hello, I'm Gabriel Lopez. I am a Frontend developer in Houston Texas. I have a serious passion for visual and responsive design as well as creating dynamic, user friendly experiences. In short, crafting great software matters to me. What matters to you?
-//learning canvas today.
 
 const HomePage = () => {
     return (
@@ -45,6 +44,9 @@ const HomePage = () => {
             </section>
             <section className='promo-unit left'>
                 <PromoUnit />
+            </section>
+            <section className='location-block'>
+                <LocationBlock />
             </section>
         </React.Fragment>
     );
