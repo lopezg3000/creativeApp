@@ -1,6 +1,7 @@
 import React from 'react';
 import LocatorBackground from '../assets/homepageImages/locationUnit/locatorBackground.jpg';
 import LocatorImage from '../assets/homepageImages/locationUnit/locatorImage.jpg';
+import './locationBlock.css';
 
 const LocationBlock = () => {
     return (
