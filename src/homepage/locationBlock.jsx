@@ -33,7 +33,7 @@ const LocationBlock = () => {
                                         className='entry-input-text'
                                     />
                                     <button type='submit'>
-                                        <i className="fas fa-caret-right icon"></i>
+                                        <i className="fas fa-caret-right icon white"></i>
                                     </button>
                                 </div>
                             </form>
