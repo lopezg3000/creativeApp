@@ -1,3 +1,4 @@
+/*block of code to make image behind content --start*/
 .location-block {
     position:relative;
     margin: 0 22px 80px;
@@ -17,6 +18,14 @@
 }
 
 .location-block .location-container {
-    /*brings content in front of image*/
+    /*brings content in front of background image*/
     position: relative; 
+    display: grid;
+    grid-template-columns: 42.5% 57.5%;
+    width: 100%;
+    max-width: 1198px;
+    padding: 120px 0;
+    margin: 0 auto;
 }
+
+/*block to make image behind content --end */
