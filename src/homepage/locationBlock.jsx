@@ -20,7 +20,7 @@ const LocationBlock = () => {
                         <p className='description'>
                             To find one of our many stores nationwide, simply enter your zip code.
                         </p>
-                        <div>
+                        <div className='form-container'>
                             <form>
                                 <div className='entry-input entry-input-default'>
                                     <input
