@@ -128,8 +128,8 @@ button .white {
         position: absolute; 
         display: grid;
         grid-template-columns: initial;
-        grid-template-rows: 385px calc(100% - 385px);
-        margin: 85px 0;
+        grid-template-rows: 385px calc(100% - 385px); /*pixels should match image wrapper height*/
+        margin: 85px 0; /*changes with size of grid template rows*/
     }
 
     .location-container .location-image-column {
@@ -161,7 +161,28 @@ button .white {
         width: 640px;
         margin: 0 auto;
         padding: 33px 0;
+    } 
+
+    .location-info-column .max-wrapper .eyebrow {
+        margin: 0 33px 10px;
     }
-    
+
+    .location-info-column .max-wrapper .headline {
+        padding: 22px 33px;
+        font-size: 1.8rem;
+    }
+
+    .location-info-column .max-wrapper .description {
+        margin: 0 33px 25px;
+        font-size: 1rem;
+    }
+
+    .location-info-column .max-wrapper .form-container {
+        margin: 0 33px; 
+    }
 }
 
+
+@media only screen and (max-width: 768px) {
+    
+}
