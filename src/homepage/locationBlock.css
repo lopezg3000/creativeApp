@@ -33,6 +33,8 @@
 
 /*block to make image behind content --end */
 
+/*styles for location info column for width above 1024px*/
+
 .location-info-column .max-wrapper {
     padding: 44px 0;
     background: linear-gradient(90deg,#fff,#dadfe1);
@@ -48,7 +50,7 @@
     background-color: #fff;
     text-align: left;
     font-size: 2rem;
-    line-height: 2.125rem;
+    line-height: 1.9rem;
     letter-spacing: -.1rem;
 }
 
@@ -58,6 +60,8 @@
     text-align: left;
     font-size: 1.125rem;
 }
+
+/*styles for FORM for widths above 1024px*/
 
 .location-info-column .max-wrapper .form-container {
     margin: 0 44px 0; 
@@ -102,7 +106,11 @@ button .white {
     font-size: 1.5rem;
 }
 
+
 @media only screen and (max-width: 1024px) {
+
+    /*styles for background image for max width 1024px*/
+
     .location-block .location-background {
         max-height: 835px;
         overflow: initial;
@@ -113,13 +121,15 @@ button .white {
         height: 835px;
     }
 
+    /*styles for location image column for max width 1024px*/
+
     .location-block .location-container {
         /*brings content in front of background image*/
         position: absolute; 
         display: grid;
         grid-template-columns: initial;
-        grid-template-rows: 384px calc(100% - 384px);
-        margin: 71px 0;
+        grid-template-rows: 385px calc(100% - 385px);
+        margin: 85px 0;
     }
 
     .location-container .location-image-column {
@@ -131,10 +141,16 @@ button .white {
     .location-image-column .image-wrapper {
         /*fixed width and height for image so that it does not shrink*/
         width: 680px;
-        height: 380px;
+        height: 385px;
         margin: 0 auto;
         box-shadow: 0 1px 10px 0 rgba(0,0,0,.15);
     }
+
+    .location-image-column .image-wrapper img{
+       height: 100%;
+    }
+
+    /*styles for location info column for max width 1024px*/
 
     .location-container .location-info-column {
         order: 2;
@@ -144,6 +160,7 @@ button .white {
         /*fixed width for info column so that it does not shrink*/
         width: 640px;
         margin: 0 auto;
+        padding: 33px 0;
     }
     
 }
