@@ -185,19 +185,30 @@ button .white {
 
 @media only screen and (max-width: 768px) {
     .location-block {
-        position: initial;
+        position: relative;
         margin: 0 auto 40px;
         /* height: auto; */
     }
 
     .location-block .location-background {
+        /*
+        Flex, height, align items and overflow styles necessary to produce an image zoom effect.
+        Also, the image needs to have a height longer than it's parent.
+        */
         position: absolute;
+        display: flex;
+        align-items: center;
         width: 100%;
-        height: 35%;
+        height: 22%;
         top: 0;
         left: 0;
         right: 0;
-        display: none;
+        overflow: hidden;
+    }
+
+    .location-block .location-background img {
+        height: auto;
+        width: 100%;
     }
 
     .location-block .location-container {
@@ -231,12 +242,16 @@ button .white {
     }
 
     .location-image-column .image-wrapper {
-        /*width now shrinks with window width*/
+        /*width now shrinks with window width by using width auto instead of 100% width*/
         width: auto;
-        height: 100%;
+        height: auto;
         max-width: 680px;
-        padding: 0 22px;
+        padding: 60px 22px 0;
         box-shadow: none;
+    }
+
+    .location-image-column .image-wrapper img {
+        box-shadow: 0 2px 19px 0 rgba(0,0,0,.15)
     }
 
 
