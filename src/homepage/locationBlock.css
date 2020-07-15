@@ -246,7 +246,6 @@ button .white {
     }
 
     .location-info-column .max-wrapper .headline {
-        /* headline is now limited to width of container instead of over flowing to the right */
         width: auto;
         background-color: initial;
         font-size: 1.28rem;
@@ -254,6 +253,8 @@ button .white {
         padding: 0 22px;
         letter-spacing: -.05rem;
     }
+
+    /* headline is now limited to width of container instead of over flowing to the right */
 
     .location-info-column .max-wrapper .description {
         margin: 0 22px 15px;
