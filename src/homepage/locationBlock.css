@@ -184,5 +184,60 @@ button .white {
 
 
 @media only screen and (max-width: 768px) {
-    
+    .location-block {
+        position: initial;
+        margin: 0 auto 40px;
+        /* height: auto; */
+    }
+
+    .location-block .location-background {
+        position: absolute;
+        width: 100%;
+        height: 35%;
+        top: 0;
+        left: 0;
+        right: 0;
+        display: none;
+    }
+
+    .location-block .location-container {
+        position: relative;
+        margin: initial;
+        grid-template-rows: auto auto;
+    }
+
+
+    .location-info-column .max-wrapper {
+        width: 100%;
+        max-width: 640px;
+        margin: 0 auto;
+        padding: 33px 0;
+        background: none;
+    } 
+
+    .location-info-column .max-wrapper .eyebrow {
+        /*eyebrow is now limited to width of container instead of over flowing to the right*/
+        width: auto;
+    }
+
+    .location-info-column .max-wrapper .headline {
+        /*headline is now limited to width of container instead of over flowing to the right*/
+        width: auto;
+    }
+
+    .location-container .location-image-column {
+        width: 100%;
+        height: 100%;
+    }
+
+    .location-image-column .image-wrapper {
+        /*width now shrinks with window width*/
+        width: auto;
+        height: 100%;
+        max-width: 680px;
+        padding: 0 22px;
+        box-shadow: none;
+    }
+
+
 }
