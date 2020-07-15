@@ -1,4 +1,5 @@
 /* block of code to make image behind content --start */
+
 .location-block {
     position:relative;
     margin: 0 22px 80px;
@@ -248,7 +249,7 @@ button .white {
         /* headline is now limited to width of container instead of over flowing to the right */
         width: auto;
         background-color: none;
-        font-size: 1.28rem;
+        font-size: 1.125rem; /*1.28rem*/
         line-height: 1.625rem;
         padding: 0 22px;
         letter-spacing: -.05rem;
