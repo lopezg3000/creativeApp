@@ -1,4 +1,4 @@
-/*block of code to make image behind content --start*/
+/* block of code to make image behind content --start */
 .location-block {
     position:relative;
     margin: 0 22px 80px;
@@ -18,7 +18,7 @@
 }
 
 .location-block .location-container {
-    /*brings content in front of background image*/
+    /* brings content in front of background image */
     position: absolute; 
     display: grid;
     grid-template-columns: 42.5% 57.5%;
@@ -31,9 +31,9 @@
     align-items: center;
 }
 
-/*block to make image behind content --end */
+/* block to make image behind content --end */
 
-/*styles for location info column for width above 1024px*/
+/* styles for location info column for width above 1024px */
 
 .location-info-column .max-wrapper {
     padding: 44px 0;
@@ -61,7 +61,7 @@
     font-size: 1.125rem;
 }
 
-/*styles for FORM for widths above 1024px*/
+/* styles for FORM for widths above 1024px */
 
 .location-info-column .max-wrapper .form-container {
     margin: 0 44px 0; 
@@ -89,7 +89,7 @@ form .entry-input-text {
 }
 
 ::placeholder {
-    /*this selector is used to style input placeholder*/
+    /* this selector is used to style input placeholder */
     color: rgba(0, 0, 0, 0.25);
     font-size: 1.05rem;
 }
@@ -99,6 +99,7 @@ form .entry-input button {
     width: 50px;
     background: #e31b23;
     border: none;
+    cursor: pointer;
 }
 
 button .white {
@@ -109,7 +110,7 @@ button .white {
 
 @media only screen and (max-width: 1024px) {
 
-    /*styles for background image for max width 1024px*/
+    /* styles for background image for max width 1024px */
 
     .location-block .location-background {
         max-height: 835px;
@@ -117,29 +118,29 @@ button .white {
     }
 
     .location-block .location-background img {
-        /*image needs a set height so that background covers container children*/
+        /* image needs a set height so that background covers container children */
         height: 835px;
     }
 
-    /*styles for location image column for max width 1024px*/
+    /* styles for location image column for max width 1024px */
 
     .location-block .location-container {
-        /*brings content in front of background image*/
+        /* brings content in front of background image */
         position: absolute; 
         display: grid;
         grid-template-columns: initial;
-        grid-template-rows: 385px calc(100% - 385px); /*pixels should match image wrapper height*/
-        margin: 85px 0; /*changes with size of grid template rows*/
+        grid-template-rows: 385px calc(100% - 385px); /* pixels should match image wrapper height */
+        margin: 85px 0; /* changes with size of grid template rows */
     }
 
     .location-container .location-image-column {
-        /*rearranged order of divs in css grid so that image is begore info*/
+        /* rearranged order of divs in css grid so that image is begore info */
        order: 1;
        z-index: 1;
     }
 
     .location-image-column .image-wrapper {
-        /*fixed width and height for image so that it does not shrink*/
+        /* fixed width and height for image so that it does not shrink */
         width: 680px;
         height: 385px;
         margin: 0 auto;
@@ -150,14 +151,14 @@ button .white {
        height: 100%;
     }
 
-    /*styles for location info column for max width 1024px*/
+    /* styles for location info column for max width 1024px */
 
     .location-container .location-info-column {
         order: 2;
     }
 
     .location-info-column .max-wrapper {
-        /*fixed width for info column so that it does not shrink*/
+        /* fixed width for info column so that it does not shrink */
         width: 640px;
         margin: 0 auto;
         padding: 33px 0;
@@ -184,11 +185,19 @@ button .white {
 
 
 @media only screen and (max-width: 768px) {
+
+    /* 
+        changed location-background to absolute and location container to relative,
+        so that section has the height of the location container as it is larger.
+    */
+
     .location-block {
         position: relative;
         margin: 0 auto 40px;
         /* height: auto; */
     }
+
+    /* styles of r location background for max width of 768px */
 
     .location-block .location-background {
         /*
@@ -211,30 +220,46 @@ button .white {
         width: 100%;
     }
 
+    /* styles for background image --end */
+
     .location-block .location-container {
         position: relative;
         margin: initial;
         grid-template-rows: auto auto;
     }
 
+    /* styles for info column max width 768px */
 
     .location-info-column .max-wrapper {
         width: 100%;
         max-width: 640px;
         margin: 0 auto;
-        padding: 33px 0;
+        padding: 22px 0;
         background: none;
     } 
 
     .location-info-column .max-wrapper .eyebrow {
-        /*eyebrow is now limited to width of container instead of over flowing to the right*/
+        /* eyebrow is now limited to width of container instead of over flowing to the right */
         width: auto;
+        margin: 0 22px 10px;
     }
 
     .location-info-column .max-wrapper .headline {
-        /*headline is now limited to width of container instead of over flowing to the right*/
+        /* headline is now limited to width of container instead of over flowing to the right */
         width: auto;
+        background-color: none;
+        font-size: 1.28rem;
+        line-height: 1.625rem;
+        padding: 0 22px;
+        letter-spacing: -.05rem;
     }
+
+    .location-info-column .max-wrapper .description {
+        margin: 0 22px 15px;
+        font-size: .875rem;
+    }
+
+    /* styles for location image column max width 768px */
 
     .location-container .location-image-column {
         width: 100%;
@@ -242,7 +267,7 @@ button .white {
     }
 
     .location-image-column .image-wrapper {
-        /*width now shrinks with window width by using width auto instead of 100% width*/
+        /* width now shrinks with window width by using width auto instead of 100% width */
         width: auto;
         height: auto;
         max-width: 680px;
@@ -254,5 +279,30 @@ button .white {
         box-shadow: 0 2px 19px 0 rgba(0,0,0,.15)
     }
 
+    /* styles for FORM for max width 768px */
 
+    .location-info-column .max-wrapper .form-container {
+        margin: 0 22px; 
+    }
+
+    form .entry-input {
+        height: 40px;
+    }
+
+    form .entry-input-text {
+        height: 40px;
+        line-height: 40px;
+        padding: 0 22px;
+        font-size: .875rem;
+    }
+
+    ::placeholder {
+        /* this selector is used to style input placeholder */
+        color: rgba(0, 0, 0, 0.25);
+        font-size: .875rem;
+    }
+
+    form .entry-input button {
+        height: 40px;
+    }
 }
