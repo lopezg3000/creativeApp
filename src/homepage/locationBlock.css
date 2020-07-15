@@ -248,7 +248,7 @@ button .white {
     .location-info-column .max-wrapper .headline {
         /* headline is now limited to width of container instead of over flowing to the right */
         width: auto;
-        background-color: none;
+        background-color: initial;
         font-size: 1.28rem;
         line-height: 1.625rem;
         padding: 0 22px;
