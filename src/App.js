@@ -9,6 +9,7 @@ import HealthyRewards from './homepage/healthyRewards';
 import Locations from './homepage/locations';
 import Franchise from './homepage/franchise';
 import NotFound from './homepage/notFound';
+import Footer from './homepage/footer';
 // import Home from './components/home/home'
 import './App.css';
 // import HeroParent from "./components/roughComponents/HeroParent";
@@ -32,6 +33,7 @@ function App() {
           <Redirect to="/not-found" />
         </Switch>
       </main>
+      <Footer />
     </React.Fragment>
   );
 }

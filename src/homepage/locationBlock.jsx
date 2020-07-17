@@ -3,6 +3,13 @@ import LocatorBackground from '../assets/homepageImages/locationUnit/locatorBack
 import LocatorImage from '../assets/homepageImages/locationUnit/locatorImage.jpg';
 import './locationBlock.css';
 
+/*Improvements:
+    1. Widths greater than 768px, make the image background have a zoom in and out effect
+        when window width increases and decreases. 
+    2. Create a separate component that encapsulates eyebrow, headline and description
+    3. Validate form inputs and make form into a controlled component using React.
+*/
+
 const LocationBlock = () => {
     return (
         <React.Fragment>
