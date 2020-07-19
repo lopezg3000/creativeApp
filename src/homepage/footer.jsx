@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+//footer still needs more updates
+
 const Footer = () => {
     return (
         <footer className='footer'>
