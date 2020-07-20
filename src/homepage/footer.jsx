@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import './footer.css';
 
 //footer still needs more updates
 
@@ -9,7 +10,9 @@ const Footer = () => {
             <div className='footer-links'>
                 <div className='max-wrapper'>
                     <div className='column column-left'>
-                        <Link to='/'><img src='https://skprod.objects.frb.io/images/static/smoothie-king-logo.svg' /></Link>
+                        <Link to='/'>
+                            <img src='https://skprod.objects.frb.io/images/static/smoothie-king-logo.svg' />
+                        </Link>
                         <div className='mailing-list-signup'>
                             <p>
                                 Be the first to learn of new products and
