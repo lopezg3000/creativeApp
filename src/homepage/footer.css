@@ -7,11 +7,32 @@
 }
 
 .footer-links .max-wrapper {
+    /* 
+        border-box property makes it so that width, 
+        margin, and padding all add up to 1286px.
+    */
     margin: 0 auto;
     width: 100%;
     max-width: 1286px;
     padding: 0 22px;
     display: grid;
     grid-template-columns: repeat(3, calc(1286px / 3));
-    box-sizing: border-box;
+    box-sizing: border-box; 
+}
+
+.max-wrapper .column-left .logo {
+    margin: 0 0 25px;
+    display: block;
+    width: 100%;
+}
+
+.column-left .mailing-list-signup {
+    margin: 0 0 25px;
+}
+
+.mailing-list-signup p {
+    line-height: 1.3125rem;
+    display: block;
+    max-width: 344px;
+    margin: 0 0 30px;
 }

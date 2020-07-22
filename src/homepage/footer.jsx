@@ -10,7 +10,7 @@ const Footer = () => {
             <div className='footer-links'>
                 <div className='max-wrapper'>
                     <div className='column column-left'>
-                        <Link to='/'>
+                        <Link to='/' className='logo'>
                             <img src='https://skprod.objects.frb.io/images/static/smoothie-king-logo.svg' />
                         </Link>
                         <div className='mailing-list-signup'>
