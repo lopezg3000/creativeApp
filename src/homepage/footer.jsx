@@ -17,7 +17,7 @@ const Footer = () => {
                             <p>
                                 Be the first to learn of new products and
                                 promotions when you sign up for our newsletter.
-                        </p>
+                            </p>
                             <form>
                                 <div className='entry-email-signup'>
                                     <input
@@ -48,7 +48,7 @@ const Footer = () => {
                                         target='blank'
                                         rel='noopener'
                                     >
-                                        <i class="fab fa-facebook-f"></i>
+                                        <i className="fab fa-facebook-f"></i>
                                     </a>
                                 </li>
                                 <li>
