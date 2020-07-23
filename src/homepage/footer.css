@@ -21,7 +21,7 @@
     max-width: 1286px;
     padding: 0 22px;
     display: grid;
-    grid-template-columns: repeat(3, calc(1286px / 3));
+    grid-template-columns: repeat(3, 1fr);
     box-sizing: border-box; 
 }
 
@@ -36,7 +36,7 @@
 /* styles of form for widths above 1024px */
 
 .column-left .mailing-list-signup {
-    margin: 0 0 45px;
+    margin: 0 0 40px;
 }
 
 .mailing-list-signup p {
@@ -97,4 +97,41 @@
 .button-submit .white {
     align-self: center;
     padding: 0 18px 0 0;
+}
+
+/* styles for social buttons for widths above 1024px */
+
+.column-left .social-follow-buttons p {
+    font-family: Montserrat, sans-serif;
+    line-height: 1.3125rem;
+    font-weight: 400;
+    margin: 0 0 15px;
+    display: block;
+}
+
+.column-left .social-follow-buttons ul {
+    margin: 0; 
+    padding: 0;
+    list-style: none;
+}
+
+.social-follow-buttons ul li {
+    display: inline-block;
+    margin: 0 0 0 10px;
+}
+
+.social-follow-buttons ul li:first-child {
+   margin: 0;
+}
+
+.social-follow-buttons ul li a {
+    display: flex;
+    text-decoration: none;
+    color: #000;
+    background-color: #fff;
+    width: 43px;
+    height: 43px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
 }
