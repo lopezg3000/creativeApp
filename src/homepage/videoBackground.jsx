@@ -8,7 +8,7 @@ const VideoBackground = () => {
             <div className='video-wrap'>
                 <video
                     src={SmoothieKing}
-                    // autoPlay={true}
+                    autoPlay={true}
                     loop={true}
                     type="video/mp4"
                     muted
