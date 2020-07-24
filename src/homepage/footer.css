@@ -102,6 +102,11 @@
 
 /* styles for social buttons for widths above 1024px */
 
+.column-left .social-follow-buttons {
+    width: 100%;
+    min-width: 256px;
+}
+
 .column-left .social-follow-buttons p {
     display: block;
     font-family: Montserrat, sans-serif;
@@ -137,7 +142,7 @@
     background-color: #fff;
 }
 
-/* styles for column center and right for widths above 1024px */
+/* styles for About and International columns of footer for widths above 1024px */
 
 .max-wrapper .column-center {
     margin: 0 0 0 auto;
@@ -172,3 +177,39 @@
     font-size: 1rem;
     line-height: 1.3125rem;
 }
+
+/* styles for privacy footer section for widths above 1024px */
+
+.footer-privacy {
+    display: flex;
+    align-items: center;
+    height: 40px;
+    padding: 0 22px 0 22px;
+    font-family: Montserrat, sans-serif;
+    font-weight: 300;
+    font-size: .875rem;
+    line-height: 1.0625rem;
+    background-color: #000;
+    color: #fff;
+}
+
+.footer-privacy .max-wrapper {
+    display: flex;
+    width: 100%;
+    max-width: 1286px;
+    justify-content: space-between;
+    margin: 0 auto;
+}
+
+.footer-privacy .max-wrapper .column p {
+    font-size: inherit;
+    line-height: inherit;
+}
+
+.footer-privacy .max-wrapper .column a {
+    text-decoration: none;
+    color: #fff;
+    font-size: inherit;
+    line-height: inherit;
+}
+
