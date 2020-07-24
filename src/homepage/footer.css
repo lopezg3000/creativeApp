@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
 /* styles for parent of logo, form, and social buttons for widths above 1024px */
 
@@ -69,7 +70,7 @@
 .entry-email-signup .checkbox p {
     margin: 0;
     padding: 0 0 0 10px;
-    font-size: .875rem;
+    font-size: .8rem;
 }
 
 .entry-email-signup  .button-submit {
@@ -79,7 +80,7 @@
     box-shadow: 0 1px 10px 0 rgba(0,0,0,.15);
     outline: 0;
     border-radius: 24px;
-    width: 36%;
+    width: 150px;
     height: 48px;
     padding: 0;
     justify-content: space-between;
@@ -102,11 +103,11 @@
 /* styles for social buttons for widths above 1024px */
 
 .column-left .social-follow-buttons p {
+    display: block;
     font-family: Montserrat, sans-serif;
     line-height: 1.3125rem;
     font-weight: 400;
     margin: 0 0 15px;
-    display: block;
 }
 
 .column-left .social-follow-buttons ul {
@@ -126,12 +127,48 @@
 
 .social-follow-buttons ul li a {
     display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 43px;
+    height: 43px;
+    border-radius: 50%;
     text-decoration: none;
     color: #000;
     background-color: #fff;
-    width: 43px;
-    height: 43px;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
+}
+
+/* styles for column center and right for widths above 1024px */
+
+.max-wrapper .column-center {
+    margin: 0 0 0 auto;
+}
+
+.max-wrapper .column-right {
+    margin: 0 auto;
+}
+
+.column-center h2, .column-right h2 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.625rem;
+    line-height: 1.875rem;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+.column-center ul, .column-right ul {
+    margin: 0; 
+    padding: 0;
+    list-style: none;
+}
+
+.column-center ul li, .column-right ul li {
+    margin: 0 0 8px;
+}
+
+.column-center ul li a, .column-right ul li a {
+    text-decoration: none;
+    color: #000;
+    font-family: Montserrat, sans-serif;
+    font-size: 1rem;
+    line-height: 1.3125rem;
 }

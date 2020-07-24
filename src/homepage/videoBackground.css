@@ -1,6 +1,6 @@
 .hero-background {
     overflow: hidden;
-    background: #000;
+    /* background: #000; */
 }
 
 .video-wrap {
@@ -12,6 +12,7 @@
     position: relative;
     width: 100vw;
     bottom: 7rem;
+    z-index: -1; /* applied so that navbar shadow is set over video*/
 }
 
 @media only screen and (max-width: 1023px) {
