@@ -50,7 +50,8 @@
 
 .entry-email-signup .entry-input-text {
     border-radius: 24px;
-    width: 60%;
+    width: 75%;
+    max-width: 260px;
     margin: 0 0 24px;
     box-shadow: 0 1px 10px 0 rgba(0,0,0,.15);
 }
@@ -211,5 +212,83 @@
     color: #fff;
     font-size: inherit;
     line-height: inherit;
+}
+
+@media only screen and (max-width: 768px) {
+
+    /* styles for parent of logo, form, and social buttons for max width 768px */
+
+    .footer .footer-links {
+        padding: 44px 0 33px;
+    }
+
+    .footer-links .max-wrapper {
+        grid-template-columns: initial;
+        grid-template-rows: repeat(3, auto);
+    }
+
+    /* styles of form for max width 768px */
+
+    .column-left .mailing-list-signup {
+        margin: 0 0 30px;
+    }
+
+    .mailing-list-signup p {
+        font-size: .875rem;
+        line-height: 1.125rem;
+        margin: 0 0 20px;
+    }
+
+    .entry-email-signup .entry-input-text {
+        margin: 0 0 40px;
+    }
+
+    .entry-email-signup .button-submit {
+        height: 40px;
+        width: 130px;
+    }
+
+    .button-submit span {
+        font-size: .875rem;
+    }
+
+    /* styles for About and International columns of footer for max width 768px */
+
+    .max-wrapper .column-center, .max-wrapper .column-right{
+        margin: 0;
+    }
+
+    .column-center h2, .column-right h2 {
+        font-size: 1.125rem;
+        line-height: 1.3125rem;
+        margin: 33px 0 20px;
+    }
+
+    .column-center ul li a, .column-right ul li a {
+        font-size: .875rem;
+        line-height: 1.125rem;
+    }
+
+    /* styles for privacy footer section or max width 768px */
+
+    .footer-privacy {
+        height: auto;
+        font-size: .75rem;
+        line-height: .9375rem;
+        padding: 0;
+        align-items: initial;
+    }
+
+    .footer-privacy .max-wrapper {
+        width: auto;
+        flex-direction: column;
+        padding: 11px 22px 16.5px;
+        justify-content: initial;
+        align-items: center;
+    }
+
+    .footer-privacy .max-wrapper .column:first-child {
+        margin: 5px 0;
+    }
 }
 
