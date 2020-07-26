@@ -13,6 +13,8 @@ import './contentIntro.css';
 import './promo.css';
 import './smoothieCategories.css';
 
+//need to add fade in effect on scroll
+
 
 const HomePage = () => {
     return (
