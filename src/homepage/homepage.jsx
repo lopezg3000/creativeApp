@@ -13,10 +13,13 @@ import './heroCopyBlock.css'; //need to move this to heroCopyBlock.jsx to be con
 import './contentIntro.css';
 import './promo.css';
 import './smoothieCategories.css';
+import { entries } from 'lodash';
 
 //need to add fade in effect on scroll
 
 class Homepage extends Component {
+    //Used createRef method instead of ref callback because ref created by createRef
+    //method happens before componentDidMount
     heroRef = React.createRef();
 
     state = {
@@ -25,35 +28,29 @@ class Homepage extends Component {
 
     componentDidMount() {
         // console.log('hero');
-        const options = {};
-        console.log(this.heroRef.current);
         this.observer = new IntersectionObserver(
-            entries => {
-                if (entries[0].isIntersecting) {
-                    this.setState({ isVisible: true });
-
-                    this.observer.unobserve(this.heroRef.current);
-                }
-
-                if (this.heroRef.current) {
-                    this.observer.observe(this.heroRef.current)
-                }
-            }, options
+            this.handleObserver.bind(this)
         );
+
+        this.observer.observe(this.heroRef.current);
     }
 
-    // handleObserver(entities, observer) {
-    //     console.log('hello');
-    //     if (entities[0].isIntersecting) {
-    //         this.setState({ isVisible: true });
+    componentWillUnmount() {
+        this.observer.unobserve(this.heroRef.current);
+    }
 
-    //         observer.unobserve(this.heroRef.current);
-    //     }
+    handleObserver = (entries, observer) => {
+        console.log('hello');
+        if (entries[0].isIntersecting) {
+            this.setState({ isVisible: true });
 
-    //     if (this.heroRef.current) {
-    //         observer.observe(this.heroRef.current)
-    //     }
-    // }
+            observer.unobserve(this.heroRef.current);
+        }
+
+        // if (this.heroRef.current) {
+        //     observer.observe(this.heroRef.current)
+        // }
+    }
 
 
     render() {
