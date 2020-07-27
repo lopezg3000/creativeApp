@@ -17,29 +17,43 @@ import './smoothieCategories.css';
 //need to add fade in effect on scroll
 
 class Homepage extends Component {
+    heroRef = React.createRef();
+
     state = {
         isVisible: false
     }
 
     componentDidMount() {
         // console.log('hero');
-        const appearOnScroll = new IntersectionObserver(entries => {
-            this.handleAppearOnScroll(entries, appearOnScroll).bind(this);
-        });
+        const options = {};
+        console.log(this.heroRef.current);
+        this.observer = new IntersectionObserver(
+            entries => {
+                if (entries[0].isIntersecting) {
+                    this.setState({ isVisible: true });
+
+                    this.observer.unobserve(this.heroRef.current);
+                }
+
+                if (this.heroRef.current) {
+                    this.observer.observe(this.heroRef.current)
+                }
+            }, options
+        );
     }
 
-    componentWillUnmount() {
-        this.appearOnScroll.unobserve(this.heroRef);
-    }
+    // handleObserver(entities, observer) {
+    //     console.log('hello');
+    //     if (entities[0].isIntersecting) {
+    //         this.setState({ isVisible: true });
 
-    handleAppearOnScroll(entries, appearOnScroll) {
-        console.log('hello');
-        if (entries[0].isIntersecting) {
-            this.setState({ isVisible: true });
-        }
+    //         observer.unobserve(this.heroRef.current);
+    //     }
 
-        appearOnScroll.unobserve(this.heroRef);
-    }
+    //     if (this.heroRef.current) {
+    //         observer.observe(this.heroRef.current)
+    //     }
+    // }
 
 
     render() {
@@ -47,7 +61,8 @@ class Homepage extends Component {
             <React.Fragment>
                 <section
                     className={`hero full-width section ${this.state.isVisible ? 'is-visible' : ''}`}
-                    ref={heroRef => (this.heroRef = heroRef)}
+                    // ref={heroRef => (this.heroRef = heroRef)}
+                    ref={this.heroRef}
                 >
                     <VideoBackground />
                     <HeroCopyBlock />
