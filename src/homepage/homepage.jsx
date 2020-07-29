@@ -18,8 +18,6 @@ import { entries } from 'lodash';
 //need to add fade in effect on scroll
 
 class Homepage extends Component {
-    //Used createRef method instead of ref callback because ref created by createRef
-    //method happens before componentDidMount
     state = {
         isVisible: false,
     }
@@ -34,7 +32,8 @@ class Homepage extends Component {
         { number: 7 }
     ]
 
-    heroRef = React.createRef();
+    //Used createRef method instead of ref callback because ref created by createRef
+    //method happens before componentDidMount
     sectionRefs = this.sections.reduce((acc, value) => {
         acc[value.number] = React.createRef();
         return acc;
@@ -42,63 +41,49 @@ class Homepage extends Component {
 
 
     componentDidMount() {
-
-        // console.log(this.sectionRefs);
-
-        // console.log('hero');
         this.observer = new IntersectionObserver(
             this.handleObserver.bind(this)
         );
 
-        // if (this.heroRef.current) {
         Object.values(this.sectionRefs).forEach(value => {
-            // console.log(value.current)
-            if (value.current) this.observer.observe(value.current)
-        },
-        );
-        // this.observer.observe(this.heroRef.current);
-        // console.log(this.heroRef.current);
-        // }
+            if (value.current) this.observer.observe(value.current);
+        });
 
     }
 
     componentWillUnmount() {
         Object.values(this.sectionRefs).forEach(value => {
-            if (value.current) this.observer.unobserve(value.current)
+            if (value.current) this.observer.unobserve(value.current);
         });
-        // this.observer.unobserve(this.heroRef.current);
     }
 
     handleObserver(entries, observer) {
         if (entries[0].isIntersecting) {
-            console.log(entries.target)
-            this.setState({ isVisible: true });
+            console.log(entries[0].target);
 
-            Object.values(this.sectionRefs).forEach(value => {
-                if (value.current) observer.unobserve(value.current)
-            }
-            );
-            // observer.unobserve(this.heroRef.current);
+            // Object.values(this.sectionRefs).forEach(value => {
+            // if (this.sectionRefs.current) {
+            // console.log(this.sectionRefs.current);
+            entries[0].target.className += ' is-visible'; //not the react way, need to learn react way
+            observer.unobserve(entries[0].target);
+            // }
+            // });
         }
     }
 
 
     render() {
-
-        // console.log(this.sectionRefs[1]);
-        // console.log(this.heroRef);
         return (
             <React.Fragment>
                 <section
-                    className={`hero full-width section ${this.state.isVisible ? 'is-visible' : ''}`}
-                    // ref={this.heroRef}
+                    className='hero full-width section'
                     ref={this.sectionRefs[1]}
                 >
                     <VideoBackground />
                     <HeroCopyBlock />
                 </section>
                 <section
-                    className={`content-slider carousel section ${this.state.isVisible ? 'is-visible' : ''}`}
+                    className='content-slider carousel section'
                     ref={this.sectionRefs[2]}
                 >
                     <ContentIntro
@@ -107,10 +92,10 @@ class Homepage extends Component {
                     />
                     <Slider />
                 </section>
-                <section className='full-width-promo' ref={this.sectionRefs[3]}>
+                <section className='full-width-promo section' ref={this.sectionRefs[3]}>
                     <Promo />
                 </section>
-                <section className='smoothie-categories stacked' ref={this.sectionRefs[4]}>
+                <section className='smoothie-categories stacked section' ref={this.sectionRefs[4]}>
                     <ContentIntro
                         eyebrow='Purpose Blends'
                         headline='Blended to Fuel Your Passion'
@@ -118,13 +103,13 @@ class Homepage extends Component {
                     />
                     <SmoothieCategories />
                 </section>
-                <section className='content-slider partnerships carousel' ref={this.sectionRefs[5]}>
+                <section className='content-slider partnerships carousel section' ref={this.sectionRefs[5]}>
                     <PartnershipsSlider />
                 </section>
-                <section className='promo-unit left' ref={this.sectionRefs[6]}>
+                <section className='promo-unit left section' ref={this.sectionRefs[6]}>
                     <PromoUnit />
                 </section>
-                <section className='location-block' ref={this.sectionRefs[7]}>
+                <section className='location-block section' ref={this.sectionRefs[7]}>
                     <LocationBlock />
                 </section>
             </React.Fragment>
