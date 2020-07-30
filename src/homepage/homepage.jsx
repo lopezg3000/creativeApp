@@ -13,14 +13,13 @@ import './heroCopyBlock.css'; //need to move this to heroCopyBlock.jsx to be con
 import './contentIntro.css';
 import './promo.css';
 import './smoothieCategories.css';
-import { entries } from 'lodash';
 
-//need to add fade in effect on scroll
+/* improvements: 
+    1. Need to fade in each smoothie category separately
+    2. Need to figure out a way to reference refs without using array index i.e. using id
+*/
 
 class Homepage extends Component {
-    state = {
-        isVisible: false,
-    }
 
     sections = [
         { number: 1 },
@@ -32,8 +31,9 @@ class Homepage extends Component {
         { number: 7 }
     ]
 
-    //Used createRef method instead of ref callback because ref created by createRef
-    //method happens before componentDidMount
+    /*  Used createRef method instead of ref callback because ref created by createRef
+        method happens before componentDidMount
+    */
     sectionRefs = this.sections.reduce((acc, value) => {
         acc[value.number] = React.createRef();
         return acc;
@@ -46,28 +46,23 @@ class Homepage extends Component {
         );
 
         Object.values(this.sectionRefs).forEach(value => {
-            if (value.current) this.observer.observe(value.current);
+            this.observer.observe(value.current);
         });
 
     }
 
     componentWillUnmount() {
         Object.values(this.sectionRefs).forEach(value => {
-            if (value.current) this.observer.unobserve(value.current);
+            this.observer.unobserve(value.current);
         });
     }
 
     handleObserver(entries, observer) {
         if (entries[0].isIntersecting) {
             console.log(entries[0].target);
-
-            // Object.values(this.sectionRefs).forEach(value => {
-            // if (this.sectionRefs.current) {
-            // console.log(this.sectionRefs.current);
-            entries[0].target.className += ' is-visible'; //not the react way, need to learn react way
+            //Need to use react, feel like I am referencing dom too much
+            entries[0].target.className += ' is-visible';
             observer.unobserve(entries[0].target);
-            // }
-            // });
         }
     }
 
@@ -92,10 +87,16 @@ class Homepage extends Component {
                     />
                     <Slider />
                 </section>
-                <section className='full-width-promo section' ref={this.sectionRefs[3]}>
+                <section
+                    className='full-width-promo section'
+                    ref={this.sectionRefs[3]}
+                >
                     <Promo />
                 </section>
-                <section className='smoothie-categories stacked section' ref={this.sectionRefs[4]}>
+                <section
+                    className='smoothie-categories stacked section'
+                    ref={this.sectionRefs[4]}
+                >
                     <ContentIntro
                         eyebrow='Purpose Blends'
                         headline='Blended to Fuel Your Passion'
@@ -103,13 +104,22 @@ class Homepage extends Component {
                     />
                     <SmoothieCategories />
                 </section>
-                <section className='content-slider partnerships carousel section' ref={this.sectionRefs[5]}>
+                <section
+                    className='content-slider partnerships carousel section'
+                    ref={this.sectionRefs[5]}
+                >
                     <PartnershipsSlider />
                 </section>
-                <section className='promo-unit left section' ref={this.sectionRefs[6]}>
+                <section
+                    className='promo-unit left section'
+                    ref={this.sectionRefs[6]}
+                >
                     <PromoUnit />
                 </section>
-                <section className='location-block section' ref={this.sectionRefs[7]}>
+                <section
+                    className='location-block section'
+                    ref={this.sectionRefs[7]}
+                >
                     <LocationBlock />
                 </section>
             </React.Fragment>
