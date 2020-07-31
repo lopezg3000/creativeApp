@@ -43,20 +43,20 @@ class VideoBackground extends Component {
         return (
             <div className='hero-background container'>
                 <div className='video-wrap'>
-                    <img
+                    {/* <img
                         src={Thumb}
                         className="video-thumb tiny"
                         alt="thumb"
                         style={{ opacity: this.state.isVideoLoaded ? 0 : 1 }}
-                    />
+                    /> */}
                     <video
                         src={src}
                         autoPlay={true}
                         loop={true}
                         type="video/mp4"
                         muted
-                        onLoadedData={this.onLoadedData}
-                        style={{ opacity: this.state.isVideoLoaded ? 1 : 0 }}
+                        // onLoadedData={this.onLoadedData}
+                        // style={{ opacity: this.state.isVideoLoaded ? 1 : 0 }}
                         playsInline>
                     </video>
                 </div>
