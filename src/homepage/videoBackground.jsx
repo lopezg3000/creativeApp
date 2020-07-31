@@ -49,7 +49,7 @@ class VideoBackground extends Component {
                         alt="thumb"
                         style={{ opacity: this.state.isVideoLoaded ? 0 : 1 }}
                     />
-                    {/* <video
+                    <video
                         src={src}
                         autoPlay={true}
                         loop={true}
@@ -58,7 +58,7 @@ class VideoBackground extends Component {
                         onLoadedData={this.onLoadedData}
                         style={{ opacity: this.state.isVideoLoaded ? 1 : 0 }}
                         playsInline>
-                    </video> */}
+                    </video>
                 </div>
             </div>
         );
