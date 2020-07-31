@@ -2,12 +2,14 @@ import React, { Component } from 'react';
 import BigScreenVideo from '../assets/videos/heroBigScreenVideo.mp4';
 import MobileVideo from '../assets/videos/heroMobileVideo.mov';
 import { getVideoSrc } from '../utils/getVideoSrc';
+import Thumb from '../assets/homepageImages/heroVideoThumb.jpg';
 import './videoBackground.css'
 
 
 class VideoBackground extends Component {
     state = {
-        width: 0
+        width: 0,
+        isVideoLoaded: false
     }
 
     componentDidMount() {
@@ -24,6 +26,10 @@ class VideoBackground extends Component {
         this.setState({ width });
     };
 
+    onLoadedData = () => {
+        this.setState({ isVideoLoaded: true });
+    }
+
 
     render() {
         const { width } = this.state;
@@ -32,12 +38,20 @@ class VideoBackground extends Component {
         return (
             <div className='hero-background container'>
                 <div className='video-wrap'>
+                    <img
+                        src={Thumb}
+                        className="video-thumb tiny"
+                        alt="thumb"
+                        style={{ opacity: this.state.isVideoLoaded ? 0 : 1 }}
+                    />
                     <video
                         src={src}
                         autoPlay={true}
                         loop={true}
                         type="video/mp4"
                         muted
+                        onLoadedData={this.onLoadedData}
+                        style={{ opacity: this.state.isVideoLoaded ? 1 : 0 }}
                         playsInline>
                     </video>
                 </div>

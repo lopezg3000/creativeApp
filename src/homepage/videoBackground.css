@@ -6,6 +6,7 @@
 .video-wrap {
     width: 100%;
     height: 55vh;
+    position: relative;
 }
 
 .video-wrap video {
@@ -14,6 +15,19 @@
     bottom: 7rem;
     z-index: -1; /* applied so that navbar shadow is set over video*/
 }
+
+.video-wrap .video-thumb {
+    position: absolute;
+    width: 100vw;
+    top: -108px;
+    transition: opacity 400ms ease 0ms;
+}
+
+.tiny {
+    filter: blur(20px);
+    transform: scale(1.1);
+    transition: visibility 0ms ease 400ms;
+  }
 
 @media only screen and (max-width: 1023px) {
     .video-wrap video {
