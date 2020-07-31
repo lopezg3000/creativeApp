@@ -50,9 +50,10 @@
     }
 
     .video-wrap .video-thumb {
-        width: 230vw;
+        /* width: 230vw;
         bottom: 0; 
-        left: -65%;
+        left: -65%; */
+        height: 55vh;
     }
 
 }
