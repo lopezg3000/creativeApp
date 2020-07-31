@@ -4,8 +4,6 @@ import '@fortawesome/fontawesome-free//css/all.css';
 import "./index.css";
 import App from "./App";
 import * as serviceWorker from "./serviceWorker";
-import Carousel from "./components/roughComponents/animationCarousel";
-import HeroParent from "./components/roughComponents/HeroParent";
 import { BrowserRouter } from "react-router-dom";
 {/* <BrowserRouter><App /></BrowserRouter> */ }
 // import CheckBoxParent from "./components/CheckBoxParent";
