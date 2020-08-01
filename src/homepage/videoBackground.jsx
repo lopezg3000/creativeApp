@@ -6,7 +6,8 @@ import Thumb from '../assets/homepageImages/heroVideoThumb.jpg';
 import './videoBackground.css'
 
 /*improvements:
-    1. box shadow behind hero video after implementing progressive loading
+    1. box shadow behind hero video after implementing progressive loading because of 
+        transform property https://stackoverflow.com/questions/20851452/z-index-is-canceled-by-setting-transformrotate
     2. position of image between 320px and 768px needs to be corrected
 */
 
