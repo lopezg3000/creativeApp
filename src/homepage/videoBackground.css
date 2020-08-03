@@ -17,7 +17,7 @@
 
 .video-wrap .video-thumb {
     position: absolute;
-    width: 100vw;
+    /* width: 100vw; */
     transition: opacity 400ms ease 0ms;
     /* z-index: -1; */
 }
